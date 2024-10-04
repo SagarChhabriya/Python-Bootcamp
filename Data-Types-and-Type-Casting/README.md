@@ -344,6 +344,208 @@ IndexError: string index out of range
 4. In Python, we can represent char values using str type; explicitly, char type is not available.
 
 
+<!-- update table of content from here-->
+# Type Casting in Python
+
+We can convert one type of value to another type. This conversion is called **Typecasting** or **Type Coercion**. The following are various inbuilt functions for type casting:
+
+1. **`int()`**
+2. **`float()`**
+3. **`complex()`**
+4. **`bool()`**
+5. **`str()`**
+
+## 1. `int()`
+We can use this function to convert values from other types to `int`.
+
+**Examples:**
+```python
+>>> int(123.987) 
+123
+
+>>> int(10 + 5j) 
+TypeError: can't convert complex to int 
+
+>>> int(True) 
+1 
+
+>>> int(False) 
+0 
+
+>>> int("10") 
+10 
+
+>>> int("10.5") 
+ValueError: invalid literal for int() with base 10: '10.5' 
+
+>>> int("ten") 
+ValueError: invalid literal for int() with base 10: 'ten' 
+
+>>> int("0B1111") 
+ValueError: invalid literal for int() with base 10: '0B1111' 
+```
+
+
+## Note:
+1. We can convert from any type to `int` except for the complex type.
+2. If we want to convert `str` type to `int` type, the string must contain only integral values and should be specified in base-10.
+
+
+## 2. float():
+We can use the `float()` function to convert other type values to float type.
+
+1) `>>> float(10)`  
+   Output: `10.0`  
+
+2) `>>> float(10+5j)`  
+   Output: `TypeError: can't convert complex to float`  
+
+3) `>>> float(True)`  
+   Output: `1.0`  
+
+4) `>>> float(False)`  
+   Output: `0.0`  
+
+5) `>>> float("10")`  
+   Output: `10.0`  
+
+6) `>>> float("10.5")`  
+   Output: `10.5`  
+
+7) `>>> float("ten")`  
+   Output: `ValueError: could not convert string to float: 'ten'`  
+
+8) `>>> float("0B1111")`  
+   Output: `ValueError: could not convert string to float: '0B1111'`  
+
+## Note:
+1. We can convert any type value to float type except for complex type.
+2. Whenever we are trying to convert `str` type to `float` type, the string must be either an integral or floating point literal and should be specified only in base-10.
+
+## 3. complex():
+We can use the `complex()` function to convert other types to complex type.
+
+### Form-1: `complex(x)`
+We can use this function to convert `x` into a complex number with real part `x` and imaginary part `0`.
+
+1) `complex(10)`  
+   Output: `10+0j`  
+
+2) `complex(10.5)`  
+   Output: `10.5+0j`  
+
+3) `complex(True)`  
+   Output: `1+0j`  
+
+4) `complex(False)`  
+   Output: `0j`  
+
+5) `complex("10")`  
+   Output: `10+0j`  
+
+6) `complex("10.5")`  
+   Output: `10.5+0j`  
+
+7) `complex("ten")`  
+   Output: `ValueError: complex() arg is a malformed string`  
+
+### Form-2: `complex(x, y)`
+We can use this method to convert `x` and `y` into a complex number such that `x` will be the real part and `y` will be the imaginary part.
+
+1) `complex(10, -2)`  
+   Output: `10-2j`  
+
+2) `complex(True, False)`  
+   Output: `1+0j`  
+
+
+### 4. `bool()`
+We can use this function to convert other type values to `bool` type.
+
+1) `bool(0)`  
+   Output: `False`  
+
+2) `bool(1)`  
+   Output: `True`  
+
+3) `bool(10)`  
+   Output: `True`  
+
+4) `bool(10.5)`  
+   Output: `True`  
+
+5) `bool(0.178)`  
+   Output: `True`  
+
+6) `bool(0.0)`  
+   Output: `False`  
+
+7) `bool(10-2j)`  
+   Output: `True`  
+
+8) `bool(0+1.5j)`  
+   Output: `True`  
+
+9) `bool(0+0j)`  
+   Output: `False`  
+
+10) `bool("True")`  
+    Output: `True`  
+
+11) `bool("False")`  
+    Output: `True`  
+
+12) `bool("")`  
+    Output: `False`  
+
+
+```python
+
+bool(X)
+|
+|-- If X is int datatype
+|   |-- 0 means False
+|   |-- Non-zero means True
+|
+|-- If X is float datatype
+|   1. If total number value is zero, then the result is False
+|   2. Otherwise, the result is True
+|
+|-- If X is complex datatype
+|   1. If both real and imaginary parts are zero (i.e., 0+0j), then the result is False
+|   2. Otherwise, the result is True
+|
+|-- If X is str datatype
+    1. If X is an empty string, then the result is False
+    2. Otherwise, the result is True
+```
+
+
+Tip: [How to create mermaid graphs, flowcharts, pie charts, class diagrams](https://github.com/mermaid-js/mermaid)
+```mermaid
+graph TD;
+   bool(x)-->If-X-is-int-datatype;
+   bool(x)-->If-X-is-float-datatype;
+   bool(x)-->If-X-is-complex-datatype;
+   bool(x)-->If-X-is-str-datatype; 
+```
+
+
+
+### 5. str()
+We can use this method to convert other type values to `str` type.
+
+**Examples:**
+```python
+>>> str(10) 
+'10' 
+>>> str(10.5) 
+'10.5' 
+>>> str(10 + 5j) 
+'(10+5j)' 
+>>> str(True) 
+'True'
+```
 
 
 
