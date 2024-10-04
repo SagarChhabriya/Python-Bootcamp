@@ -549,4 +549,100 @@ We can use this method to convert other type values to `str` type.
 
 
 
+### Fundamental Data Types and Immutability
+
+All fundamental data types in Python are immutable. This means that once we create an object, we cannot modify it. If we attempt to change it, a new object will be created instead. This characteristic is known as immutability.
+
+When a new object is needed, Python’s Virtual Machine (PVM) checks if an existing object with the same value is available. If it finds one, it reuses that object. If not, it creates a new one. This approach helps improve memory efficiency and performance.
+
+However, this can lead to issues if multiple references point to the same object. If one reference modifies the object, it could unintentionally affect others that share the same reference. To avoid this, immutability ensures that once an object is created, it cannot be altered. Any attempt to change it results in the creation of a new object.
+
+```python
+>>> a = 10 
+>>> b = 10 
+>>> a is b 
+True 
+>>> id(a) 
+1572353952 
+>>> id(b) 
+1572353952 
+```
+
+| 1                                              | 2                                              | 3                                         | 4                                            |
+|------------------------------------------------|------------------------------------------------|-------------------------------------------|----------------------------------------------|
+| `>>> a = 10`                                   | `>>> a = 10 + 5j`                             | `>>> a = True`                           | `>>> a = 'sagar'`                           |
+| `>>> b = 10`                                   | `>>> b = 10 + 5j`                             | `>>> b = True`                           | `>>> b = 'sagar'`                           |
+| `>>> id(a)`                                    | `>>> a is b`                                  | `>>> a is b`                             | `>>> a is b`                                |
+| `1572353952`                                   | `False`                                       | `True`                                   | `True`                                       |
+| `>>> id(b)`                                    | `>>> id(a)`                                   | `>>> id(a)`                              | `>>> id(a)`                                 |
+| `1572353952`                                   | `15980256`                                    | `1572172624`                             | `16378848`                                   |
+|                                                | `>>> id(b)`                                   | `>>> id(b)`                              | `>>> id(b)`                                 |
+|                                                | `15979944`                                    | `1572172624`                             | `16378848`                                   |
+
+
+
+
+## Bytes Data Type
+
+The `bytes` data type represents a group of byte numbers, just like an array.
+
+### Example:
+1. `x = [10, 20, 30, 40]`  
+2. `b = bytes(x)`  
+3. `type(b)`  
+   - Output: `<class 'bytes'>`  
+4. `print(b[0])`  
+   - Output: `10`  
+5. `print(b[-1])`  
+   - Output: `40`  
+6. 
+   ```python
+   for i in b:
+       print(i)
+10
+20
+30
+40
+
+- The only allowed values for byte data type are 0 to 256. By mistake if we are trying to provide any other values then we will get value error.
+- Once we creates bytes data type value, we cannot change its values,otherwise we will get TypeError.
+
+### Bytes Data Type: Immutability Example
+
+1. `x = [10, 20, 30, 40]`  
+2. `b = bytes(x)`  
+3. `b[0] = 100`  
+   - Output: `TypeError: 'bytes' object does not support item assignment`
+
+
+
+### List Data Type
+
+The list data type is used to represent a group of values as a single entity, where:
+1. Insertion order is preserved.
+2. Heterogeneous objects are allowed.
+3. Duplicates are allowed.
+4. Lists are growable in nature.
+5. Values should be enclosed within square brackets.
+
+#### Example 1:
+```python
+my_list = [10, 10.5, 'durga', True, 10] 
+print(my_list)  # Output: [10, 10.5, 'durga', True, 10]
+```
+
+```python
+my_list = [10, 20, 30, 40]
+print(my_list[0])      # Output: 10
+print(my_list[-1])     # Output: 40
+print(my_list[1:3])    # Output: [20, 30]
+my_list[0] = 100
+for i in my_list:
+    print(i)
+```
+100
+20
+30
+40
+
 
