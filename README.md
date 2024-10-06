@@ -18,3 +18,6 @@
    - Python versions
    -  Identifiers and their rules
 3. Data Types and Type Casting
+   - Built-in/in-built datatypes
+   - Base conversions
+   - Data Types: int, float, complex, bool, str, slicing of strings
