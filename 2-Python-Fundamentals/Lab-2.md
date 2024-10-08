@@ -1,4 +1,4 @@
-# Labs tasks will be added soon
+# Additional Lab tasks will be added soon
 
 1. Create Valid Identifiers:
   - Define three valid identifiers in your program. For example:
