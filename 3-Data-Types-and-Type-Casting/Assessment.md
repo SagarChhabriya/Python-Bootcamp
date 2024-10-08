@@ -177,3 +177,99 @@
     - C) Creates a new list
     - D) None of the above
 
+
+30. How are items stored in a list?
+    - A) In a fixed order
+    - B) Randomly
+    - C) In ascending order
+    - D) In a descending order
+
+31. What will `id(10)` return?
+    - A) Memory address of 10
+    - B) 10
+    - C) Type of 10
+    - D) None
+
+32. How do you concatenate two strings `s1` and `s2`?
+    - A) s1 + s2
+    - B) s1 & s2
+    - C) s1 | s2
+    - D) s1 * s2
+
+33. Which of the following is an immutable data type?
+    - A) list
+    - B) dict
+    - C) set
+    - D) tuple
+
+34. What will be the output of `bool([])`?
+    - A) True
+    - B) False
+    - C) 0
+    - D) None
+
+35. How do you access the last element of a list `my_list`?
+    - A) my_list[-1]
+    - B) my_list[0]
+    - C) my_list[1]
+    - D) my_list[len(my_list)]
+
+36. What does the `len()` function return for a string?
+    - A) Number of characters
+    - B) Memory size
+    - C) Type of string
+    - D) None
+
+37. How are lists defined in Python?
+    - A) ()
+    - B) []
+    - C) {}
+    - D) <>
+
+38. What is the output of `str(10 + 5j)`?
+    - A) "10 + 5j"
+    - B) "(10 + 5j)"
+    - C) "10"
+    - D) Error
+
+39. Which of the following data types can store multiple values?
+    - A) int
+    - B) str
+    - C) list
+    - D) float
+
+40. What is the output of `complex(10, -5)`?
+    - A) 10
+    - B) 10 - 5j
+    - C) 10 + 5j
+    - D) 0 + 0j
+
+41. What is the result of `10 + True`?
+    - A) 10
+    - B) 11
+    - C) 1
+    - D) Error
+
+42. What type does `int("abc")` raise?
+    - A) ValueError
+    - B) TypeError
+    - C) None
+    - D) String
+
+43. What is the output of `bool(10 - 10)`?
+    - A) True
+    - B) False
+    - C) None
+    - D) 0
+
+44. What does `0o10` represent in decimal?
+    - A) 8
+    - B) 10
+    - C) 12
+    - D) 16
+
+45. Which method is used to get the real part of a complex number?
+    - A) real()
+    - B) imag()
+    - C) abs()
+    - D) None
