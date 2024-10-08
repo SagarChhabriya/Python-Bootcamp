@@ -121,3 +121,59 @@
     - C) float()
     - D) bool()
 
+
+
+21. Which of the following data types is mutable?
+    - A) int
+    - B) float
+    - C) str
+    - D) list
+
+22. What will `int(10.9)` return?
+    - A) 10
+    - B) 10.9
+    - C) 11
+    - D) 0
+
+23. What will `float("10.5")` return?
+    - A) 10
+    - B) 10.5
+    - C) "10.5"
+    - D) None
+
+24. Which of the following will cause a `TypeError`?
+    - A) int(10 + 5j)
+    - B) float(10)
+    - C) str(True)
+    - D) complex("10")
+
+25. What is the output of `len("hello")`?
+    - A) 4
+    - B) 5
+    - C) 6
+    - D) None
+
+26. Which data type is used for storing sequences of characters?
+    - A) int
+    - B) list
+    - C) str
+    - D) bool
+
+27. Which of the following is NOT a fundamental data type in Python?
+    - A) int
+    - B) float
+    - C) char
+    - D) str
+
+28. What will `bytes([10, 20, 300])` return?
+    - A) ValueError
+    - B) [10, 20]
+    - C) [10, 20, 300]
+    - D) None
+
+29. What does `my_list[0] = 100` do if `my_list = [10, 20, 30]`?
+    - A) Changes the first element to 100
+    - B) Causes an error
+    - C) Creates a new list
+    - D) None of the above
+
