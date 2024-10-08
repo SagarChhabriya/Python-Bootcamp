@@ -273,3 +273,52 @@
     - B) imag()
     - C) abs()
     - D) None
+
+
+# Answers to MCQs
+
+1. B) Checks the type of a variable
+2. C) int
+3. B) 0b
+4. B) '0b1111'
+5. C) 0o
+6. A) 16
+7. A) hex()
+8. C) Both A and B
+9. C) float
+10. B) 10+0j
+11. A) 3 + 5j
+12. B) False
+13. A) True
+14. D) All of the above
+15. B) []
+16. A) 's'
+17. C) s[5]
+18. B) 5
+19. A) "abcabcabc"
+20. A) str()
+21. D) list
+22. A) 10
+23. B) 10.5
+24. A) int(10 + 5j)
+25. B) 5
+26. C) str
+27. C) char
+28. A) ValueError
+29. A) Changes the first element to 100
+30. A) In a fixed order
+31. A) Memory address of 10
+32. A) s1 + s2
+33. D) tuple
+34. B) False
+35. A) my_list[-1]
+36. A) Number of characters
+37. B) []
+38. B) "(10 + 5j)"
+39. C) list
+40. B) 10 - 5j
+41. B) 11
+42. A) ValueError
+43. B) False
+44. A) 8
+45. D) None
