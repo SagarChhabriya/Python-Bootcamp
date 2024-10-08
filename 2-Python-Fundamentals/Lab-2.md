@@ -1,16 +1,82 @@
 # Labs tasks will be added soon
 
+1. Create Valid Identifiers:
+  - Define three valid identifiers in your program. For example:
+  ```python
+    my_variable = 5
+    userName = "Alice"
+    _privateData = 100
+  ```
 
+2. Experiment with Invalid Identifiers:
+   - Try to create three invalid identifiers (e.g., using `$`, starting with a digit) and observe the errors.
+  ```python
+  # Uncommenting the following will result in syntax errors
+  # 1stVariable = 10
+  # invalid$name = "test"
+  # my-variable = 20
 
+  ```
 
+3. Case Sensitivity Test:
+  - Define two identifiers that differ only by case, then print both values.
+    ```python
+    value = 10
+    Value = 20
+    print(value)  # Output: 10
+    print(Value)  # Output: 20
 
+    ```
+4. Check Length of Identifiers:
+   - Create an identifier that is excessively long and print its value.
+     ```python
+     a_very_long_identifier_name_that_is_not_recommended = 42
+     print(a_very_long_identifier_name_that_is_not_recommended)
+     ```
+5. Reserved Word Usage:
+   - Attempt to create a variable using a reserved word (e.g., `def`) and observe the error.
+    ```python
+    # Uncommenting the following will result in a syntax error
+    # def = 20
+    ```
+6. List Reserved Words:
+   ```python
+   import keyword
+   print(keyword.kwlist)
+   ```
 
+## Basic Commands
 
+7. Print Python Version:
+  - Write a program to print the current version of Python you are using.
+    ```python
+    import sys
+    print("Python version:", sys.version)
+    ```
+8. Check Current Working Directory(Current Folder):
+   - Use the `os` module to print the current working directory.
+    ```python
+    import os
+    print("Current Working Directory:", os.getcwd())
+    ```
+9. List Files in Directory:
+   - Write a program to list all files in the current directory.
+     ```python
+     import os
+     print("Files in current directory:", os.listdir())
+     ```
+10. Print Help for a Module:
+    - Use the `help()` function to get information about a built-in function (e.g., `print`).
+    ```python
+    help(print)
+    ```
 
-
-
-
-
+11. Using dir()
+    - Use the `dir()` function to list all the attributes and methods of a module (e.g., `math`).
+    ```python
+    import math
+    print("Attributes and methods of math module:", dir(math))
+    ```
 ## Additions 
 1. **Single-Line Comments** Write a program that includes a single-line comment explaining what the code does.
   ```python
