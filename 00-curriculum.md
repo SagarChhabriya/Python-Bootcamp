@@ -1,27 +1,103 @@
 # 1. Getting Started
 
-- **1.1 Introduction to Python**
+## 1.1 Introduction
+- **1.1.1 Introduction to Python**
   - History & Origins
   - Why Python?
 
-- **1.2 Python's Popular Applications**
+- **1.1.2 Python's Popular Applications**
   - What is Python Used For?
 
-- **1.3 Python's Strengths and Weaknesses**
+- **1.1.3 Python's Strengths and Weaknesses**
   - Advantages of Python
   - Disadvantages of Python
 
-- **1.4 Python Basics: Understanding Core Concepts**
+- **1.1.4 Python Basics: Understanding Core Concepts**
   - Namespace and Scope
   - Program Structure
 
-- **1.5 Getting Started with Python Development**
+- **1.1.5 Getting Started with Python Development**
   - Installing Python
   - Interactive Shell vs Script Files
   - Choosing an IDE or Text Editor
 
-- **1.6 Python Internals**
+- **1.1.6 Python Internals**
   - Understanding the Python Virtual Machine (PVM)
+
+---
+
+## 1.2  to Git and GitHub
+
+- **1.2.1 Introduction**
+  - What is Git?
+  - Version Control Concepts
+  - Why Use Git?
+
+- **1.2.2 Setting Up Git**
+  - Installing Git
+  - Configuring Git (username, email)
+  - Basic Git Commands (`git init`, `git status`, `git add`, `git commit`)
+  
+- **1.2.3 Working with Git Repositories**
+  - Creating and Cloning Repositories
+  - Staging and Committing Changes
+  - Viewing the Commit History (`git log`)
+
+- **1.2.4 Introduction to GitHub**
+  - What is GitHub?
+  - How GitHub Works with Git
+  
+- **1.2.5 Working with GitHub**
+  - Creating a GitHub Account
+  - Pushing and Pulling to/from GitHub (`git push`, `git pull`)
+  - Collaboration: Forks, Pull Requests, and Issues
+  
+- **1.2.6 Branching and Merging with Git**
+  - Creating Branches (`git branch`, `git checkout`)
+  - Merging Branches (`git merge`)
+  - Resolving Merge Conflicts
+  
+- **1.2.7 Best Practices for Git**
+  - Commit Messages
+  - Using `.gitignore`
+  - Reverting Changes and History (`git reset`, `git revert`)
+
+- **1.2.8 The Fast Forward Error**
+  - Cause of the fast forward error due to differences between the local and remote repositories
+
+---
+
+- **1.3 Using Git and GitHub with Visual Studio Code (VS Code)**
+  - **1.3.1 Setting Up VS Code for Git**
+    - Installing VS Code
+    - Installing Git on VS Code (if not already installed)
+    - Setting up VS Code to work with Git
+  
+  - **1.3.2 Using the Built-in Git Features in VS Code**
+    - Accessing Git Source Control Panel in VS Code
+    - Initializing a Git Repository using VS Code
+    - Staging, Committing, and Viewing Changes using the VS Code Interface
+  
+  - **1.3.3 Cloning a Repository from GitHub**
+    - Cloning Repositories Using the VS Code Interface
+    - Opening Repositories in VS Code
+  
+  - **1.3.4 Pushing and Pulling from GitHub with VS Code**
+    - Pushing Changes to GitHub using VS Code
+    - Pulling Changes from GitHub using VS Code
+  
+  - **1.3.5 Working with Branches in VS Code**
+    - Creating and Switching Branches using VS Code
+    - Merging Branches and Resolving Conflicts in VS Code
+  
+  - **1.3.6 Collaborating with GitHub in VS Code**
+    - Creating Pull Requests in VS Code
+    - Reviewing and Merging Pull Requests
+    - Handling Merge Conflicts in VS Code
+  
+  - **1.3.7 Using VS Code Extensions for Git and GitHub**
+    - Installing GitHub Pull Requests and Issues Extension for VS Code
+    - Using VS Code Extensions for Enhanced Git Workflow (e.g., GitLens)
 
 ---
 
@@ -59,6 +135,11 @@
   - `type()` function
   - `id()` function
 
+- **2.8 Introduction to Script**
+  - What is a Script?
+  - What is a Program?
+  - Types of Scripts
+  - Types of Programming Languages
 
 ---
 # 3. Introduction to Data Handling
@@ -195,7 +276,7 @@
 ---
 
 
-# 7. List Manipulation
+# 7. List
 
 - **7.1 Introduction to Python Lists**
   - Characteristics and Use of Lists in Python
