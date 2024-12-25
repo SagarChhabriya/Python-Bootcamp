@@ -1,5 +1,5 @@
 
-# [Suggessted](/suggessted)
+[Go to Suggessted Section](#suggessted)
 
 # Core Python Syllabus
 
