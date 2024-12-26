@@ -1,19 +1,18 @@
 # 1. Getting Started
 
 ## 1.1 Introduction
-- **1.1.1 Introduction to Python**
-  
-  - History & Origins
-  
-        Python is a widely used high-level programming language for general-purpose programming, created by Guido van Rossum and first released in 1991. Python features a dynamic type system and automatic memory management and supports multiple programming paradigms, including object-oriented, imperative, functional programming, and procedural styles. It has a large and comprehensive standard library
-        
-        Two major versions of Python are currently in active use:
-        Python 3.x is the current version and is under active development.
-        Python 2.x is the legacy version and will receive only security updates until 2020. No new features will be
-        implemented. Note that many projects still use Python 2, although migrating to Python 3 is getting easier
 
-        You can download and install either version of Python [here](https://www.python.org/downloads/). See Python 3 vs. Python 2 for a comparison between them. In addition, some third-parties offer re-packaged versions of Python that add commonly used libraries and other features to ease setup
-        for common use cases, such as math, data analysis or scientific use. See [the list at the official site](https://www.python.org/download/alternatives/)
+### 1.1.1 Introduction to Python
+
+- **History & Origins**  
+  Python is a widely used high-level programming language for general-purpose programming, created by Guido van Rossum and first released in 1991. Python features a dynamic type system and automatic memory management and supports multiple programming paradigms, including object-oriented, imperative, functional programming, and procedural styles. It has a large and comprehensive standard library.
+
+  Two major versions of Python are currently in active use:
+  - Python 3.x is the current version and is under active development.
+  - Python 2.x is the legacy version and will receive only security updates until 2020. No new features will be implemented. Note that many projects still use Python 2, although migrating to Python 3 is getting easier.
+
+
+
 
 
 
@@ -33,7 +32,18 @@
   - Program Structure
 
 - **1.1.5 Getting Started with Python Development**
-  - Installing Python
+  
+  ### Installing Python
+  You can download and install either version of Python [here](https://www.python.org/downloads/). See Python 3 vs. Python 2 for a comparison between them. In addition, some third-parties offer re-packaged versions of Python that add commonly used libraries and other features to ease setup for common use cases, such as math, data analysis, or scientific use. See [the list at the official site](https://www.python.org/download/alternatives/).
+  
+  To confirm that Python was installed correctly, you can verify it by running the following command in your favorite terminal. (If you are using Windows OS, you need to add the path of Python to the environment variable before using it in the command prompt):
+
+  ```bash
+  python --version
+  ```
+
+  If you have installed Python 3, but `$ python --version` outputs a Python 2 version, it means you also have Python 2 installed. This is often the case on MacOS and many Linux distributions. In that case, use the Python 3 interpreter.  
+
   - Interactive Shell vs Script Files
   - Choosing an IDE or Text Editor
 
