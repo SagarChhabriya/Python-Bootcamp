@@ -26,4 +26,6 @@
   - Understanding the Python Virtual Machine (PVM)
 
 
-## [Session 1.1](/01-Getting-Started/1.1.md)
+## [Session 1.0 Quick Recap](/Module-01-Getting-Started/Session-1.0-Quick-Recap.md)
+
+## [Session 1.1 Getting Started](/01-Getting-Started/1.1.md)
