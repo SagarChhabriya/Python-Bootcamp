@@ -1,3 +1,4 @@
+
 # 1. Getting Started
 
 ## 1.1 Introduction
@@ -23,3 +24,6 @@
 
 - **1.1.6 Python Internals**
   - Understanding the Python Virtual Machine (PVM)
+
+
+## [Session 1.1](/01-Getting-Started/1.1.md)
