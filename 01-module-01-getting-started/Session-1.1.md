@@ -349,7 +349,7 @@ In simple terms, the **PVM** reads and executes Python code, but with **JIT**, c
   3. **Execution**: The PVM then interprets the bytecode and executes it on your computer.
 
 So, with CPython, the process involves compiling the `.py` file into `.pyc` bytecode first, and this bytecode is then executed by the Python interpreter.
-
+  
 ### JIT (e.g., in PyPy) and No `.pyc` Files:
 - **JIT compilation** (used in implementations like **PyPy**) works differently:
   1. **No Intermediate `.pyc` File**: JIT compilers do not create a `.pyc` file. Instead of precompiling the code to bytecode before execution, the JIT compiler compiles parts of the code **just in time** while the program is running.
