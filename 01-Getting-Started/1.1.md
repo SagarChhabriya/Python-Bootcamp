@@ -1,8 +1,8 @@
 # 1. Getting Started
 
-## 1.1 Introduction
+# 1.1 Introduction
 
-### 1.1.1 Introduction to Python
+## 1.1.1 Introduction to Python
 
 - **History & Origins**  
     Python is a widely used high-level programming language for general-purpose programming, created by Guido van Rossum in 1989 while working at the National Research Institute in the Netherlands.Officially, Python was made available to the public in 1991. The official Date of Birth for Python is February 20, 1991.
@@ -46,7 +46,7 @@
   In short, Python is a powerful yet easy-to-use language that is suitable for both beginners and professionals, making it a preferred choice for developers worldwide.
 
 
-### 1.1.2 Python's Popular Applications
+## 1.1.2 Python's Popular Applications
   - **What is Python Used For?**
   
     Python is a versatile language and can be used for a wide variety of applications, including:
@@ -59,7 +59,7 @@
     6. **Desktop GUI Applications**: Python can be used to develop desktop applications with GUI, using frameworks such as Tkinter and PyQt.
     7. **Cybersecurity and Networking**: Python plays a vital role in penetration testing, building security tools, and handling network-related tasks.
 
-### 1.1.3 Python's Strengths and Weaknesses
+## 1.1.3 Python's Strengths and Weaknesses
 
   - **Advantages of Python**
   
@@ -81,13 +81,11 @@
     3. **Memory Consumption**: Python’s memory consumption is high due to its dynamic typing and garbage collection.
     4. **Weak in Multithreading**: Python’s Global Interpreter Lock (GIL) can limit the performance of multithreaded programs, especially in CPU-bound tasks.
 
-### 1.1.4 Python Basics: Understanding Core Concepts
+## 1.1.4 Python Basics: Understanding Core Concepts
 
-  - **Namespace and Scope**
+### Namespace and Scope
   
-    Sure! Let's simplify the explanation by relating the concepts of **heap**, **stack**, and **namespace** in simple terms.
-
-### Stack and Heap:
+#### Stack and Heap:
 - **Stack**: Think of the stack as a pile of plates in a cafeteria. Each time you call a function in Python, it adds a plate to the pile with the variables that function needs. When the function is done, the plate is taken off the pile. 
   - **What goes on the stack?** Small, temporary things like numbers or simple variables that exist only while the function is running.
   - **When is it removed?** As soon as the function finishes, the stack removes those variables.
@@ -96,19 +94,19 @@
   - **What goes in the heap?** Large objects that need to stay in memory, like lists, dictionaries, or objects you create in your program.
   - **When is it removed?** It stays in memory until Python is finished with it and does automatic cleanup.
 
-### Namespaces:
+#### Namespaces:
 A **namespace** is like a **label** or **name tag** that helps you find things. It’s like when you give a name to a plate (in the stack) or a piece of furniture (in the heap) so you can remember what it is.
 
 - **In Python**, namespaces keep track of where each variable is, whether it’s inside a function, inside a class, or globally available. 
 - When you use a variable, Python looks in the appropriate **namespace** to find where it’s stored.
 
-### Connecting the Stack, Heap, and Namespace:
+#### Relation Between the Stack, Heap, and Namespace:
 - When you create a **variable** in Python, the **namespace** gives it a name (like "x" or "my_list").
 - If the variable is a simple number or string, it’s stored on the **stack**.
 - If the variable is a more complex object (like a list or dictionary), it’s stored in the **heap**.
 - The **namespace** keeps track of which name refers to which object, and it helps Python know where to look for the object when you use that name.
 
-### Simple Example:
+#### Simple Example:
 
 ```python
 x = 5  # 'x' is a name, and its value (5) is stored in the stack
@@ -282,5 +280,91 @@ You would run this script using `.\script.ps1`.
 - **Local**: VS Code, PyCharm, Anaconda, other.
 - **Cloud**: Google Colab, Replit, other.
 
-### 1.1.6 Python Internals
-- Understanding the Python Virtual Machine (PVM)
+## 1.1.6 Understanding the Python Virtual Machine (PVM)
+
+To understand how Python works under the hood, we need to look at the Python Virtual Machine (PVM) and how it might benefit from JIT compilation. The PVM is responsible for running Python code, but some implementations of Python (like PyPy) use JIT compilation to make the execution faster. Let's dive: 
+
+### What is the Python Virtual Machine (PVM)?
+The **Python Virtual Machine** (PVM) is the part of Python that reads and executes Python code. It's like a translator that turns Python programs into machine instructions that your computer can understand and run.
+
+### Key Steps in How the PVM Works:
+When you write a Python program, the following happens:
+
+1. **Source Code**:
+   - You write Python code in a `.py` file, which is a plain text file with instructions written in Python.
+   
+2. **Compilation to Bytecode**:
+   - Python doesn’t execute your source code directly. Instead, it first translates the Python code into an intermediate form called **bytecode**. This bytecode is a lower-level, platform-independent representation of your code.
+   - This bytecode is stored in `.pyc` files (compiled Python files). It is not the same as machine code but can be run by the PVM.
+
+3. **Execution by the PVM**:
+   - The **PVM** takes the bytecode and executes it on your machine. The PVM acts as a virtual computer, running the bytecode in a way that abstracts away the details of your actual hardware. 
+   - When the PVM runs your code, it uses the **Python interpreter** to handle the execution.
+
+
+### Where Does JIT Come In?
+
+The concept of **JIT (Just-In-Time) compilation** can be integrated into the explanation of how Python code is executed by the Python Virtual Machine (PVM). JIT is a technique that improves performance by compiling code at runtime, rather than before execution. Here's how JIT fits into the above definition:
+
+In the default implementation of Python (**CPython**), the code is interpreted and executed directly by the PVM, without any JIT compilation. However, **JIT compilation** is used in some alternative Python implementations to improve performance:
+
+- **JIT Compilation**: In some Python implementations like **PyPy**, the JIT compiler analyzes the Python code during execution and dynamically compiles the most frequently used parts of the code into **native machine code**. This means that the Python code is translated into machine code just before it is run, instead of being precompiled into bytecode. The advantage of JIT is that it can optimize performance by compiling code that is used often, making it run faster.
+
+### Key Benefits of JIT:
+- **Faster Execution**: JIT compilation allows Python programs to run faster, as frequently used parts of the code are compiled into machine code, avoiding the overhead of interpretation.
+- **Dynamic Compilation**: The JIT compiler can make decisions about which parts of the code to compile at runtime, based on the program's behavior, leading to better performance optimizations.
+
+### Key Components Involved in the Execution Process:
+- **Python Interpreter**: The interpreter is responsible for executing the bytecode (in CPython), but with JIT-enabled implementations like PyPy, the interpreter can also invoke JIT compilation when needed.
+- **PVM (Python Virtual Machine)**: This part executes bytecode in the default Python implementation, but with JIT compilation (in PyPy), the PVM can also run compiled machine code, which results in faster performance.
+- **CPython**: The default Python implementation, which compiles Python code into bytecode and runs it on the PVM, but does not use JIT. However, PyPy is a Python implementation that uses JIT compilation to speed up execution.
+
+### Why Does Python Use a Virtual Machine?
+
+1. **Platform Independence**: By compiling Python code into bytecode, the program can be run on any machine that has a Python interpreter, regardless of the underlying hardware. The PVM provides a layer of abstraction from the underlying system.
+   
+2. **Efficiency**: The use of bytecode allows Python to optimize execution. While bytecode is not as fast as machine code, it can still run efficiently across platforms.
+
+3. **Portability**: Since the bytecode can run on any system with the PVM, Python programs are portable and can be run across different operating systems without modification.
+
+## PVM vs. JVM (Java Virtual Machine):
+The concept of a **virtual machine** isn't unique to Python. Other languages, like Java, use a **Java Virtual Machine (JVM)**, and it also employs JIT compilation to improve performance. The PVM and JVM both serve similar purposes: running code on any machine in a way that abstracts the underlying hardware. However, the PVM is designed specifically for running Python bytecode, while the JVM runs Java bytecode. Just like the JVM, the PVM can be enhanced with JIT to optimize code execution, allowing both Python and Java to perform better.
+
+### To Summarize:
+- The **PVM** is responsible for running your Python code by executing **bytecode**.
+- **Python code** is first translated into bytecode, and then the **PVM** reads and executes it.
+- In some Python implementations (like **PyPy**), **JIT compilation** is used to convert frequently used parts of the bytecode into **native machine code** at runtime, improving performance.
+- The combination of **PVM** and **JIT** allows Python programs to run faster, especially in **JIT-enabled implementations** like PyPy, which perform on-the-fly compilation for optimized execution.
+
+In simple terms, the **PVM** reads and executes Python code, but with **JIT**, certain parts of the code are compiled directly into machine code during execution, making the program run faster.
+
+---
+
+## Bonus
+
+### CPython and `.pyc` Files:
+- **CPython** is the default implementation of Python, and it works as follows:
+  1. **Compiling `.py` to `.pyc`**: When you run a Python program (a `.py` file), CPython compiles it into **bytecode**, which is saved in a `.pyc` file (short for "Python Compiled").
+  2. **Bytecode**: This bytecode is an intermediate representation of your Python code, which is not specific to any platform. It is not machine code but a lower-level form of Python code that the Python Virtual Machine (PVM) can understand.
+  3. **Execution**: The PVM then interprets the bytecode and executes it on your computer.
+
+So, with CPython, the process involves compiling the `.py` file into `.pyc` bytecode first, and this bytecode is then executed by the Python interpreter.
+
+### JIT (e.g., in PyPy) and No `.pyc` Files:
+- **JIT compilation** (used in implementations like **PyPy**) works differently:
+  1. **No Intermediate `.pyc` File**: JIT compilers do not create a `.pyc` file. Instead of precompiling the code to bytecode before execution, the JIT compiler compiles parts of the code **just in time** while the program is running.
+  2. **Runtime Compilation**: JIT compilers monitor how the code is being executed and, at runtime, identify hot spots (parts of the code that are executed very frequently). These parts are then compiled into **native machine code** (specific to the platform you're running on), which makes execution faster.
+  3. **Execution**: The JIT compiler translates Python code into machine code dynamically, meaning there's no need for bytecode files like `.pyc`—the code is compiled as it's run, rather than beforehand.
+
+### Key Differences:
+1. **CPython**:
+   - **Creates `.pyc` files**: The Python code is first compiled into bytecode (stored in `.pyc` files), which the interpreter executes.
+   - **Interprets bytecode**: The bytecode is interpreted by the Python Virtual Machine (PVM).
+
+2. **JIT (e.g., PyPy)**:
+   - **Does not create `.pyc` files**: Instead, it compiles parts of the code **at runtime** into native machine code, improving performance.
+   - **Direct machine code generation**: JIT compilation results in machine code execution during runtime, leading to faster execution for long-running programs.
+
+### In Short:
+- **CPython** creates `.pyc` files by compiling Python code into bytecode, which is then interpreted by the PVM.
+- **JIT**-enabled implementations like **PyPy** compile code to native machine code **during execution**, without needing to generate `.pyc` files. This allows for faster execution, particularly for frequently executed code, since JIT compilation optimizes performance dynamically.
