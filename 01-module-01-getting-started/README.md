@@ -1,3 +1,7 @@
+## [Session 1.0 Quick Recap](session-1.0-quick-recap.md)
+
+## [Session 1.1 Getting Started](session-1.1.md)
+
 
 # 1. Getting Started
 
@@ -26,6 +30,3 @@
   - Understanding the Python Virtual Machine (PVM)
 
 
-## [Session 1.0 Quick Recap](session-1.0-quick-recap.md)
-
-## [Session 1.1 Getting Started](session-1.1.md)
