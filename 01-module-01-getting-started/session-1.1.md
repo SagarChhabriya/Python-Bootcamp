@@ -371,6 +371,28 @@ So, with CPython, the process involves compiling the `.py` file into `.pyc` byte
 - **JIT**-enabled implementations like **PyPy** compile code to native machine code **during execution**, without needing to generate `.pyc` files. This allows for faster execution, particularly for frequently executed code, since JIT compilation optimizes performance dynamically.
 
 
+## Flavors/Distributions of Python
+
+1. CPython 
+It is the standard flavor of Python. It can be used to work with C language Applications.
+
+2. Jython or JPython
+It is for Java applications. It can run on JVM.
+
+3. Iron Python
+It is for C#/.NET platform.
+
+4. PyPy
+The main advantage of PyPy is performance will be improved because JIT compiler is available inside PVM.
+
+5. RubyPython
+For Ruby Platforms.
+
+6. Anaconda Python
+It is especially designed for handling large volume of data processing.
+
+
+
 
 ## Session Sumamary
 
