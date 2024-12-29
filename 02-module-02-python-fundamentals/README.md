@@ -7,6 +7,7 @@
 
 - **2.2 Flow of the Python Program**
   - Understanding program execution flow
+    - Depends on flavor
 
 - **2.3 Working with Interactive Mode**
   - Evaluating expressions
