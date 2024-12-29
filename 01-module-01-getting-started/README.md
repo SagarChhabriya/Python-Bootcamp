@@ -2,6 +2,7 @@
 
 ## [Session 1.1 Getting Started](session-1.1.md)
 
+## [learn.microsoft.com/en-us/training/modules/python-install-vscode/](https://learn.microsoft.com/en-us/training/modules/python-install-vscode/)
 
 # 1. Getting Started
 
