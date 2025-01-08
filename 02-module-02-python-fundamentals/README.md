@@ -18,8 +18,8 @@
   - Types of Scripts
   - Types of Programming Languages
 
-- [**2.5 Variables and Data Types**](/02-module-02-python-fundamentals/session-2.0.md/#25-variables-and-data-types)
-  - Identifiers, Literals, Operators
+- [**2.5 Variables**](/02-module-02-python-fundamentals/session-2.0.md/#25-variables-and-data-types)
+  - Identifiers
   - Variables and Assignments in Python vs Other Languages
 
 - [**2.6 Input and Output in Python**](/02-module-02-python-fundamentals/session-2.0.md/#26-input-and-output-in-python)

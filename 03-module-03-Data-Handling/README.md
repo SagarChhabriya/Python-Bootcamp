@@ -1,3 +1,10 @@
+
+## Literals
+
+
+
+## Operators
+
 # 3. Introduction to Data Handling
 
 - **3.1 Data Types in Python**
