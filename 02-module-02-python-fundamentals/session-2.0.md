@@ -312,6 +312,56 @@ Scripting languages are used to create scripts that automate tasks without requi
 ## Identifiers
 A name in Python is program is called identifier. It can be class name or function name or module name or variable name.
 
+- Rules to define identifiers in Python:
+  1. The only allowed characters in python are 
+    - alphabet symbols(either lower case or upper case)
+    - digits (0-9)
+    - underscore symbol(_)
+    By mistake if we are using any other symbol like $ then we will get syntax error.
+    - cash = 10 ✅
+    - ca$h = 10 ❌
+
+  2. Identifier should not starts with digit
+    - 123total ❌ 
+    - total123 ✅
+
+  3. Identifiers are case sensitive (python is case senstive). 
+    
+    ```python 
+    total = 10
+    TOTAL = 999
+    print(total) # 10
+    print(TOTAL) # 999
+    ```
+
+## Identifier
+  - Alphabet Symbols (Either Upper case OR Lower case)
+  - If identifier start with underscore(_) then it indicates its private.
+  - Identifier should not start with digits.
+  - Identifiers are case sensitive.
+  - we cannot use reserve words as identifiers
+    Ex: def = 10 ❌
+  - There is no length limit for Python identifiers. But not recommended to use too length identifiers.
+  - Dollar ($) Symbol is not allowed in Python. 
+
+
+### Exercise
+  - 123total
+  - total123
+  - java2python
+  - ca$h
+  - _abc_abc
+  - def
+  - if
+
+**Note:** 
+1. If identifier starts with _ symbol then it indicates that it is private.
+2. If identifier starts with __ (two underscore symbols) indicating that strongly private identifier.
+3. If the identifier starts and ends with two underscore symbols then the identifier is language defined special name, which is also known as magic methods.
+
+Example:
+  `__add__`
+
 
 
 , Literals, Operators
