@@ -2,6 +2,7 @@
 
 # 2.1 Basic Syntax
 
+
 ## Indentation
 
 - **Python**: 
