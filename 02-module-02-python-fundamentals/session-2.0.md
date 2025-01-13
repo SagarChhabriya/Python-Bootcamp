@@ -139,7 +139,8 @@ Result =  10
 
 
 ## Python Character Set
-# Character Set Used in Python
+
+![](assets/python-character-set.jpg)
 
 The character set in Python includes the following characters:
 
@@ -150,10 +151,11 @@ The character set in Python includes the following characters:
 2. **Digits**: This includes the numeric digits:
    - `{0, 1, 2, ... 9}`
 
-3. **White Spaces**: This includes spaces, line breaks (enters), and tabs.
+3. **White Spaces**: This includes spaces,  escape sequence such as line breaks (enters), and tabs.
 
 4. **Special Characters**: This includes various special symbols, such as:
    - `{, !, ?, #, <, >, (, ), %, ", &, ^, *, <<, >>, [, ], +, =, /, -, _, :, ;, }`
+
 
 
 
