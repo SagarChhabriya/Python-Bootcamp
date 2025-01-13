@@ -51,10 +51,114 @@
     ```
 
 
+## Python Tokens
+
+
+Tokens are the smallest individual units or elements in a Python program that the Python interpreter identifies. These tokens serve as the building blocks of the source code.
+
+Python language supports various types of tokens, including:
+
+- **Keywords (Reserved words)**: `True`, `False`, `None`, `class`, `continue`, `break`, `if`, `elif`, `else`, `from`, `or`, `def`, `del`, `import`, etc.
+- **Identifiers**: User-defined names.
+- **Literals**: String, Numeric, Boolean, Collection.
+- **Delimiters**: `()`, `{}`, `[]`, `:`, `.`, `=`, `;`, `+=`, `-=`, `*=`, `/=`, `%=`, etc.
+- **Operators**: `+`, `-`, `*`, `**`, `/`, `%`, `<<`, `>>`, etc.
+
+![](assets/01-python-tokens.png)
+
+Python interpreter scans written text in the program source code and converts it into tokens during the conversion of source code into machine code.
+
+# How to Identify Tokens in a Python Program?
+
+To identify the tokens in a Python program, let's consider an example.
+
+### Python Program to Find the Subtraction of Two Numbers
+
+```python
+# Python program to find the subtraction of two numbers.
+x = int(input("Enter your first number = "))
+y = int(input("Enter your second number = "))
+sub = x - y
+print("Result = ", sub)
+```
+
+**Output:**
+```
+Enter your first number = 30
+Enter your second number = 20
+Result =  10
+```
+
+### Token Breakdown:
+
+1. **First Statement:**
+   The first statement consists of the following tokens:
+   ```
+   x = int(input("Enter your first number = "))
+   ```
+   - `x`
+   - `=`
+   - `int`
+   - `(`
+   - `input`
+   - `(`
+   - `"Enter your first number = "`
+   - `)`
+   - `)`
+
+2. **Second Statement:**
+   The second statement contains the following tokens:
+   ```
+   y = int(input("Enter your second number = "))
+   ```
+   - `y`
+   - `=`
+   - `int`
+   - `(`
+   - `input`
+   - `(`
+   - `"Enter your second number = "`
+   - `)`
+   - `)`
+
+3. **Third Statement:**
+   The third statement contains the following tokens:
+
+   ```
+   sub = x - y
+   ```
+   - `sub`
+   - `=`
+   - `x`
+   - `-`
+   - `y`
+
+### Notes:
+- The Python interpreter ignores the `#` comment symbol and the text that follows it.
+- Tokens are used by the interpreter to detect errors, primarily syntax errors. If tokens are not arranged in the correct sequence, the interpreter will produce an error.
+
+
 ## Python Character Set
+# Character Set Used in Python
+
+The character set in Python includes the following characters:
+
+1. **Alphabet**: This includes both uppercase and lowercase English alphabet letters:
+   - Uppercase: `{A, B, C, D, E, ...}`
+   - Lowercase: `{a, b, c, d, e, f, ...}`
+
+2. **Digits**: This includes the numeric digits:
+   - `{0, 1, 2, ... 9}`
+
+3. **White Spaces**: This includes spaces, line breaks (enters), and tabs.
+
+4. **Special Characters**: This includes various special symbols, such as:
+   - `{, !, ?, #, <, >, (, ), %, ", &, ^, *, <<, >>, [, ], +, =, /, -, _, :, ;, }`
 
 
-## Python Tokens, Keywords, PEP8
+
+
+##  Keywords, PEP8
 
 ---
 
