@@ -68,7 +68,7 @@ Python language supports various types of tokens, including:
 
 Python interpreter scans written text in the program source code and converts it into tokens during the conversion of source code into machine code.
 
-# How to Identify Tokens in a Python Program?
+## How to Identify Tokens in a Python Program?
 
 To identify the tokens in a Python program, let's consider an example.
 
