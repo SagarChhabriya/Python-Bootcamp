@@ -161,6 +161,24 @@ The character set in Python includes the following characters:
 
 
 ##  Keywords, PEP8
+## Python Reserved Keywords (3.12.0)
+
+In Python, reserved keywords are special words that have predefined meanings and cannot be used as identifiers (like variable or function names).
+
+To get a list of reserved keywords in Python 3.12.0, you can use the `keyword` module as follows:
+
+### Code Example
+
+```python
+import keyword
+print(keyword.kwlist)
+```
+
+```css
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+```
+
+These are the reserved keywords in Python 3.12.0. They cannot be used as variable or function names in your code.
 
 ---
 
