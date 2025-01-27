@@ -530,11 +530,14 @@ print(type(text))  # Output: <class 'str'>
 
 | Method                        | Description and Example Code                                                                                          | Output                       |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------|------------------------------|
-| **Upper Case (`upper()`)**     | ```python\n# Converts all characters in a string to uppercase.\na = "Hello, World!"\nprint(a.upper())```                    | "HELLO, WORLD!"              |
-| **Lower Case (`lower()`)**     | ```python\n# Converts all characters in a string to lowercase.\na = "Hello, World!"\nprint(a.lower())```                    | "hello, world!"              |
-| **Remove Whitespace (`strip()`)** | ```python\n# Removes leading and trailing whitespace (spaces, tabs, etc.).\na = " Hello, World! "\nprint(a.strip())```       | "Hello, World!"              |
-| **Replace String (`replace()`)** | ```python\n# Replaces a substring in the string with another substring.\na = "Hello, World!"\nprint(a.replace("H", "J"))```  | "Jello, World!"              |
-| **Split String (`split()`)**   | ```python\n# Splits the string at the specified separator and returns a list of substrings.\na = "Hello, World!"\nprint(a.split(","))``` | `['Hello', ' World!']`       |
+| **Upper Case (`upper()`)**     | Converts all characters in a string to uppercase. <br>`a = "Hello, World!"`<br>`print(a.upper())`                    | "HELLO, WORLD!"              |
+| **Lower Case (`lower()`)**     | Converts all characters in a string to lowercase.<br>`a = "Hello, World!"`<br>`print(a.lower())`                    | "hello, world!"              |
+| **Remove Whitespace (`strip()`)** | Removes leading and trailing whitespace (spaces, tabs, etc.).<br>`a = " Hello, World! "`<br>`print(a.strip())`       | "Hello, World!"              |
+| **Replace String (`replace()`)** | Replaces a substring in the string with another substring.<br>`a = "Hello, World!"`<br>`print(a.replace("H", "J"))`  | "Jello, World!"              |
+| **Split String (`split()`)**   | Splits the string at the specified separator and returns a list of substrings.<br>`a = "Hello, World!"`<br>`print(a.split(","))` | `['Hello', ' World!']`       |
+
+---
+
 
 
 
