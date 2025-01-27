@@ -131,7 +131,7 @@ Python has the following built-in data types:
 
 > **Note**: In Python, everything is an object, including the data types.
 
-### `int` Data Type
+### 1. `int` Data Type
 
 The `int` data type represents whole numbers (integral values).
 
@@ -208,6 +208,136 @@ print(d)  # Output: 2
 > **Note**: Even though you can specify integer values in binary, octal, or hexadecimal form, Python will always treat them as decimal when working with the values.
 
 
+## Base Conversions in Python
+
+Python provides built-in functions for converting numbers from one base to another. These functions allow you to convert numbers from any base to binary, octal, or hexadecimal.
+
+### 1. `bin()`
+The `bin()` function converts a number from any base to binary (base-2).
+
+#### Example:
+```python
+print(bin(15))        # Output: 0b1111 (Binary representation of 15)
+print(bin(0o11))      # Output: 0b1011 (Binary representation of octal 11)
+print(bin(0x10))      # Output: 0b10000 (Binary representation of hexadecimal 10)
+```
+
+### 2. `oct()`
+The `oct()` function converts a number from any base to octal (base-8).
+
+#### Example:
+```python
+print(oct(10))        # Output: 0o12 (Octal representation of 10)
+print(oct(0b1111))    # Output: 0o17 (Octal representation of binary 1111)
+print(oct(0x123))     # Output: 0o443 (Octal representation of hexadecimal 123)
+```
+
+### 3. `hex()`
+The `hex()` function converts a number from any base to hexadecimal (base-16).
+
+#### Example:
+```python
+print(hex(100))       # Output: 0x64 (Hexadecimal representation of 100)
+print(hex(0b111111))  # Output: 0x3f (Hexadecimal representation of binary 111111)
+print(hex(0o12345))   # Output: 0x5345 (Hexadecimal representation of octal 12345)
+```
+
+### In Short:
+- **`bin()`**: Converts any number to binary.
+- **`oct()`**: Converts any number to octal.
+- **`hex()`**: Converts any number to hexadecimal. 
+
+These functions are useful for converting between number systems and can be applied to numbers in decimal, binary, octal, or hexadecimal forms.
+
+
+### 2. `float` Data Type
+
+The `float` data type represents floating-point numbers, which are decimal values (values with a fractional part). 
+
+#### Example:
+```python
+f = 1.234
+print(type(f))  # Output: <class 'float'>
+```
+
+We can also represent floating-point numbers using **scientific notation** (exponential form), which is especially useful for large or small numbers.
+
+#### Example:
+```python
+f = 1.2e3  # This is equivalent to 1.2 * 10^3, or 1200
+print(f)  # Output: 1200.0
+
+f = 2.5E4  # Equivalent to 2.5 * 10^4, or 25000
+print(f)  # Output: 25000.0
+```
+
+> **Note**: While integers can be represented in decimal, binary, octal, or hexadecimal form, **floating-point values can only be represented in decimal form**.
+
+#### Example of Invalid Floating-point Representation:
+```python
+f = 0B11.01  # This will raise a SyntaxError, as floating-point numbers can't be written in binary form.
+```
+
+---
+
+### 3. `Complex` Data Type
+
+A **complex number** has a real part and an imaginary part. It is written in the form:
+
+```
+a + bj
+```
+
+Where:
+- `a` is the real part
+- `b` is the imaginary part
+
+#### Examples of Complex Numbers:
+```python
+a = 3 + 5j  # Real part: 3, Imaginary part: 5
+b = 10 - 5.5j  # Real part: 10, Imaginary part: -5.5
+c = 0.5 + 0.1j  # Real part: 0.5, Imaginary part: 0.1
+```
+
+#### Complex Number with Different Forms for Real Part:
+You can use different number systems (decimal, octal, binary, hexadecimal) for the real part, but the imaginary part must always be represented in decimal form.
+
+#### Examples:
+```python
+a = 0B11 + 5j  # Binary for real part, decimal for imaginary part
+print(a)  # Output: (3+5j)
+
+a = 3 + 0B11j  # Decimal for real part, binary for imaginary part (Note: imaginary part should be in decimal)
+print(a)  # Output: SyntaxError: invalid syntax
+```
+
+#### Operations with Complex Numbers:
+You can perform mathematical operations on complex numbers as well.
+
+```python
+a = 10 + 1.5j
+b = 20 + 2.5j
+c = a + b
+print(c)  # Output: (30+4.0j)
+print(type(c))  # Output: <class 'complex'>
+```
+
+#### Accessing Real and Imaginary Parts:
+Complex numbers in Python have built-in attributes to access their real and imaginary parts.
+
+```python
+c = 10.5 + 3.6j
+print(c.real)  # Output: 10.5
+print(c.imag)  # Output: 3.6
+```
+
+### Applications of Complex Numbers:
+Complex numbers are commonly used in fields such as:
+- **Scientific computing**
+- **Electrical engineering**
+- **Signal processing**
+
+They are helpful for representing phenomena involving oscillations, waveforms, and electrical circuits.
 
 
   - Static vs Dynamic Typing
