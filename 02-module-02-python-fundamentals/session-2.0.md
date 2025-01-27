@@ -853,5 +853,191 @@ In this example, both `x` and `y` have the same value, and therefore, their uniq
 
 ---
 
+## `dir()` Function
+The `dir()` function in Python is used to get a list of all the attributes and methods that are available for an object. It provides a simple way to inspect the properties and functions that can be accessed or used for any given object.
+
+### Basic Usage of `dir()`
+When called without arguments, `dir()` returns the list of names in the current scope (i.e., the variables, functions, and modules available).
+
+#### Example 1: Using `dir()` on a String Object
+You can use `dir()` to view the available methods and properties of a string.
+
+```python
+print(dir("Hello"))
+```
+
+Output:
+```
+['__class__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'swapcase', 'title', 'upper', 'zfill']
+```
+
+This output lists all the special and regular methods associated with string objects, such as `lower()`, `split()`, `capitalize()`, and so on.
+
+### Example 2: Using `dir()` on a List Object
+You can also use `dir()` to inspect the available methods for a list.
+
+```python
+my_list = [1, 2, 3, 4]
+print(dir(my_list))
+```
+
+Output:
+```
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__iadd__', '__imul__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+```
+
+This lists methods like `append()`, `remove()`, `sort()`, and other operations you can perform on lists.
+
+`Note`: Don't get worried about the classes, we learn these all concepts in our later chapters this is just an example.
+
+### Example 3: Using `dir()` on a Custom Class
+If you define your own class, you can use `dir()` to see the special and regular methods that are available.
+
+```python
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        return f"Hello, my name is {self.name}!"
+
+person = Person("Alice", 30)
+print(dir(person))
+```
+
+Output:
+```
+['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__ne__', '__new__', '__reduce__', '__repr__', '__setattr__', '__sizeof__', '__str__', 'greet', 'name', 'age']
+```
+
+You can see `greet`, `name`, and `age` as part of the attributes and methods of the `Person` class.
+
+---
+
+## `help()` Function
+The `help()` function is used to display documentation about an object, function, or module. It provides details about the usage, parameters, return values, and other important information.
+
+### Example 1: Using `help()` on a Built-in Function
+You can use `help()` to get documentation on built-in Python functions, such as `print()`.
+
+```python
+help(print)
+```
+
+Output:
+```
+Help on built-in function print in module builtins:
+
+print(...)
+    print([object, ...], sep=' ', end='\n', file=sys.stdout, flush=False)
+    
+    Prints the values to a stream, or to sys.stdout by default. Optional keyword arguments:
+    
+    sep --  string inserted between values, default a space
+    end --  string appended after the last value, default a newline
+    file --  a file-like object (stream); defaults to the current sys.stdout
+    flush --  whether to forcibly flush the stream.
+```
+
+This provides a detailed explanation of the `print()` function, including its parameters like `sep`, `end`, `file`, and `flush`.
+
+### Example 2: Using `help()` on a Class
+You can use `help()` to learn more about any class, such as the built-in `str` class.
+
+```python
+help(str)
+```
+
+Output:
+```
+Help on class str in module builtins:
+
+class str(object)
+ |  str(object='') -> str
+ |  
+ |  Built-in class for strings.
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(self, value, /)
+ |      Return self+value.
+ |  
+ |  __contains__(self, key, /)
+ |      Return a boolean indicating whether a substring exists in the string.
+ |  
+ |  __eq__(self, value, /)
+ |      Return self==value.
+ |  
+ |  ...
+```
+
+The output provides details on the `str` class, including the methods like `__add__()`, `__contains__()`, `__eq__()`, and others. 
+
+### Example 3: Using `help()` on a Module
+You can use `help()` to get information about a Python module. For example, let's check the `math` module.
+
+```python
+import math
+help(math)
+```
+
+Output:
+```
+Help on module math:
+
+NAME
+    math - Mathematical functions
+
+DESCRIPTION
+    This module provides access to mathematical functions.
+
+FUNCTIONS
+    acos(x)
+        Return the arc cosine of x in radians.
+    acosh(x)
+        Return the inverse hyperbolic cosine of x.
+    ...
+```
+
+This shows a list of functions available in the `math` module, along with a brief description of each.
+
+### Example 4: Using `help()` on a Custom Class
+You can also use `help()` on a class that you define yourself.
+
+```python
+class Person:
+    """A class representing a person."""
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        """Greets the person."""
+        return f"Hello, my name is {self.name}!"
+
+help(Person)
+```
+
+Output:
+```
+Help on class Person in module __main__:
+
+class Person(builtins.object)
+ |  A class representing a person.
+ |  
+ |  Methods defined here:
+ |  
+ |  __init__(self, name, age)
+ |      Initialize the person's name and age.
+ |  
+ |  greet(self)
+ |      Greets the person.
+```
+
+This shows the class-level documentation and the methods defined in the class (`__init__` and `greet`).
+
+---
 
 

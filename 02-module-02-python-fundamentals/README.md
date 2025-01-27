@@ -33,7 +33,11 @@
   - Output formatting
 
 - [**2.7 Working with Python Functions**](/02-module-02-python-fundamentals/session-2.0.md/#27-working-with-python-functions)
-  - `type()` function
-  - `id()` function
+  - `type()` used to determine the type of an object. 
+  - `id()`  returns the unique identifier (memory address) of an object
+  - `dir()` returns a list of attributes and methods of an object.
+  - `help()` provides documentation about an object or function.
+
+
 
 
