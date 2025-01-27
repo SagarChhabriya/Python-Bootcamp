@@ -498,6 +498,117 @@ Scripting languages are used to create scripts that automate tasks without requi
 
 # 2.5 Variables
 
+
+
+## What are Variables?
+
+Variables are used to store data values in Python.
+
+## Creating Variables
+
+In Python, there’s no need to explicitly declare a variable. It’s created when you assign a value to it.
+
+### Example:
+```python
+age = 25
+name = "Alice"
+print(age)
+print(name)
+```
+
+## Changing Variable Type
+
+A variable in Python can change its type after it's been assigned a value. Python doesn’t require a fixed type for variables.
+
+### Example:
+```python
+score = 10       # score is an integer
+score = "High"   # score is now a string
+print(score)
+```
+
+## Casting Variables
+
+You can explicitly change the type of a variable using casting functions.
+
+### Example:
+```python
+x = str(10)   # x becomes '10' (string)
+y = int(10)   # y becomes 10 (integer)
+z = float(10) # z becomes 10.0 (float)
+```
+
+## Checking Variable Type
+
+To find out the type of a variable, use the `type()` function.
+
+### Example:
+```python
+age = 25
+name = "Alice"
+print(type(age))
+print(type(name))
+```
+
+## Single or Double Quotes?
+
+You can define string variables using either single quotes or double quotes.
+
+### Example:
+```python
+greeting = "Hello"
+# is the same as
+greeting = 'Hello'
+```
+
+## Case-Sensitivity
+
+Variable names in Python are case-sensitive. This means that lowercase and uppercase letters are treated as different variables.
+
+### Example:
+```python
+height = 150
+Height = "Tall"
+# 'Height' is a different variable from 'height'
+```
+
+## Assigning Multiple Values to Multiple Variables
+
+Python allows you to assign values to multiple variables in one line.
+
+### Example:
+```python
+color1, color2, color3 = "Red", "Green", "Blue"
+print(color1)
+print(color2)
+print(color3)
+```
+
+> **Note:** Ensure the number of variables matches the number of values to avoid errors.
+
+## Assigning One Value to Multiple Variables
+
+You can also assign the same value to several variables in a single line.
+
+### Example:
+```python
+color1 = color2 = color3 = "Yellow"
+print(color1)
+print(color2)
+print(color3)
+```
+
+
+## Exercise
+
+Which of these is the correct syntax to assign the value 'Goodbye' to three variables in one statement?
+
+1. `a, b, c = 'Goodbye'`
+2. `a = b = c = 'Goodbye'`
+3. `a|b|c = 'Goodbye'`
+
+---
+
 ## Identifiers
 
 In Python, an **identifier** is a name given to various program elements such as classes, functions, modules, or variables.
@@ -573,99 +684,6 @@ Evaluate whether the following names are valid Python identifiers:
 **Note**:
 - An identifier starting with a single underscore (`_`) typically signals that it is private (although not strictly enforced in Python).
 - Identifiers that start and end with two underscores (`__`) are **magic methods** (e.g., `__add__`).
-
-
-
-
-
-
-# Variables and Assignments in Python vs Other Languages
-
-In programming, **variables** are used to store data values. The way variables are declared and assigned values can vary between programming languages. Let's compare **Python** with other languages such as **C**, **Java**, and **JavaScript**.
-
-## 1. **Variable Declaration and Assignment in Python**
-In Python, you don’t need to explicitly declare the type of a variable before assigning a value to it. The type is automatically inferred from the value assigned. This is due to Python being a **dynamically typed** language.
-
-### Example:
-```python
-x = 10            # x is an integer
-y = "Hello"       # y is a string
-z = 3.14          # z is a float
-```
-
-- Python uses a simple assignment operator `=`.
-- **No need for explicit type declaration.**
-- Variables are created when they are assigned a value.
-
-### Variable Types in Python:
-- Integers (`int`), Floating-point numbers (`float`), Strings (`str`), Booleans (`bool`), Lists (`list`), Dictionaries (`dict`), etc.
-  
-## 2. **Variable Declaration and Assignment in C**
-In C, variables must be **explicitly declared** with a specific type before they can be assigned a value. C is a **statically typed** language, meaning the type of the variable is determined at compile-time and cannot change during runtime.
-
-### Example:
-```c
-int x = 10;       // x is an integer
-char y[] = "Hello";  // y is a string (character array)
-float z = 3.14;   // z is a float
-```
-
-- In C, you must specify the type of variable (e.g., `int`, `char`, `float`).
-- Variables must be declared **before** they are used.
-
-## 3. **Variable Declaration and Assignment in Java**
-Java, like C, is also a **statically typed** language. Variables in Java must be explicitly declared with a type, and the type cannot change once declared.
-
-### Example:
-```java
-int x = 10;       // x is an integer
-String y = "Hello";  // y is a string
-double z = 3.14;  // z is a double
-```
-
-- Java requires explicit type declaration (`int`, `String`, `double`).
-- **Variables cannot change types** after they are declared.
-
-## 4. **Variable Declaration and Assignment in JavaScript**
-JavaScript is more similar to Python in that it is a **dynamically typed** language. You don’t need to specify the type of a variable when declaring it, and the type can change during runtime.
-
-### Example:
-```javascript
-let x = 10;       // x is a number
-let y = "Hello";  // y is a string
-let z = 3.14;     // z is a float
-```
-
-- JavaScript uses `let`, `const`, or `var` for declaring variables.
-  - `let` is used to declare a variable with block scope.
-  - `const` is used to declare a variable that cannot be reassigned.
-  - `var` is used to declare variables with function scope, but is now largely outdated.
-
-### Differences Between Python and Other Languages:
-
-| Feature                          | **Python**                    | **C**                            | **Java**                        | **JavaScript**                  |
-|-----------------------------------|-------------------------------|----------------------------------|---------------------------------|---------------------------------|
-| **Variable Declaration**          | Implicit (no type required)   | Explicit (type required)         | Explicit (type required)        | Implicit (no type required)     |
-| **Type of Language**              | Dynamically typed             | Statically typed                | Statically typed                | Dynamically typed               |
-| **Variable Type Change**          | Allowed                       | Not allowed                     | Not allowed                     | Allowed                         |
-| **Variable Scope**                | Global/Local                   | Local (in functions)            | Local (in methods)              | Local (block-scoped with `let`) |
-| **Memory Management**             | Automatic (Garbage Collection) | Manual (developer-controlled)   | Automatic (Garbage Collection)  | Automatic (Garbage Collection)  |
-
-
-<!-- # 2.6 Input and Output in Python
-  - The `input()` function
-  - Single input, Multiple input
-  - Vulnerability in `input()` (Python 2.x)
-  - The `print()` function
-    - New line
-    - Parameters: `end`, `sep`
-  - `raw_input()` (Note: Python 2.x)
-  - Output formatting
-
-# 2.7 Working with Python Functions
-  - `type()` function
-  - `id()` function -->
-
 
 ---
 
