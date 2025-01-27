@@ -611,6 +611,8 @@ This will print:
 
 
 
+## String Methods
+
 | **Method**        | **Description**                                                      | **Example**                                                |
 |-------------------|----------------------------------------------------------------------|------------------------------------------------------------|
 | `capitalize()`     | Converts the first character to uppercase.                            | `"hello".capitalize()` -> `"Hello"`                         |
