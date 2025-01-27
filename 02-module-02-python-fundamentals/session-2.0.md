@@ -682,16 +682,66 @@ print(f"Hello, {name}!")
 In this example, the program prompts the user to input their name and then greets them with a message.
 
 
-## Vulnerability in `input()` (Python 2.x)
-In Python 2.x, the `input()` function evaluated the input as a Python expression, which posed a security risk if untrusted input was provided. This is no longer a problem in Python 3.x.
 
-### Example (Python 2.x):
+## Vulnerability in `input()` (Python 2.x)
+
+In Python 2.x, the `input()` function evaluated the user's input as a Python expression. This posed a significant security risk because an attacker could input malicious code that would be executed by Python. This is no longer an issue in Python 3.x, as `input()` always returns a string.
+
+### Example of the Vulnerability (Python 2.x):
+
+Consider the following Python 2.x code:
+
 ```python
 # Python 2.x
-user_input = input("Enter a value: ")  # Can be exploited with malicious input.
+user_input = input("Enter a value: ")
+print("You entered:", user_input)
 ```
 
-In Python 3.x, this behavior has been fixed, and `input()` always returns a string.
+If a user enters a simple integer like `5`, the code will work fine, returning the value `5` as expected:
+
+```
+Enter a value: 5
+You entered: 5
+```
+
+However, if the user enters something more malicious, such as `__import__('os').system('rm -rf /')`, Python 2.x will treat the input as a Python expression and execute it:
+
+```python
+Enter a value: __import__('os').system('rm -rf /')
+```
+
+This would run the command `rm -rf /`, which in a real-world scenario could result in disastrous consequences, like deleting system files.
+
+This vulnerability occurs because `input()` in Python 2.x evaluates the input as a Python expression. In the case above, the expression `__import__('os').system('rm -rf /')` is executed, and the `os.system()` function is invoked to run shell commands.
+
+### Fix in Python 3.x
+
+In Python 3.x, the `input()` function was modified to return the input as a string and no longer evaluate the input as a Python expression. This change eliminates the security risk.
+
+In Python 3.x, the following code would simply treat the input as a string:
+
+```python
+# Python 3.x
+user_input = input("Enter a value: ")
+print("You entered:", user_input)
+```
+
+If the user enters `__import__('os').system('rm -rf /')`, the program will simply print the string:
+
+```
+Enter a value: __import__('os').system('rm -rf /')
+You entered: __import__('os').system('rm -rf /')
+```
+
+This input is treated as a plain string, and no harmful code is executed.
+
+---
+
+This change made in Python 3.x greatly improves security and prevents malicious users from exploiting the `input()` function.
+
+### Explanation:
+- In Python 2.x, `input()` would execute anything that looked like a valid Python expression. This could be dangerous if the user input was not trusted like `SQL injection`.
+- In Python 3.x, `input()` no longer evaluates the input as Python code, instead treating everything as a string, which is safer.
 
 ## The `print()` function
 The `print()` function in Python outputs data to the console. You can customize the behavior of `print()` using several parameters.
