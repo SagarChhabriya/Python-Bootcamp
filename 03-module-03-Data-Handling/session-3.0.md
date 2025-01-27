@@ -535,6 +535,8 @@ print(type(text))  # Output: <class 'str'>
 | **Remove Whitespace (`strip()`)** | Removes leading and trailing whitespace (spaces, tabs, etc.).<br>`a = " Hello, World! "`<br>`print(a.strip())`       | "Hello, World!"              |
 | **Replace String (`replace()`)** | Replaces a substring in the string with another substring.<br>`a = "Hello, World!"`<br>`print(a.replace("H", "J"))`  | "Jello, World!"              |
 | **Split String (`split()`)**   | Splits the string at the specified separator and returns a list of substrings.<br>`a = "Hello, World!"`<br>`print(a.split(","))` | `['Hello', ' World!']`       |
+| **String Concatenation (`+`)** | Combines two or more strings into a single string.<br>`a = "Hello"`<br>`b = "World"`<br>`c = a + b`<br>`print(c)`    | "HelloWorld"                 |
+|                               | Add a space between the strings.<br>`c = a + " " + b`<br>`print(c)`                                                   | "Hello World"                |
 
 ---
 
