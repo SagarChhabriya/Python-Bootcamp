@@ -143,6 +143,12 @@ print(type(a))  # Output: <class 'int'>
 
 > **Note**: In Python 2, there was a `long` data type for representing very large integers. In Python 3, the `int` type can handle large values, so there's no need for a separate `long` type.
 
+
+### Python 2 `long` Data Type
+
+In Python 2, there was a `long` data type for very large integers. However, in Python 3, `long` has been removed, and large integers are represented using the `int` type.
+
+
 ### Representing `int` Values in Different Number Systems
 
 You can represent integer values in various number systems:
@@ -338,6 +344,215 @@ Complex numbers are commonly used in fields such as:
 - **Signal processing**
 
 They are helpful for representing phenomena involving oscillations, waveforms, and electrical circuits.
+
+### 4. `bool` Data Type
+
+The `bool` data type is used to represent **Boolean values**. The only allowed values for this data type are `True` and `False`.
+
+Internally, Python represents:
+- `True` as 1
+- `False` as 0
+
+#### Example:
+```python
+b = True
+print(type(b))  # Output: <class 'bool'>
+```
+
+#### Using Boolean Expressions:
+You can also use Boolean values in expressions to check conditions.
+
+```python
+a = 10
+b = 20
+c = a < b  # This is a comparison, which returns a Boolean value
+print(c)  # Output: True
+```
+
+#### Arithmetic with Booleans:
+Since `True` is 1 and `False` is 0 internally, you can perform arithmetic operations on them.
+
+```python
+print(True + True)  # Output: 2
+print(True - False)  # Output: 1
+```
+
+---
+
+### 5. `str` Data Type
+
+The `str` data type represents **string values** (a sequence of characters). Strings can be enclosed in single quotes (`'`) or double quotes (`"`).
+
+#### Examples:
+```python
+name = "Sagar"
+print(name)  # Output: Sagar
+
+name = 'Sagar'
+print(name)  # Output: Sagar
+```
+
+#### Multi-line Strings:
+To represent multi-line strings, you can use **triple quotes** (`'''` or `"""`).
+
+#### Example:
+```python
+name = '''Sagar
+Chhabriya'''
+print(name)
+# Output:
+# Sagar
+# Chhabriya
+
+name = """Sagar
+Chhabriya"""
+print(name)
+# Output:
+# Sagar
+# Chhabriya
+```
+
+You can also use triple quotes to embed quotes within the string.
+
+#### Example:
+```python
+name = '''This is "a" character'''
+print(name)  # Output: This is "a" character
+
+name = 'This is "character"'
+print(name)  # Output: This is "character"
+```
+
+---
+
+### Python String Slicing
+
+String slicing in Python allows you to extract a part of a string using a **start index** and an **end index**. The general syntax for slicing is:
+
+```python
+string[start:end]
+```
+
+Where:
+- `start`: The index from where the slice starts (inclusive).
+- `end`: The index where the slice ends (exclusive).
+
+### Examples:
+
+1. **Basic Slicing**:
+   Get characters from position 2 to position 5 (not included):
+   ```python
+   b = "Hello, World!"
+   print(b[2:5])  # Output: "llo"
+   ```
+
+2. **Slice From the Start**:
+   If the `start` index is omitted, it defaults to the beginning of the string:
+   ```python
+   b = "Hello, World!"
+   print(b[:5])  # Output: "Hello"
+   ```
+
+3. **Slice To the End**:
+   If the `end` index is omitted, it defaults to the end of the string:
+   ```python
+   b = "Hello, World!"
+   print(b[2:])  # Output: "llo, World!"
+   ```
+
+4. **Negative Indexing**:
+   You can use negative indices to slice from the end of the string. For example:
+   ```python
+   b = "Hello, World!"
+   print(b[-5:-2])  # Output: "orl"
+   ```
+
+   - `-1` refers to the last character, `-2` is the second-last, and so on.
+
+### Exercise: What will the result of the following code be?
+```python
+x = 'Welcome'
+print(x[3:5])
+```
+Answer: `"co"`
+
+This is because the slice starts at index 3 (which is `'c'`) and ends just before index 5 (which is `'o'`).
+
+In Python, strings are **zero-indexed**, meaning the first character has index 0. You can use slicing (`[]`) to access parts of a string. 
+
+- **Positive Indexing**: Counts from left to right.
+- **Negative Indexing**: Counts from right to left.
+
+#### Example:
+```python
+name = "sagar"
+print(name[0])  # Output: s (first character)
+print(name[1])  # Output: a (second character)
+print(name[-1])  # Output: r (last character)
+
+# Slicing to get a substring
+print(name[1:4])  # Output: aga (characters from index 1 to 3)
+
+# Slicing to get from the start to index 4
+print(name[:4])  # Output: sag
+
+# Slicing to get from index 1 to the end
+print(name[1:])  # Output: agar
+
+# Repeating a string
+print(name * 3)  # Output: sagarsagarsagar
+
+# Length of the string
+print(len(name))  # Output: 5
+```
+
+> **Note**: In Python, the following data types are considered fundamental data types:
+- `int`
+- `float`
+- `complex`
+- `bool`
+- `str`
+
+---
+
+### Characters as Strings
+
+In Python, there is no separate `char` data type. Characters are simply **strings of length 1**.
+
+#### Example:
+```python
+text = 'a'
+print(type(text))  # Output: <class 'str'>
+```
+
+---
+
+### Modify Strings in Python
+
+| Method                        | Description                                                        | Example Code                                             | Output                       |
+|-------------------------------|--------------------------------------------------------------------|----------------------------------------------------------|------------------------------|
+| **Upper Case (`upper()`)**     | Converts all characters in a string to uppercase.                  | `a = "Hello, World!"`<br>`print(a.upper())`               | "HELLO, WORLD!"              |
+| **Lower Case (`lower()`)**     | Converts all characters in a string to lowercase.                  | `a = "Hello, World!"`<br>`print(a.lower())`               | "hello, world!"              |
+| **Remove Whitespace (`strip()`)** | Removes leading and trailing whitespace (spaces, tabs, etc.).     | `a = " Hello, World! "`<br>`print(a.strip())`             | "Hello, World!"              |
+| **Replace String (`replace()`)** | Replaces a substring in the string with another substring.        | `a = "Hello, World!"`<br>`print(a.replace("H", "J"))`     | "Jello, World!"              |
+| **Split String (`split()`)**   | Splits the string at the specified separator and returns a list of substrings. | `a = "Hello, World!"`<br>`print(a.split(","))`           | `['Hello', ' World!']`       |
+
+---
+
+### Exercise Question:
+
+**What is the correct syntax to print a string in upper case letters?**
+
+- `'Welcome'.upper()` ✔️
+- `'Welcome'.toUpper()` ❌
+- `'Welcome'.toUpperCase()` ❌
+
+**Correct Answer:** `'Welcome'.upper()`
+
+
+
+
+
 
 
   - Static vs Dynamic Typing
