@@ -526,28 +526,19 @@ print(type(text))  # Output: <class 'str'>
 ```
 
 ---
-
 ### Modify Strings in Python
 
-| Method                        | Description                                                        | Example Code                                             | Output                       |
-|-------------------------------|--------------------------------------------------------------------|----------------------------------------------------------|------------------------------|
-| **Upper Case (`upper()`)**     | Converts all characters in a string to uppercase.                  | `a = "Hello, World!"`<br>`print(a.upper())`               | "HELLO, WORLD!"              |
-| **Lower Case (`lower()`)**     | Converts all characters in a string to lowercase.                  | `a = "Hello, World!"`<br>`print(a.lower())`               | "hello, world!"              |
-| **Remove Whitespace (`strip()`)** | Removes leading and trailing whitespace (spaces, tabs, etc.).     | `a = " Hello, World! "`<br>`print(a.strip())`             | "Hello, World!"              |
-| **Replace String (`replace()`)** | Replaces a substring in the string with another substring.        | `a = "Hello, World!"`<br>`print(a.replace("H", "J"))`     | "Jello, World!"              |
-| **Split String (`split()`)**   | Splits the string at the specified separator and returns a list of substrings. | `a = "Hello, World!"`<br>`print(a.split(","))`           | `['Hello', ' World!']`       |
+| Method                        | Description and Example Code                                                                                          | Output                       |
+|-------------------------------|-------------------------------------------------------------------------------------------------------------------------|------------------------------|
+| **Upper Case (`upper()`)**     | `# Converts all characters in a string to uppercase.`<br>`a = "Hello, World!"`<br>`print(a.upper())`                    | "HELLO, WORLD!"              |
+| **Lower Case (`lower()`)**     | `# Converts all characters in a string to lowercase.`<br>`a = "Hello, World!"`<br>`print(a.lower())`                    | "hello, world!"              |
+| **Remove Whitespace (`strip()`)** | `# Removes leading and trailing whitespace (spaces, tabs, etc.).`<br>`a = " Hello, World! "`<br>`print(a.strip())`       | "Hello, World!"              |
+| **Replace String (`replace()`)** | `# Replaces a substring in the string with another substring.`<br>`a = "Hello, World!"`<br>`print(a.replace("H", "J"))`  | "Jello, World!"              |
+| **Split String (`split()`)**   | `# Splits the string at the specified separator and returns a list of substrings.`<br>`a = "Hello, World!"`<br>`print(a.split(","))` | `['Hello', ' World!']`       |
 
 ---
 
-### Exercise Question:
 
-**What is the correct syntax to print a string in upper case letters?**
-
-- `'Welcome'.upper()` ✔️
-- `'Welcome'.toUpper()` ❌
-- `'Welcome'.toUpperCase()` ❌
-
-**Correct Answer:** `'Welcome'.upper()`
 
 
 
