@@ -652,7 +652,7 @@ let z = 3.14;     // z is a float
 | **Memory Management**             | Automatic (Garbage Collection) | Manual (developer-controlled)   | Automatic (Garbage Collection)  | Automatic (Garbage Collection)  |
 
 
-# 2.6 Input and Output in Python
+<!-- # 2.6 Input and Output in Python
   - The `input()` function
   - Single input, Multiple input
   - Vulnerability in `input()` (Python 2.x)
@@ -664,7 +664,142 @@ let z = 3.14;     // z is a float
 
 # 2.7 Working with Python Functions
   - `type()` function
-  - `id()` function
+  - `id()` function -->
+
+
+---
+
+# 2.6 Input and Output in Python
+
+## The `input()` function
+The `input()` function in Python allows the user to provide input through the console. The input is always returned as a string.
+
+### Example:
+```python
+name = input("Enter your name: ")
+print(f"Hello, {name}!")
+```
+In this example, the program prompts the user to input their name and then greets them with a message.
+
+
+## Vulnerability in `input()` (Python 2.x)
+In Python 2.x, the `input()` function evaluated the input as a Python expression, which posed a security risk if untrusted input was provided. This is no longer a problem in Python 3.x.
+
+### Example (Python 2.x):
+```python
+# Python 2.x
+user_input = input("Enter a value: ")  # Can be exploited with malicious input.
+```
+
+In Python 3.x, this behavior has been fixed, and `input()` always returns a string.
+
+## The `print()` function
+The `print()` function in Python outputs data to the console. You can customize the behavior of `print()` using several parameters.
+
+### New Line
+By default, `print()` adds a newline after the output, but you can change this behavior by using the `end` parameter.
+
+### Example:
+```python
+print("Hello,", end=" ")
+print("world!")
+```
+Output:
+```
+Hello, world!
+```
+In this example, the `end=" "` argument makes sure that the two print statements are printed on the same line.
+
+### Parameters: `end`, `sep`
+- `end`: Specifies what is printed at the end of the statement. The default is `"\n"`, which creates a new line.
+- `sep`: Specifies the separator between multiple arguments passed to `print()`. The default is `" "`.
+
+### Example:
+```python
+print("Apple", "Banana", "Cherry", sep=", ")
+```
+Output:
+```
+Apple, Banana, Cherry
+```
+In this example, the `sep` parameter customizes the separator between the printed items.
+
+## `raw_input()` (Note: Python 2.x)
+In Python 2.x, `raw_input()` was used to take input as a string, while `input()` evaluated the input as a Python expression. In Python 3.x, `raw_input()` is no longer available, and `input()` behaves like `raw_input()` from Python 2.x.
+
+### Example (Python 2.x):
+```python
+# Python 2.x
+user_input = raw_input("Enter a string: ")
+```
+
+In Python 3.x, `input()` performs the same function, so there is no need for `raw_input()`.
+
+## Output Formatting
+Python provides various ways to format the output when printing values. The most common methods are using f-strings, `format()`, and string concatenation.
+
+### Example (f-strings):
+```python
+name = "John"
+age = 30
+print(f"Name: {name}, Age: {age}")
+```
+Output:
+```
+Name: John, Age: 30
+```
+
+### Example (`format()`):
+```python
+name = "John"
+age = 30
+print("Name: {}, Age: {}".format(name, age))
+```
+Output:
+```
+Name: John, Age: 30
+```
+
+### Example (String Concatenation):
+```python
+name = "John"
+age = 30
+print("Name: " + name + ", Age: " + str(age))
+```
+Output:
+```
+Name: John, Age: 30
+```
+
+---
+
+# 2.7 Working with Python Functions
+
+## The `type()` function
+The `type()` function in Python is used to determine the type of an object.
+
+### Example:
+```python
+x = 42
+print(type(x))  # Output: <class 'int'>
+
+y = "Hello, world!"
+print(type(y))  # Output: <class 'str'>
+```
+In this example, `type()` is used to check the types of an integer and a string.
+
+## The `id()` function
+The `id()` function returns the unique identifier (memory address) of an object in Python.
+
+### Example:
+```python
+x = 42
+y = 42
+print(id(x))  # Output: Some unique identifier
+print(id(y))  # Output: Same unique identifier since both are pointing to the same object
+```
+
+In this example, both `x` and `y` have the same value, and therefore, their unique identifiers (memory addresses) are the same.
 
 ---
 
