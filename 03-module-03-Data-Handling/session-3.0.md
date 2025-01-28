@@ -659,17 +659,184 @@ set_literal = {1, 2, 3, 4}
 - **Collection Literals**: `[1, 2, 3]`, `(1, 2)`, `{'key': 'value'}`, `{1, 2, 3}`
 
 
+### Static Typing vs Dynamic Typing in Python:
 
+**1. Dynamic Typing** (Python's default behavior):
 
+In Python, you don't declare the types of variables. The interpreter figures out the type at runtime.
 
+```python
+x = 10    # x is an integer
+print(type(x))  # <class 'int'>
 
+x = "Hello"  # x is now a string
+print(type(x))  # <class 'str'>
+```
 
+- Python determines that `x` is an integer first and later a string at runtime.
+- **Dynamic Typing**: Types are not explicitly declared, and can change at runtime.
 
-  - Static vs Dynamic Typing
-  - Static vs Dynamic Binding
+**2. Static Typing (not native to Python but can be enforced with type hints)**:
+
+Python is dynamically typed by default, but you can use **type hints** to suggest the type of a variable. This doesn't enforce the type at runtime, but it can be used by tools like linters or IDEs for better static analysis.
+
+```python
+def greet(name: str) -> str:
+    return "Hello " + name
+
+int x = 10   # can be written ---> x: int = 10
+x = "Hello"  # This will not raise an error at runtime, but linters will warn about it
+```
+
+- Python doesn't enforce the type at runtime, but you can specify types with **type hints**.
+- **Static Typing**: Type hints in Python can suggest types, but they are not enforced during execution.
+
+- **Dynamic Typing**: Variables can change types at runtime, as Python doesn't enforce strict type rules.
+- **Static Typing**: Can be suggested via type hints, but it isn't enforced at runtime.
+
+<!-- Static vs Dynamic Binding -->
    
 
-- **3.2 Type Conversion**
+# Type Conversion in Python
+
+In Python, we can convert values from one type to another. This process is called **Typecasting** or **Type Coercion**. Python provides several built-in functions to perform type conversion.
+
+## Built-in Type Conversion Functions:
+
+1. `int()`
+2. `float()`
+3. `complex()`
+4. `bool()`
+5. `str()`
+
+---
+
+### 1. `int()`
+The `int()` function is used to convert a value to an integer.
+
+**Examples:**
+
+```python
+int(123.987)      # Converts float to int: 123
+int(True)         # Converts boolean True to int: 1
+int(False)        # Converts boolean False to int: 0
+int("10")         # Converts string "10" to int: 10
+```
+
+**Important Notes:**
+- You cannot convert a **complex** type to an integer.
+- When converting a **string** to an integer, the string must only contain digits (integral values). It should be in base-10.
+
+**Invalid examples:**
+```python
+int(10+5j)         # TypeError: can't convert complex to int
+int("10.3")        # ValueError: invalid literal for int() with base 10: '10.3'
+int("ten")         # ValueError
+```
+
+---
+
+### 2. `float()`
+The `float()` function is used to convert a value to a floating-point number.
+
+**Examples:**
+
+```python
+float(10)          # Converts int 10 to float: 10.0
+float(True)        # Converts boolean True to float: 1.0
+float("10")        # Converts string "10" to float: 10.0
+float("10.3")      # Converts string "10.3" to float: 10.3
+```
+
+**Important Notes:**
+- You cannot convert a **complex** type to a float.
+- When converting a **string** to a float, the string must be either an integral or floating-point number in base-10.
+
+**Invalid examples:**
+```python
+float(10+5j)       # TypeError
+float("ten")       # ValueError
+float("0B1111")    # ValueError
+```
+
+---
+
+### 3. `complex()`
+The `complex()` function is used to convert values to a complex number.
+
+#### Form 1: `complex(x)`
+Converts `x` to a complex number where `x` is the real part and the imaginary part is `0`.
+
+**Examples:**
+
+```python
+complex(10)        # Converts 10 to complex: 10 + 0j
+complex(10.5)      # Converts 10.5 to complex: 10.5 + 0j
+complex(True)      # Converts True to complex: 1 + 0j
+```
+
+#### Form 2: `complex(x, y)`
+Converts `x` to the real part and `y` to the imaginary part of the complex number.
+
+**Examples:**
+
+```python
+complex(10, -6)    # Converts to complex: 10 - 6j
+complex(True, False)  # Converts to complex: 1 + 0j
+```
+
+**Invalid example:**
+```python
+complex("ten")     # ValueError
+```
+
+---
+
+### 4. `bool()`
+The `bool()` function is used to convert a value to a boolean (`True` or `False`).
+
+**Examples:**
+
+```python
+bool(0)            # Converts int 0 to False
+bool(1)            # Converts int 1 to True
+bool(10)           # Converts int 10 to True
+bool(4.4)          # Converts float 4.4 to True
+bool(0.0)          # Converts float 0.0 to False
+bool(10-3j)        # Converts complex number to True
+bool("True")       # Converts non-empty string to True
+bool("")           # Converts empty string to False
+```
+
+**Important Notes:**
+- **For int**: `0` is `False`, any non-zero integer is `True`.
+- **For float**: `0.0` is `False`, any non-zero float is `True`.
+- **For complex**: `0+0j` is `False`, any non-zero complex number is `True`.
+- **For string**: An empty string `""` is `False`, and any non-empty string is `True`.
+
+---
+
+### 5. `str()`
+The `str()` function is used to convert a value to a string.
+
+**Examples:**
+
+```python
+str(10)            # Converts int 10 to string: "10"
+str(10.5)          # Converts float 10.5 to string: "10.5"
+str(10+4j)         # Converts complex number to string: "(10+4j)"
+str(True)          # Converts boolean True to string: "True"
+```
+
+---
+
+- **Typecasting** allows you to convert values from one type to another using functions like `int()`, `float()`, `complex()`, `bool()`, and `str()`.
+- Keep in mind the rules for each conversion function, as some conversions may result in errors if the values are incompatible.
+
+---
+
+
+
   - Implicit and Explicit Conversion
 
 - **3.3 Constants in Python**
