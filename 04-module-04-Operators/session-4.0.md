@@ -175,7 +175,24 @@ result2 = 5 // 2  # Output: 2
 ```
 
 ### Operator Overloading:
-Python allows operators to be overloaded so that they behave differently based on the operands.
+Python allows operators to be overloaded so that they behave differently based on the operands. This means you can define custom behavior for operators like `+`, `-`, etc., when they are used with user-defined classes.
+
+#### Example 1: Using `+` for string concatenation:
+
+The `+` operator can be used to concatenate strings, as shown below:
+
+```python
+str1 = "Hello, "
+str2 = "World!"
+result = str1 + str2  # Concatenates the two strings
+print(result)  # Output: Hello, World!
+```
+
+In this case, the `+` operator is used to concatenate two strings. This demonstrates how the same operator behaves differently based on the data types it is used with.
+
+#### Example 2: Overloading `+` for numeric addition:
+
+In Python, you can overload operators to define custom behavior for specific classes. Here's how the `+` operator can be overloaded for a custom class to add numerical values:
 
 ```python
 class MyClass:
@@ -191,7 +208,13 @@ result = obj1 + obj2  # Calls __add__ method
 print(result)  # Output: 8
 ```
 
----
+In this example, we overloaded the `+` operator to add the `value` attribute of two `MyClass` objects.
+
+### Explanation:
+- In **Example 1**, the `+` operator is used to concatenate two string objects, resulting in the combined string `"Hello, World!"`.
+- In **Example 2**, the `+` operator is overloaded to perform numerical addition between objects of a custom class `MyClass`, adding their `value` attributes.
+
+This illustrates how the same operator (`+`) can be used with different types (strings vs. custom objects) to perform different operations.
 
 ## 4.12 Inplace vs Standard Operators
 
