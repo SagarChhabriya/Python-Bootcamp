@@ -666,9 +666,8 @@ set_literal = {1, 2, 3, 4}
 
 
   - Static vs Dynamic Typing
-  - Numbers
-  - Boolean
-  - Strings
+  - Static vs Dynamic Binding
+   
 
 - **3.2 Type Conversion**
   - Implicit and Explicit Conversion
