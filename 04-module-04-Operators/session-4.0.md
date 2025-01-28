@@ -282,3 +282,86 @@ print(x is z)  # True
 | `not in`   | Checks non-membership | `"d" not in ["a", "b", "c"]`          | `True` |
 | `is`       | Checks object identity| `x = 5; y = 5; x is y`                | `True` |
 | `is not`   | Checks non-identity   | `x = 5; y = 6; x is not y`            | `True` |
+
+
+# 4.15 Ternary Operator
+
+A **ternary operator** allows you to write a simple `if-else` condition in a single line, making the code more concise.
+
+## Syntax:
+```python
+<expression1> if <condition> else <expression2>
+```
+- If `<condition>` evaluates to `True`, then `<expression1>` is executed.
+- If `<condition>` evaluates to `False`, then `<expression2>` is executed.
+
+---
+
+## Example 1: Basic Ternary Operator
+
+```python
+a, b = 10, 20
+x = 30 if a < b else 40
+print(x)
+```
+
+**Explanation**:  
+Here, the condition `a < b` is checked. Since `a` is less than `b`, the value of `x` will be `30`.
+
+**Output**:
+```
+30
+```
+
+---
+
+## Example 2: Read Two Numbers from the Keyboard and Print the Minimum Value
+
+```python
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+min_value = a if a < b else b
+print("Minimum value:", min_value)
+```
+
+**Explanation**:  
+This example reads two numbers from the user and then uses the ternary operator to find and print the smaller of the two.
+
+**Output Example**:
+```
+Enter first number: 12
+Enter second number: 8
+Minimum value: 8
+```
+
+---
+
+## Nesting of Ternary Operators
+
+You can nest multiple ternary operators to handle more complex conditions. The general syntax would look like this:
+
+```python
+<expression1> if <condition1> else <expression2> if <condition2> else <expression3>
+```
+
+### Example:
+
+```python
+a, b, c = 10, 20, 30
+x = a if a > b and a > c else b if b > c else c
+print(x)
+```
+
+**Explanation**:  
+Here, the nested ternary operator checks which of the three values `a`, `b`, or `c` is the largest and assigns it to `x`.
+
+**Output**:
+```
+30
+```
+
+---
+
+### Note on Readability:
+
+While ternary operators can help write concise code, overusing them or nesting too many levels can reduce code readability. It’s often best to use ternary operators for simple conditions, and use regular `if-else` statements for more complex logic.

@@ -43,3 +43,5 @@
 
 - [**4.14 Membership and Identity Operators**](session-4.0.md#414-membership-and-identity-operators)
   - Differences between `in`, `not in`, `is`, `is not`
+
+- [ **4.15 Ternary Operator**](session-4.0.md#415-ternary-operator)
