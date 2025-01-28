@@ -974,66 +974,362 @@ if default_value is None:
     print("No default value assigned yet.")  # This will print
 ```
 
-### Summary
-- `None` is a special constant in Python that signifies the absence of a value.
-- It is of type `NoneType` and is used for default return values, placeholders, and indicating that a variable has no value.
-- `None` is falsy and is commonly checked using the `is` operator.
+# 3.5 Introduction to Python Collection/Data Structures
 
+Python provides several built-in collection types to store multiple items in a single variable. These collections are essential for managing large sets of data and provide a variety of operations to manipulate them.
 
-- **3.5 Introduction to Python Collection/Data Structures**
+## 3.5.1 Sequences in Python
 
-  - **3.5.1 Sequences in Python**
-    - Lists
-    - Tuples
+Sequences are ordered collections of items. Python has two main types of sequences: **Lists** and **Tuples**.
+
+### Lists
+- **Definition**: A list is a mutable, ordered collection of items. It allows duplicate values.
+- **Syntax**: Lists are defined using square brackets `[]`.
+  ```python
+  my_list = [1, 2, 3, 4, 5]
+  ```
+- **Key Operations**:
+  - Indexing and slicing: `my_list[0]` (access the first element)
+  - Appending: `my_list.append(6)`
+  - Insertion: `my_list.insert(2, 'new')`
+  - Deletion: `del my_list[1]`
+  - List comprehension: `[x*2 for x in my_list]`
+
+  Example:
+  ```python
+  my_list = [1, 2, 3]
+  my_list.append(4)  # [1, 2, 3, 4]
+  ```
+
+### Tuples
+- **Definition**: A tuple is an immutable, ordered collection of items. Like lists, tuples can contain multiple items, but once created, their elements cannot be modified.
+- **Syntax**: Tuples are defined using parentheses `()`.
+  ```python
+  my_tuple = (1, 2, 3, 4, 5)
+  ```
+- **Key Operations**:
+  - Indexing and slicing: `my_tuple[0]`
+  - Concatenation: `tuple1 + tuple2`
+  - Tuple unpacking: `a, b, c = my_tuple`
+
+  Example:
+  ```python
+  my_tuple = (1, 2, 3)
+  print(my_tuple[0])  # Output: 1
+  ```
+
+---
+
+## 3.5.2 Sets and Dictionaries
+
+### Sets
+- **Definition**: A set is an unordered collection of unique items. Sets do not allow duplicate elements and do not guarantee any specific order.
+- **Syntax**: Sets are defined using curly braces `{}` or the `set()` constructor.
+  ```python
+  my_set = {1, 2, 3, 4}
+  ```
+- **Key Operations**:
+  - Adding elements: `my_set.add(5)`
+  - Removing elements: `my_set.remove(3)`
+  - Set operations: Union (`my_set | another_set`), Intersection (`my_set & another_set`)
+
+  Example:
+  ```python
+  my_set = {1, 2, 3}
+  my_set.add(4)
+  print(my_set)  # Output: {1, 2, 3, 4}
+  ```
+
+### Frozensets
+- **Definition**: A frozenset is an immutable version of a set. Once created, frozensets cannot be modified (no adding or removing elements).
+- **Syntax**: Frozensets are created using the `frozenset()` constructor.
+  ```python
+  my_frozenset = frozenset([1, 2, 3])
+  ```
+
+  Example:
+  ```python
+  my_frozenset = frozenset([1, 2, 3])
+  print(my_frozenset)  # Output: frozenset({1, 2, 3})
+  ```
+
+### Dictionaries
+- **Definition**: A dictionary is an unordered collection of key-value pairs. Each key is unique and maps to a value.
+- **Syntax**: Dictionaries are defined using curly braces `{}` with key-value pairs separated by a colon `:`.
+  ```python
+  my_dict = {"name": "Alice", "age": 25}
+  ```
+- **Key Operations**:
+  - Accessing values: `my_dict["name"]`
+  - Adding/updating items: `my_dict["address"] = "New York"`
+  - Deleting items: `del my_dict["age"]`
+  - Dictionary comprehension: `{key: value for key, value in iterable}`
+
+  Example:
+  ```python
+  my_dict = {"name": "Alice", "age": 25}
+  my_dict["city"] = "London"
+  print(my_dict)  # Output: {"name": "Alice", "age": 25, "city": "London"}
+  ```
+
+---
+
+## 3.5.3 Maps and Data Structures
+
+### Introduction to Mapping Types
+- **Mapping types** in Python are data structures that store key-value pairs, and the most common mapping type is the **dictionary**. However, mapping types can also be extended using classes or specialized types like `defaultdict` from the `collections` module.
   
-  - **3.5.2 Sets and Dictionaries**
-    - Sets
-    - Frozensets
-    - Dictionaries
-  
-  - **3.5.3 Maps and Data Structures**
-    - Introduction to Mapping Types
+  - **defaultdict**: A subclass of the dictionary, which provides a default value for nonexistent keys.
+    ```python
+    from collections import defaultdict
+    my_defaultdict = defaultdict(int)
+    my_defaultdict["key"] += 1
+    print(my_defaultdict)  # Output: defaultdict(<class 'int'>, {'key': 1})
+    ```
+
+- **Use cases**:
+  - **Dictionaries** are ideal for when you need a flexible mapping of data where you associate unique keys with values.
+  - **defaultdict** is useful when you want to avoid key errors and provide default values when a key is accessed that doesn't exist.
+
+### Summary of Collection Types:
+- **Lists**: Ordered, mutable collections.
+- **Tuples**: Ordered, immutable collections.
+- **Sets**: Unordered collections with no duplicate items.
+- **Frozensets**: Immutable sets.
+- **Dictionaries**: Unordered collections of key-value pairs.
+- **Mapping Types**: Specialized data structures like dictionaries or `defaultdict` to map keys to values.
+
+---
+
+
+
+
 
 # 3.6 Working with Date and Time
-- **3.6.1 Introduction to Date and Time in Python**
-  - Overview of Date and Time handling in Python.
-  
-- **3.6.2 Date and Time Now**
-  - Using the `datetime` module to get the current date and time.
-  - `datetime.now()` and `datetime.today()`.
-  - Difference between `datetime.now()` and `datetime.utcnow()`.
 
-- **3.6.3 Combining Date and Time**
-  - Using `datetime.combine()` to combine date and time objects.
-  - Understanding the `date` and `time` classes in the `datetime` module.
+Handling date and time in Python is essential for many types of programs, including those that involve scheduling, event logging, or time-based data. Python provides a variety of modules and functions to work with date and time efficiently.
 
-- **3.6.4 Formatting Dates and Times**
-  - `strftime()` and `strptime()` methods for formatting dates.
-  - Common formatting codes like `%Y`, `%m`, `%d`, `%H`, `%M`, `%S`.
+## 3.6.1 Introduction to Date and Time in Python
+Python provides several modules for working with dates and times, such as:
+- **`datetime` module**: Used for handling both date and time in a more complex and flexible manner.
+- **`time` module**: Provides time-related functions like sleeping, measuring execution time, etc.
+- **`calendar` module**: Offers functionality for working with calendars.
 
-- **3.6.5 Finding Durations**
-  - Calculating the difference between two dates/times (`timedelta`).
-  - Adding and subtracting time intervals using `timedelta`.
+These modules allow you to manipulate dates and times, format them, calculate durations, and much more.
 
-- **3.6.6 Comparing Dates**
-  - Comparing dates using comparison operators (`>`, `<`, `==`, etc.).
-  - Finding the minimum and maximum dates from a list.
+---
 
-- **3.6.7 Sorting Dates**
-  - Sorting lists of dates using Python's `sorted()` function or `sort()`.
-  - Sorting a list of `datetime` objects.
+## 3.6.2 Date and Time Now
 
-- **3.6.8 Pausing Execution Temporarily**
-  - Using `time.sleep()` to pause the program for a given number of seconds.
-  - Practical use cases for pausing execution (e.g., for delays in network requests).
+### Using the `datetime` module to get the current date and time:
+The `datetime` module provides multiple ways to get the current date and time.
 
-- **3.6.9 Calculating Duration of Execution**
-  - Measuring the time taken for a program or function to execute.
-  - Using `time.time()` or `time.perf_counter()` for performance benchmarking.
+- **`datetime.now()`**: Returns the current local date and time.
+  ```python
+  from datetime import datetime
+  now = datetime.now()
+  print(now)  # Example Output: 2025-01-29 15:45:12.123456
+  ```
 
-- **3.6.10 Using the Calendar Module**
-  - Overview of the `calendar` module.
-  - Displaying calendars for specific months and years.
-  - Working with weekdays, month names, and leap years.
-  - Using `calendar.month()`, `calendar.calendar()`, and `calendar.isleap()`.
+- **`datetime.today()`**: Returns the current local date and time (same as `datetime.now()`).
+  ```python
+  today = datetime.today()
+  print(today)  # Example Output: 2025-01-29 15:45:12.123456
+  ```
+
+- **`datetime.utcnow()`**: Returns the current UTC (Coordinated Universal Time) date and time, useful for time zone differences.
+  ```python
+  utc_now = datetime.utcnow()
+  print(utc_now)  # Example Output: 2025-01-29 20:45:12.123456
+  ```
+
+### Difference between `datetime.now()` and `datetime.utcnow()`:
+- `datetime.now()` returns the current local time, considering your system's time zone.
+- `datetime.utcnow()` returns the current time in UTC, which is independent of local time zones.
+
+---
+
+## 3.6.3 Combining Date and Time
+
+You can combine separate date and time objects into one `datetime` object using `datetime.combine()`.
+
+### Using `datetime.combine()`:
+- Combines a `date` object and a `time` object into a single `datetime` object.
+  ```python
+  from datetime import date, time, datetime
+  d = date(2025, 1, 29)
+  t = time(15, 45)
+  combined = datetime.combine(d, t)
+  print(combined)  # Output: 2025-01-29 15:45:00
+  ```
+
+### `date` and `time` classes in the `datetime` module:
+- **`date` class**: Represents a date (year, month, day).
+  ```python
+  d = date(2025, 1, 29)
+  print(d)  # Output: 2025-01-29
+  ```
+
+- **`time` class**: Represents time (hour, minute, second, microsecond).
+  ```python
+  t = time(15, 45)
+  print(t)  # Output: 15:45:00
+  ```
+
+---
+
+## 3.6.4 Formatting Dates and Times
+
+Python provides two key methods for formatting and parsing date/time strings:
+
+- **`strftime()`**: Formats `datetime` objects as strings.
+- **`strptime()`**: Parses strings into `datetime` objects.
+
+### Common formatting codes:
+- `%Y`: Year with century (e.g., `2025`)
+- `%m`: Month as a zero-padded decimal number (e.g., `01` to `12`)
+- `%d`: Day of the month as a zero-padded decimal number (e.g., `01` to `31`)
+- `%H`: Hour (24-hour clock) as a zero-padded decimal number (e.g., `00` to `23`)
+- `%M`: Minute as a zero-padded decimal number (e.g., `00` to `59`)
+- `%S`: Second as a zero-padded decimal number (e.g., `00` to `59`)
+
+### Example:
+```python
+now = datetime.now()
+formatted = now.strftime("%Y-%m-%d %H:%M:%S")
+print(formatted)  # Output: 2025-01-29 15:45:12
+```
+
+### Parsing a date string:
+```python
+date_string = "2025-01-29 15:45:12"
+parsed_date = datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S")
+print(parsed_date)  # Output: 2025-01-29 15:45:12
+```
+
+---
+
+## 3.6.5 Finding Durations
+
+The `timedelta` class from the `datetime` module allows for calculating the difference between two dates or times and performing arithmetic operations on them.
+
+### Calculating the difference:
+```python
+from datetime import datetime, timedelta
+date1 = datetime(2025, 1, 1)
+date2 = datetime.now()
+delta = date2 - date1
+print(delta)  # Output: 28 days, 15:45:12.123456
+```
+
+### Adding and subtracting time intervals:
+```python
+# Adding 5 days
+new_date = date1 + timedelta(days=5)
+print(new_date)  # Output: 2025-01-06
+
+# Subtracting 2 hours
+new_time = datetime.now() - timedelta(hours=2)
+print(new_time)  # Output: 2025-01-29 13:45:12.123456
+```
+
+---
+
+## 3.6.6 Comparing Dates
+
+Python allows comparing dates and times directly using comparison operators.
+
+### Example:
+```python
+date1 = datetime(2025, 1, 1)
+date2 = datetime.now()
+
+print(date1 > date2)  # Output: False
+print(date1 < date2)  # Output: True
+print(date1 == date2)  # Output: False
+```
+
+### Finding the minimum and maximum dates:
+```python
+dates = [datetime(2025, 1, 1), datetime(2024, 12, 31), datetime(2025, 2, 1)]
+print(min(dates))  # Output: 2024-12-31 00:00:00
+print(max(dates))  # Output: 2025-02-01 00:00:00
+```
+
+---
+
+## 3.6.7 Sorting Dates
+
+Python's `sorted()` function can be used to sort lists of `datetime` objects.
+
+### Sorting a list of `datetime` objects:
+```python
+dates = [datetime(2025, 1, 1), datetime(2024, 12, 31), datetime(2025, 2, 1)]
+sorted_dates = sorted(dates)
+print(sorted_dates)  # Output: [datetime(2024, 12, 31), datetime(2025, 1, 1), datetime(2025, 2, 1)]
+```
+
+---
+
+## 3.6.8 Pausing Execution Temporarily
+
+You can pause the execution of your program for a specific duration using the `time.sleep()` function.
+
+### Example:
+```python
+import time
+print("Start")
+time.sleep(3)  # Pauses execution for 3 seconds
+print("End")  # This will print after 3 seconds
+```
+
+### Practical use cases:
+- Introducing delays in network requests.
+- Waiting for a specific time interval before repeating a task.
+
+---
+
+## 3.6.9 Calculating Duration of Execution
+
+You can measure the time taken by a program or function using the `time.time()` or `time.perf_counter()` functions.
+
+### Example with `time.time()`:
+```python
+import time
+start_time = time.time()
+
+# Code to measure
+time.sleep(2)
+
+end_time = time.time()
+print(f"Execution time: {end_time - start_time} seconds")  # Output: Execution time: 2.0xxx seconds
+```
+
+---
+
+## 3.6.10 Using the Calendar Module
+
+The `calendar` module allows you to work with calendars, month names, and weekdays.
+
+### Displaying calendars:
+- **`calendar.month(year, month)`**: Displays the calendar for a specific month.
+- **`calendar.calendar(year)`**: Displays the calendar for a specific year.
+
+### Example:
+```python
+import calendar
+print(calendar.month(2025, 1))  # Displays the calendar for January 2025
+```
+
+### Working with weekdays and leap years:
+- **`calendar.weekday(year, month, day)`**: Returns the weekday as an integer (0 = Monday, 6 = Sunday).
+  ```python
+  print(calendar.weekday(2025, 1, 29))  # Output: 2 (Wednesday)
+  ```
+
+- **`calendar.isleap(year)`**: Returns `True` if the year is a leap year, otherwise `False`.
+  ```python
+  print(calendar.isleap(2024))  # Output: True
+  ```
+
 
