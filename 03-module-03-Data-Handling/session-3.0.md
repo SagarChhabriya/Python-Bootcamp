@@ -697,7 +697,7 @@ x = "Hello"  # This will not raise an error at runtime, but linters will warn ab
 <!-- Static vs Dynamic Binding -->
    
 
-# Type Conversion in Python
+# 3.2 Type Conversion in Python
 
 In Python, we can convert values from one type to another. This process is called **Typecasting** or **Type Coercion**. Python provides several built-in functions to perform type conversion.
 
