@@ -6,6 +6,12 @@
 
 # 1. Getting Started
 
+<a href="#" class="button">Post comment (link)</a>
+<input class="button" type="submit" value="Post comment (input)">
+<button class="button" type="submit">Post comment (button)</button>
+
+
+<a href="#" class="button danger">Delete post</a>
 
 <span style="display: flex; justify-content: space-between; width: 100%;">
     <a href="/Python-Bootcamp/01-module-01-getting-started/README.md" 
