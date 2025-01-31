@@ -6,14 +6,26 @@
 
 # 1. Getting Started
 
-<a href="#" class="button">Post comment (link)</a>
-<input class="button" type="submit" value="Post comment (input)">
-<button class="button" type="submit">Post comment (button)</button>
 
-![Custom Badge](https://img.shields.io/badge/Label-Message-Color)
+<!-- <img src="https://img.shields.io/badge/Label-Message-Color" width="150" height="30"> -->
 
 
-<a href="#" class="button danger">Delete post</a>
+<!-- <span style="display: flex; justify-content: space-between; width: 100%;">
+    <img src="https://img.shields.io/badge/Version-v1.0.0-blue" width="150" height="30" style="margin-right: 20px;">
+    <img src="https://img.shields.io/badge/Build-passing-brightgreen" width="150" height="30" style="margin-left: 20px;">
+</span> -->
+
+<span style="display: flex; justify-content: space-between; width: 100%;">
+    <a href="/Python-Bootcamp/00-curriculum/README.md">
+        <img src="https://img.shields.io/badge/Previous-Curriculum-blue" width="150" height="30" style="margin-right: 20px;">
+    </a>
+    <a href="/Python-Bootcamp/02-module-02-python-fundamentals/README.md">
+        <img src="https://img.shields.io/badge/Build-passing-brightgreen" width="150" height="30" style="margin-left: 20px;">
+    </a>
+</span>
+
+
+<!-- 
 
 <span style="display: flex; justify-content: space-between; width: 100%;">
     <a href="/Python-Bootcamp/01-module-01-getting-started/README.md" 
@@ -24,7 +36,7 @@
        style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
         Next: Data Handling
     </a>
-</span>
+</span> -->
 
 ## 1.1 Introduction
 - **[1.1.1 Introduction to Python](session-1.1.md/#111-introduction-to-python)**
