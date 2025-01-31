@@ -7,60 +7,18 @@
 # 1. Getting Started
 
 
-<!-- <img src="https://img.shields.io/badge/Label-Message-Color" width="150" height="30"> -->
-
-
-<!-- <span style="display: flex; justify-content: space-between; width: 100%;">
-    <img src="https://img.shields.io/badge/Version-v1.0.0-blue" width="150" height="30" style="margin-right: 20px;">
-    <img src="https://img.shields.io/badge/Build-passing-brightgreen" width="150" height="30" style="margin-left: 20px;">
-</span> -->
-<!-- 
-<span style="display: flex; justify-content: space-between; width: 100%;">
-    <a href="/Python-Bootcamp/00-curriculum/README.md">
-        <img src="https://img.shields.io/badge/Previous-Curriculum-blue" width="200" height="35" style="margin-right: 20px;">
-    </a>
-    <a href="/Python-Bootcamp/02-module-02-python-fundamentals/README.md">
-        <img src="https://img.shields.io/badge/Next-Python Fundamentals-brightgreen" width="250" height="35" style="margin-left: 20px;">
-    </a>
-</span> -->
-
-
-<span style="display: flex; justify-content: space-between; width: 100%;">
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
     <a href="../00-curriculum/README.md">
-        <img src="https://img.shields.io/badge/Previous-Curriculum-blue" width="200" height="35" style="margin-right: 20px;">
+        <img src="https://img.shields.io/badge/Previous-Curriculum-blue" width="200" height="35">
     </a>
     <a href="../02-module-02-python-fundamentals/README.md">
-        <img src="https://img.shields.io/badge/Next-Python_Fundamentals-brightgreen" width="250" height="35" style="margin-left: 20px;">
-    </a>
-    <a href="../03-module-03-data-handling/README.md">
-        <img src="https://img.shields.io/badge/Next-Data_Handling-brightgreen" width="250" height="35" style="margin-left: 20px;">
+        <img src="https://img.shields.io/badge/Next-Python_Fundamentals-brightgreen" width="250" height="35">
     </a>
 </span>
 
----
-
-
-[![Previous: Curriculum](https://img.shields.io/badge/Previous-Curriculum-blue)](../00-curriculum/README.md)
-[![Next: Python Fundamentals](https://img.shields.io/badge/Next-Python_Fundamentals-brightgreen)](../02-module-02-python-fundamentals/README.md)
 
 ---
 
-[![Next: Python Fundamentals](https://img.shields.io/badge/Next-Python_Fundamentals-brightgreen)](session-1.0-quick-recap.md)
-
-
-
-<!-- 
-
-<span style="display: flex; justify-content: space-between; width: 100%;">
-    <a href="/Python-Bootcamp/01-module-01-getting-started/README.md" 
-       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
-        Previous: Getting Started
-    </a>
-    <a href="/Python-Bootcamp/03-module-03-data-handling/README.md" 
-       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
-        Next: Data Handling
-    </a>
-</span> -->
 
 ## 1.1 Introduction
 - **[1.1.1 Introduction to Python](session-1.1.md/#111-introduction-to-python)**
