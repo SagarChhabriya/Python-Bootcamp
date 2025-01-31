@@ -32,6 +32,9 @@
     <a href="/Python-Bootcamp/02-module-02-python-fundamentals/README.md">
         <img src="https://img.shields.io/badge/Next-Python_Fundamentals-brightgreen" width="250" height="35" style="margin-left: 20px;">
     </a>
+    <a href="/Python-Bootcamp/03-module-03-data-handling/README.md">
+        <img src="https://img.shields.io/badge/Next-Data_Handling-brightgreen" width="250" height="35" style="margin-left: 20px;">
+    </a>
 </span>
 
 
@@ -39,6 +42,9 @@
 [![Previous: Curriculum](https://img.shields.io/badge/Previous-Curriculum-blue)](/Python-Bootcamp/00-curriculum/README.md)
 [![Next: Python Fundamentals](https://img.shields.io/badge/Next-Python_Fundamentals-brightgreen)](/Python-Bootcamp/02-module-02-python-fundamentals/README.md)
 
+[![Next: Python Fundamentals](https://img.shields.io/badge/Next-Python_Fundamentals-brightgreen)](/Python-Bootcamp/03-module-03-data-handling/README.md)
+
+[![Next: Python Fundamentals](https://img.shields.io/badge/Next-Python_Fundamentals-brightgreen)](session-1.0-quick-recap.md)
 
 
 <!-- 
