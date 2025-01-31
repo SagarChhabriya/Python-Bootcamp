@@ -14,7 +14,7 @@
     <img src="https://img.shields.io/badge/Version-v1.0.0-blue" width="150" height="30" style="margin-right: 20px;">
     <img src="https://img.shields.io/badge/Build-passing-brightgreen" width="150" height="30" style="margin-left: 20px;">
 </span> -->
-
+<!-- 
 <span style="display: flex; justify-content: space-between; width: 100%;">
     <a href="/Python-Bootcamp/00-curriculum/README.md">
         <img src="https://img.shields.io/badge/Previous-Curriculum-blue" width="200" height="35" style="margin-right: 20px;">
@@ -22,17 +22,17 @@
     <a href="/Python-Bootcamp/02-module-02-python-fundamentals/README.md">
         <img src="https://img.shields.io/badge/Next-Python Fundamentals-brightgreen" width="250" height="35" style="margin-left: 20px;">
     </a>
-</span>
+</span> -->
 
 
 <span style="display: flex; justify-content: space-between; width: 100%;">
-    <a href="/Python-Bootcamp/00-curriculum/README.md">
+    <a href="../00-curriculum/README.md">
         <img src="https://img.shields.io/badge/Previous-Curriculum-blue" width="200" height="35" style="margin-right: 20px;">
     </a>
-    <a href="/Python-Bootcamp/02-module-02-python-fundamentals/README.md">
+    <a href="../02-module-02-python-fundamentals/README.md">
         <img src="https://img.shields.io/badge/Next-Python_Fundamentals-brightgreen" width="250" height="35" style="margin-left: 20px;">
     </a>
-    <a href="/Python-Bootcamp/03-module-03-data-handling/README.md">
+    <a href="../03-module-03-data-handling/README.md">
         <img src="https://img.shields.io/badge/Next-Data_Handling-brightgreen" width="250" height="35" style="margin-left: 20px;">
     </a>
 </span>
