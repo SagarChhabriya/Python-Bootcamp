@@ -1,3 +1,14 @@
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../05-module-05-debugging/README.md">
+        <img src="https://img.shields.io/badge/Previous-Debugging-blue" width="200" height="35">
+    </a>
+    <a href="../07-module-07-lists/README.md">
+        <img src="https://img.shields.io/badge/Next-Python_Lists-brightgreen" width="170" height="35">
+    </a>
+</span>
+<br><br>
+
+
 ### **6.1 Introduction to Python Strings**
 - **Immutable Nature of Strings**: In Python, strings are immutable, which means once a string is created, it cannot be modified directly.
   ```python
@@ -604,3 +615,14 @@ print(is_hex("1g2f"))  # Output: False
 ```
 
 ---
+
+
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../05-module-05-debugging/README.md">
+        <img src="https://img.shields.io/badge/Previous-Debugging-blue" width="200" height="35">
+    </a>
+    <a href="../07-module-07-lists/README.md">
+        <img src="https://img.shields.io/badge/Next-Python_Lists-brightgreen" width="170" height="35">
+    </a>
+</span>
+<br><br>

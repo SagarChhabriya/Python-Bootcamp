@@ -1,5 +1,15 @@
 # 5. Debugging
 
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../04-module-04-operators/README.md">
+        <img src="https://img.shields.io/badge/Previous-Operators-blue" width="180" height="35">
+    </a>
+    <a href="../06-module-06-string-manipulation/README.md">
+        <img src="https://img.shields.io/badge/Next-String_Manipulation-brightgreen" width="220" height="35">
+    </a>
+</span>
+<br><br>
+
 ## 5.1 Types of Errors
 
 Errors in Python can be categorized into different types based on when and why they occur:
@@ -203,3 +213,13 @@ result = divide(10, 0)
 
 - Use `logging.debug()`, `logging.info()`, `logging.warning()`, `logging.error()`, and `logging.critical()` to categorize log messages.
 - Logging provides better control over the level of output and can be configured to write to files or other external systems.
+
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../04-module-04-operators/README.md">
+        <img src="https://img.shields.io/badge/Previous-Operators-blue" width="180" height="35">
+    </a>
+    <a href="../06-module-06-string-manipulation/README.md">
+        <img src="https://img.shields.io/badge/Next-String_Manipulation-brightgreen" width="220" height="35">
+    </a>
+</span>
+<br><br>

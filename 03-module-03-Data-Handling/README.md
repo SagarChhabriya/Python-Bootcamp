@@ -1,19 +1,15 @@
 
 # 3. Introduction to Data Handling
 
-
-<span style="display: flex; justify-content: space-between; width: 100%;">
-    <a href="/Python-Bootcamp/02-module-02-python-fundamentals/README.md" 
-       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
-        Previous: Getting Started
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../02-module-02-python-fundamentals/README.md">
+        <img src="https://img.shields.io/badge/Previous-Python_Fundamentals-blue" width="250" height="35">
     </a>
-    <a href="/Python-Bootcamp/04-module-04-operators/README.md" 
-       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
-        Next: Data Handling
+    <a href="../04-module-04-operators/README.md">
+        <img src="https://img.shields.io/badge/Next-Operators-brightgreen" width="170" height="35">
     </a>
 </span>
 <br><br>
-
 
 - [**3.1 Data Types in Python**](session-3.0.md#31-data-types-in-python)
   - Static vs Dynamic Typing

@@ -1,16 +1,16 @@
 # 2. Python Fundamentals
 
 
-<span style="display: flex; justify-content: space-between; width: 100%;">
-    <a href="/Python-Bootcamp/01-module-01-getting-started/README.md" 
-       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
-        Previous: Getting Started
+
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../01-module-01-getting-started/README.md">
+        <img src="https://img.shields.io/badge/Previous-Python_Fundamentals-blue" width="250" height="35">
     </a>
-    <a href="/Python-Bootcamp/03-module-03-data-handling/README.md" 
-       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
-        Next: Data Handling
+    <a href="../03-module-03-data-handling/README.md">
+        <img src="https://img.shields.io/badge/Next-Data_Handling-brightgreen" width="200" height="35">
     </a>
 </span>
+
 
 <br><br>
 

@@ -1,5 +1,15 @@
 # 5. Debugging
 
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../04-module-04-operators/README.md">
+        <img src="https://img.shields.io/badge/Previous-Operators-blue" width="180" height="35">
+    </a>
+    <a href="../06-module-06-string-manipulation/README.md">
+        <img src="https://img.shields.io/badge/Next-String_Manipulation-brightgreen" width="220" height="35">
+    </a>
+</span>
+<br><br>
+
 - [**5.1 Types of Errors**](session-5.0.md#51-types-of-errors)
   - Syntax Errors
   - Runtime Errors

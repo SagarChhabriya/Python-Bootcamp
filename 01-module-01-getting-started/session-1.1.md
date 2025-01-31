@@ -1,15 +1,15 @@
 # 1. Getting Started
 
-<span style="display: flex; justify-content: space-between; width: 100%;">
-    <!-- <a href="/Python-Bootcamp/00-curriculum/README.md" 
-       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
-        Previous: Curriculum
-    </a> -->
-    <a href="/Python-Bootcamp/02-module-02-python-fundamentals/README.md" 
-       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
-        Next: Python Fundamentals
+
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../00-curriculum/README.md">
+        <img src="https://img.shields.io/badge/Previous-Curriculum-blue" width="200" height="35">
+    </a>
+    <a href="../02-module-02-python-fundamentals/README.md">
+        <img src="https://img.shields.io/badge/Next-Python_Fundamentals-brightgreen" width="250" height="35">
     </a>
 </span>
+
 <br><br><br><br>
 
 # 1.1 Introduction
@@ -431,13 +431,12 @@ It is especially designed for handling large volume of data processing.
 - **Learning Python**: The best way to learn Python is through practical use, and the tutorial will guide you through Python's features using examples.
 
 <br><br><br><br>
-<span style="display: flex; justify-content: space-between; width: 100%;">
-    <!-- <a href="/Python-Bootcamp/00-curriculum/README.md" 
-       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
-        Previous: Curriculum
-    </a> -->
-    <a href="/Python-Bootcamp/02-module-02-python-fundamentals/README.md" 
-       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
-        Next: Python Fundamentals
+
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../00-curriculum/README.md">
+        <img src="https://img.shields.io/badge/Previous-Curriculum-blue" width="200" height="35">
+    </a>
+    <a href="../02-module-02-python-fundamentals/README.md">
+        <img src="https://img.shields.io/badge/Next-Python_Fundamentals-brightgreen" width="250" height="35">
     </a>
 </span>

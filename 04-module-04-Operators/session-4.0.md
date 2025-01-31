@@ -1,5 +1,15 @@
 # 4. Operators
 
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../03-module-03-data-handling/README.md">
+        <img src="https://img.shields.io/badge/Previous-Data_Handling-blue" width="250" height="35">
+    </a>
+    <a href="../05-module-05-debugging/README.md">
+        <img src="https://img.shields.io/badge/Next-Debugging-brightgreen" width="200" height="35">
+    </a>
+</span>
+<br><br>
+
 ## 4.1 Arithmetic Operators
 
 Arithmetic operators are used to perform mathematical operations between numeric values.
@@ -365,3 +375,14 @@ Here, the nested ternary operator checks which of the three values `a`, `b`, or 
 ### Note on Readability:
 
 While ternary operators can help write concise code, overusing them or nesting too many levels can reduce code readability. It’s often best to use ternary operators for simple conditions, and use regular `if-else` statements for more complex logic.
+
+
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../03-module-03-data-handling/README.md">
+        <img src="https://img.shields.io/badge/Previous-Data_Handling-blue" width="250" height="35">
+    </a>
+    <a href="../05-module-05-debugging/README.md">
+        <img src="https://img.shields.io/badge/Next-Debugging-brightgreen" width="200" height="35">
+    </a>
+</span>
+<br><br>
