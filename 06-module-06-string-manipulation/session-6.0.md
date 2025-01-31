@@ -42,6 +42,44 @@
   print(s[::2])  # Output: 'hlo'
   ```
 
+- **Detailed Examples**
+
+```python
+# Replace the string with a new one
+s = "Python programming is super fun and easy!"
+
+# 1. Slice from index 1 to 7 with step 1
+# This slice starts at index 1, ends just before index 7, and takes every character between them with a step of 1.
+# So it picks characters at positions 1, 2, 3, 4, 5, and 6.
+print(s[1:7:1])  # Output: 'ython '
+
+# 2. Slice from index 1 to 7 without specifying step
+# This slice is similar to the previous one, but here we didn't specify a step.
+# So Python defaults to a step of 1, meaning it picks characters from index 1 to 6.
+print(s[1:7])  # Output: 'ython '
+
+# 3. Slice from index 1 to 7 with step 2
+# This slice starts at index 1, ends just before index 7, and takes every second character between the indices.
+# So it picks characters at positions 1, 3, 5 (skipping the even-indexed ones).
+print(s[1:7:2])  # Output: 'yhn'
+
+# 4. Slice up to index 7 (excluding 7)
+# This slice includes all characters from the start of the string up to index 7 (but not including it).
+# So it picks characters at positions 0, 1, 2, 3, 4, 5, and 6.
+print(s[:7])  # Output: 'Python '
+
+# 5. Slice the entire string
+# This slice takes the entire string since we didn't specify any start or end index.
+# It essentially includes everything from the beginning to the end of the string.
+print(s[:])  # Output: 'Python programming is super fun and easy!'
+
+# 6. Reverse the string
+# This slice uses a negative step of -1, which means Python starts from the end of the string and goes backwards.
+# It reverses the entire string, so it picks characters in reverse order from the last one to the first.
+print(s[::-1])  # Output: '!ysae dna nuf repus si gnimmargorp nohtyP'
+
+```  
+
 ### **6.5 Common String Functions and Methods**
 - **`upper()` and `lower()`**: Converts all characters to uppercase or lowercase.
   ```python
