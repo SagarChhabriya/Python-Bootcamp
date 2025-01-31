@@ -1,5 +1,19 @@
 # 2. Python Fundamentals
 
+
+<span style="display: flex; justify-content: space-between; width: 100%;">
+    <a href="/Python-Bootcamp/01-module-01-getting-started/README.md" 
+       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
+        Previous: Getting Started
+    </a>
+    <a href="/Python-Bootcamp/03-module-03-data-handling/README.md" 
+       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
+        Next: Data Handling
+    </a>
+</span>
+
+<br><br>
+
 - [**2.1 Basic Syntax**](/02-module-02-python-fundamentals/session-2.0.md/#21-basic-syntax)
   - Indentation (No semicolon, no parentheses)
   - Python Character Set

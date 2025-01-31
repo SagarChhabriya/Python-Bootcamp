@@ -1,7 +1,18 @@
 
-
 # 3. Introduction to Data Handling
- 
+
+<span style="display: flex; justify-content: space-between; width: 100%;">
+    <a href="/Python-Bootcamp/02-module-02-python-fundamentals/README.md" 
+       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
+        Previous: Python Fundamentals
+    </a>
+    <a href="/Python-Bootcamp/04-module-04-operators/README.md" 
+       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
+        Next: Operators
+    </a>
+</span>
+
+
 ## 3.1 Data Types in Python
 
 A **data type** defines the kind of data a variable can hold. In Python, you don't need to specify the type of the data explicitly. The type is assigned automatically based on the value you provide. Python is a **dynamically typed** language.
@@ -1218,8 +1229,26 @@ The `timedelta` class from the `datetime` module allows for calculating the diff
 from datetime import datetime, timedelta
 date1 = datetime(2025, 1, 1)
 date2 = datetime.now()
-delta = date2 - date1
-print(delta)  # Output: 28 days, 15:45:12.123456
+date3 = date2 - date1
+print(date3)  # Output: 28 days, 15:45:12.123456
+
+# Tip: print(type(date3))
+
+```
+
+## Difference between two timedelta objects
+
+```python
+from datetime import timedelta
+
+t1 = timedelta(weeks = 2, days = 5, hours = 1, seconds = 33)
+t2 = timedelta(days = 4, hours = 11, minutes = 4, seconds = 54)
+
+t3 = t1 - t2
+
+print("t3 =", t3)
+# Tip: print(type(t3))
+
 ```
 
 ### Adding and subtracting time intervals:
@@ -1332,4 +1361,16 @@ print(calendar.month(2025, 1))  # Displays the calendar for January 2025
   print(calendar.isleap(2024))  # Output: True
   ```
 
+
+
+<span style="display: flex; justify-content: space-between; width: 100%;">
+    <a href="/Python-Bootcamp/02-module-02-python-fundamentals/README.md" 
+       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
+        Previous: Python Fundamentals
+    </a>
+    <a href="/Python-Bootcamp/04-module-04-operators/README.md" 
+       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
+        Next: Operators
+    </a>
+</span>
 

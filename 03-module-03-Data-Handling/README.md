@@ -1,6 +1,20 @@
 
 # 3. Introduction to Data Handling
 
+
+<span style="display: flex; justify-content: space-between; width: 100%;">
+    <a href="/Python-Bootcamp/02-module-02-python-fundamentals/README.md" 
+       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
+        Previous: Getting Started
+    </a>
+    <a href="/Python-Bootcamp/04-module-04-operators/README.md" 
+       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
+        Next: Data Handling
+    </a>
+</span>
+<br><br>
+
+
 - [**3.1 Data Types in Python**](session-3.0.md#31-data-types-in-python)
   - Static vs Dynamic Typing
   - Numbers
@@ -72,5 +86,4 @@
   - Displaying calendars for specific months and years.
   - Working with weekdays, month names, and leap years.
   - Using `calendar.month()`, `calendar.calendar()`, and `calendar.isleap()`.
-
 

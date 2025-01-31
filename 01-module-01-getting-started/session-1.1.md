@@ -1,5 +1,17 @@
 # 1. Getting Started
 
+<span style="display: flex; justify-content: space-between; width: 100%;">
+    <!-- <a href="/Python-Bootcamp/00-curriculum/README.md" 
+       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
+        Previous: Curriculum
+    </a> -->
+    <a href="/Python-Bootcamp/02-module-02-python-fundamentals/README.md" 
+       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
+        Next: Python Fundamentals
+    </a>
+</span>
+<br><br><br><br>
+
 # 1.1 Introduction
 
 ## 1.1.1 Introduction to Python
@@ -417,3 +429,15 @@ It is especially designed for handling large volume of data processing.
   - Python can be embedded in C applications as an extension or command language.
 - **Name Origin**: Python is named after the BBC show "Monty Python’s Flying Circus," and references to the show in documentation are encouraged.
 - **Learning Python**: The best way to learn Python is through practical use, and the tutorial will guide you through Python's features using examples.
+
+<br><br><br><br>
+<span style="display: flex; justify-content: space-between; width: 100%;">
+    <!-- <a href="/Python-Bootcamp/00-curriculum/README.md" 
+       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
+        Previous: Curriculum
+    </a> -->
+    <a href="/Python-Bootcamp/02-module-02-python-fundamentals/README.md" 
+       style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 5px; width: auto;">
+        Next: Python Fundamentals
+    </a>
+</span>
