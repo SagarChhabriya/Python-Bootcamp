@@ -37,14 +37,16 @@
     </a>
 </span>
 
+---
 
 
-[![Previous: Curriculum](https://img.shields.io/badge/Previous-Curriculum-blue)](/Python-Bootcamp/00-curriculum/README.md)
-[![Next: Python Fundamentals](https://img.shields.io/badge/Next-Python_Fundamentals-brightgreen)](/Python-Bootcamp/02-module-02-python-fundamentals/README.md)
+[![Previous: Curriculum](https://img.shields.io/badge/Previous-Curriculum-blue)](../00-curriculum/README.md)
+[![Next: Python Fundamentals](https://img.shields.io/badge/Next-Python_Fundamentals-brightgreen)](../02-module-02-python-fundamentals/README.md)
 
-[![Next: Python Fundamentals](https://img.shields.io/badge/Next-Python_Fundamentals-brightgreen)](/Python-Bootcamp/03-module-03-data-handling/README.md)
+---
 
 [![Next: Python Fundamentals](https://img.shields.io/badge/Next-Python_Fundamentals-brightgreen)](session-1.0-quick-recap.md)
+
 
 
 <!-- 
