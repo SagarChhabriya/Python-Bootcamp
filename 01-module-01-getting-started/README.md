@@ -10,6 +10,8 @@
 <input class="button" type="submit" value="Post comment (input)">
 <button class="button" type="submit">Post comment (button)</button>
 
+![Custom Badge](https://img.shields.io/badge/Label-Message-Color)
+
 
 <a href="#" class="button danger">Delete post</a>
 
