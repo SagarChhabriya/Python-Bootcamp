@@ -536,7 +536,7 @@ This will print:
 | `ljust()`          | Returns a left justified version of the string.                      | `"hello".ljust(10, "-")` -> `"hello-----"`                  |
 | `lower()`          | Converts all characters to lowercase.                                | `"HELLO".lower()` -> `"hello"`                              |
 | `lstrip()`         | Returns a left trim version of the string.                           | `"   hello".lstrip()` -> `"hello"`                          |
-| `maketrans()`      | Returns a translation table to be used in translations.              | `str.maketrans("abc", "123")` -> `{97: 49, 98: 50, 99: 51}` |
+| [`maketrans()`](/Python-Bootcamp/06-module-06-string-manipulation/MISC.md#maketrans)      | Returns a translation table to be used in translations.              | `str.maketrans("abc", "123")` -> `{97: 49, 98: 50, 99: 51}` |
 | `partition()`      | Returns a tuple where the string is parted into three parts.        | `"hello world".partition(" ")` -> `('hello', ' ', 'world')` |
 | `replace()`        | Replaces a specified substring with another string.                 | `"hello world".replace("world", "Python")` -> `"hello Python"` |
 | `rfind()`          | Finds the last occurrence of a substring. Returns `-1` if not found. | `"hello world".rfind("o")` -> `7`                           |

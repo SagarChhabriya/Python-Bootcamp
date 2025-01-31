@@ -80,6 +80,8 @@ print(s[::-1])  # Output: '!ysae dna nuf repus si gnimmargorp nohtyP'
 
 ```  
 
+[Click here to read more on String Slicing](MISC.md#string-slicing)
+
 ### **6.5 Common String Functions and Methods**
 - **`upper()` and `lower()`**: Converts all characters to uppercase or lowercase.
   ```python
@@ -148,6 +150,7 @@ print(s[::-1])  # Output: '!ysae dna nuf repus si gnimmargorp nohtyP'
   # Output: 'My name is John and I am 30 years old.'
   ```
 
+[Clich here to read more on string formatting](MISC.md#string-templating)
 
 ## **6.7 Advanced String Methods**
 

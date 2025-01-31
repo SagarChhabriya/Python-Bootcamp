@@ -177,3 +177,85 @@
     ```
 
 
+# String Templating
+
+```python
+from string import Template
+```
+
+Then you create a `Template` object and use `substitute()` (or `safe_substitute()`) to replace placeholders in the string with values.
+
+Example:
+
+```python
+from string import Template
+
+# Create a template with placeholders
+template = Template("Hello, my name is $name and I am $age years old.")
+
+# Use substitute to fill in the values
+greeting = template.substitute(name="Alice", age=30)
+print(greeting)
+```
+
+### Difference Between `substitute()` and `safe_substitute()`:
+- `substitute()`: If a placeholder is missing or undefined, it raises a `KeyError`.
+- `safe_substitute()`: If a placeholder is missing, it leaves the placeholder unchanged instead of raising an error.
+
+Example with `safe_substitute()`:
+
+```python
+greeting = template.safe_substitute(name="Alice")
+print(greeting)  # Output: Hello, my name is Alice and I am $age years old.
+```
+
+
+# Maketrans 
+
+The `maketrans()` method in Python is used to create a translation table that can be used with the `translate()` method to replace characters in a string.
+
+### Syntax:
+```python
+str.maketrans(x, y)
+```
+- `x`: A string or a dictionary. If it’s a string, it’s a set of characters to be replaced.
+- `y`: A string with the same length as `x`. Each character in `x` is replaced by the character in the same position in `y`.
+
+### Example 1: Basic Character Replacement
+```python
+# Create a translation table
+trans_table = str.maketrans("abc", "123")
+
+# Use the translate method to replace characters
+original = "abcdef"
+result = original.translate(trans_table)
+
+print(result)  # Output: "123def"
+```
+In this example, the characters `'a'`, `'b'`, and `'c'` are replaced by `'1'`, `'2'`, and `'3'` respectively.
+
+### Example 2: Using `maketrans()` with a Dictionary
+```python
+# Create a translation table using a dictionary
+trans_table = str.maketrans({"a": "1", "b": "2", "c": "3"})
+
+# Use the translate method to replace characters
+original = "abcxyz"
+result = original.translate(trans_table)
+
+print(result)  # Output: "123xyz"
+```
+Here, the dictionary specifies which characters should be replaced with what.
+
+### Example 3: Replacing Multiple Characters
+```python
+# Replace vowels with other characters
+trans_table = str.maketrans("aeiou", "12345")
+
+# Apply the translation
+text = "hello world"
+translated_text = text.translate(trans_table)
+
+print(translated_text)  # Output: "h2ll4 w4rld"
+```
+This example replaces the vowels 'a', 'e', 'i', 'o', 'u' with the digits '1', '2', '3', '4', '5'.
