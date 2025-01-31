@@ -1,147 +1,216 @@
 # String Slicing
 
-
 |  s  |  t  |  r  |  i  |  n  |  g  |     |  s  |  l  |  i  |  c  |  i  |  n  |  g  |
 |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
 |  0  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  10 |  11 |  12 |  13 |
 | -14 | -13 | -12 | -11 | -10 |  -9 | -8  | -7  | -6  | -5  | -4  | -3  | -2  | -1  |
 
 
-### Basic String Slicing:
-1. **Extract the substring from index 2 to index 5**:
-   ```python
-   s = "string slicing"
-   s[2:6]  # "rin"
-   ```
 
-2. **Extract the first 3 characters**:
-   ```python
-   s = "string slicing"
-   s[:3]  # "str"
-   ```
+### Example 1: `s[start:end]` with +ve indexing
 
-3. **Extract the substring from the 3rd to the last character**:
-   ```python
-   s = "string slicing"
-   s[2:]  # "ring slicing"
-   ```
+```python
+s = "string slicing"
 
-4. **Extract the last 4 characters**:
-   ```python
-   s = "string slicing"
-   s[-4:]  # "cing"
-   ```
+# Four possible combinations
+s[ : ]      # "string slicing"
+s[1: ]      # "tring slicing"
+s[ :4]      # "stri"
+s[1:4]      # "tri"
+```
+**Explanation of Outputs:**
+- `s[:]`: The entire string is returned.
+- `s[1:]`: The substring from index 1 to the end is returned, which is `"tring slicing"`.
+- `s[:4]`: The substring from the start to index 3 is returned, which is `"stri"`.
+- `s[1:4]`: The substring from index 1 to index 3 (excluding index 4) is returned, which is `"tri"`.
 
-5. **Extract from index 3 to index 8 with step 2**:
-   ```python
-   s = "string slicing"
-   s[3:9:2]  # "rn"
-   ```
+---
 
-### Slicing with Step Values:
-6. **Slice the entire string with step 2 (every second character)**:
-   ```python
-   s = "string slicing"
-   s[::2]  # "srg icn"
-   ```
+### Example 2: `s[start:end]` with -ve indexing
 
-7. **Slice the string in reverse with step -1**:
-   ```python
-   s = "string slicing"
-   s[::-1]  # "gnicils gnirts"
-   ```
+```python
+s = "string slicing"
 
-8. **Slice the string from the 2nd to the 6th character with step 2**:
-   ```python
-   s = "string slicing"
-   s[1:6:2]  # "tr"
-   ```
+# Four possible combinations
+s[  :  ]    # "string slicing"
+s[-4:  ]    # "cing"
+s[  :-1]    # "string slicin"
+s[-4:-1]    # "cin"
+```
+**Explanation of Outputs:**
+- `s[:]`: The entire string is returned.
+- `s[-4:]`: The last 4 characters, `"cing"`, are returned.
+- `s[:-1]`: The string excluding the last character is returned, which is `"string slicin"`.
+- `s[-4:-1]`: The substring from the 4th last character to the second last character is returned, which is `"cin"`.
 
-9. **Slice the string from the 4th character backwards with step -2**:
-   ```python
-   s = "string slicing"
-   s[3::-2]  # "tns"
-   ```
+---
 
-10. **Slice the string from index 5 to index 0 with step -1**:
-    ```python
-    s = "string slicing"
-    s[5:0:-1]  # "gnirts"
-    ```
+### Example 3: `s[start:end:step]` with +ve start, end, and +ve step
 
-### Negative Indexing:
-11. **Slice the string from the 2nd last character to the end**:
-    ```python
-    s = "string slicing"
-    s[-2:]  # "ng"
-    ```
+```python
+s = "string slicing"
 
-12. **Extract the substring from the 3rd character from the end to the 2nd character from the end**:
-    ```python
-    s = "string slicing"
-    s[-3:-1]  # "in"
-    ```
+# Eight possible combinations
+s[  :  :  ]     # "string slicing"
+s[  :  : 2]     # "srn lcn"
+s[  : 8:  ]     # "string s"
+s[  : 8: 2]     # "srn "
+s[1 :  :  ]     # "tring slicing"
+s[1 :  : 2]     # "tigsiig"
+s[1 :10:  ]     # "tring sli"
+s[1 :12: 2]     # "tigsii"
+```
+**Explanation of Outputs:**
+- `s[::]`: The entire string is returned.
+- `s[::2]`: Every second character from the string is returned, which is `"srn lcn"`.
+- `s[:8:]`: The first 8 characters of the string are returned, which is `"string s"`.
+- `s[:8:2]`: Every second character from the first 8 characters is returned, which is `"srn "`.
+- `s[1::]`: The string from index 1 to the end is returned, which is `"tring slicing"`.
+- `s[1::2]`: Every second character from index 1 to the end is returned, which is `"tigsiig"`.
+- `s[1:10:]`: The string from index 1 to index 9 is returned, which is `"tring sli"`.
+- `s[1:12:2]`: Every second character from index 1 to index 11 is returned, which is `"tigsii"`.
 
-13. **Extract the last 3 characters**:
-    ```python
-    s = "string slicing"
-    s[-3:]  # "ing"
-    ```
+---
 
-14. **Slice the string with negative step, reverse it, and get every third character**:
-    ```python
-    s = "string slicing"
-    s[::-3]  # "gcn"
-    ```
+### Example 4: `s[start:end:step]` with +ve start, end, and -ve step
 
-### Working with Larger Strings:
-15. **Extract every 3rd character from index 5 to index 15**:
-    ```python
-    s = "string slicing"
-    s[5:15:3]  # "sni"
-    ```
+```python
+s = "string slicing"
 
-16. **Extract characters from index 7 to the second last character in reverse**:
-    ```python
-    s = "string slicing"
-    s[7:-1:-1]  # "n"
-    ```
+# Eight possible combinations
+s[ : :-1]     # 'gnicils gnirts'  # Reverse of string
+s[ : :-2]     # 'giisgit'         # Every second character from the reversed string
+s[8:0:-1]     # 'ls gnirt'        # Slices from index 8 to index 1 (excluding index 0) backwards
+s[8: :-1]     # 'ls gnirts'       # Slices from index 8 to the start backwards
+s[8: :-2]     # 'l nrs'           # Every second character from index 8 to the start backwards
+s[8: :-3]     # 'lgr'             # Every third character from index 8 to the start backwards
+```
+**Explanation of Outputs:**
+- `s[::-1]`: The entire string is reversed, yielding `"gnicils gnirts"`.
+- `s[::-2]`: Every second character from the reversed string is returned, yielding `"giisgit"`.
+- `s[8:0:-1]`: The slice starts from index 8 and moves backwards, excluding index 0, yielding `"ls gnirt"`.
+- `s[8::-1]`: Similar to the previous, but includes index 0, yielding `"ls gnirts"`.
+- `s[8::-2]`: Every second character from index 8 moving backwards, yielding `"l nrs"`.
+- `s[8::-3]`: Every third character from index 8 moving backwards, yielding `"lgr"`.
 
-17. **Extract the last 3 characters with negative step**:
-    ```python
-    s = "string slicing"
-    s[-1:-4:-1]  # "gn"
-    ```
+---
+
 
 ### Combining Forward and Backward Slicing:
-18. **Slice the first half and reverse it**:
-    ```python
-    s = "string slicing"
-    s[:len(s)//2][::-1]  # "gnirts"
-    ```
 
-19. **Slice the second half and reverse it**:
-    ```python
-    s = "string slicing"
-    s[len(s)//2:][::-1]  # "gnicils"
-    ```
+#### **Slice the first half and reverse it**:
 
-20. **Combine forward and reverse slices to get a specific pattern**:
-    ```python
-    s = "string slicing"
-    s[::2] + s[::-3]  # "srg icn"
-    ```
+```python
+s = "string slicing"
+s[:len(s)//2][::-1]  # "gnirts"
+```
 
-21. **Reverse the string and then slice it in steps of 2**:
-    ```python
-    s = "string slicing"
-    s[::-1][::2]  # "gcnr"
-    ```
+**Step-by-Step Explanation:**
+
+1. **First part: `s[:len(s)//2]`**
+   - `len(s)` gives the length of the string `"string slicing"`, which is 14.
+   - `len(s)//2` calculates the integer division of 14 by 2, which gives `7`. 
+   - So `s[:7]` returns the first 7 characters of the string, which is `"string "`.
+
+2. **Second part: `[::1]` on `s[:7]` (i.e., `'string '`):**
+   - After slicing out `"string "`, we apply the reverse slicing `[::-1]`.
+   - `[::-1]` reverses the string `"string "`, resulting in `"gnirts"`.
+
+So the output is `"gnirts"`.
+
+**Note:**
+- `s[:len(s)//2]`: This slices the first half of the string.
+- `[::1]` reverses the string `"string "`.
+- By combining these two steps, we first slice a portion of the string and then reverse that portion.
+
+
+
+
+### ** Slice the second half and reverse it:
+
+```python
+s = "string slicing"
+s[len(s)//2:][::-1]  # "gnicils"
+```
+
+**Step-by-Step Explanation:**
+
+1. **First part: `s[len(s)//2:]`**
+   - `len(s)` gives the length of the string `"string slicing"`, which is 15.
+   - `len(s)//2` calculates the integer division of 15 by 2, which gives `7`.
+   - So, `s[7:]` slices from index 7 to the end, which gives `"slicing"`.
+
+2. **Second part: `[::1]` on `s[7:]` (i.e., `'slicing'`)**
+   - We reverse the string `"slicing"` using `[::-1]`.
+   - Reversing `"slicing"` results in `"gnicils"`.
+
+**Output:**
+- The final result is `"gnicils"`.
+
+**Note:**
+- The first slice `s[len(s)//2:]` gets the second half of the string (`"slicing"`).
+- The `[::-1]` reverses that second half, resulting in `"gnicils"`.
+- This technique can be useful when you want to work with a specific portion of the string (e.g., the second half) and then reverse it.
+
+
+### Combine forward and reverse slices to get a specific pattern:
+
+```python
+s = "string slicing"
+s[::2] + s[::-3]  # 'srn lcngcsnt'
+```
+
+**Step-by-Step Explanation:**
+
+1. **First part: `s[::2]`**
+   - `s[::2]` takes every second character from the string, starting from the first character.
+   - From `"string slicing"`, we get `'srn lcn'` (characters at positions 0, 2, 4, 6, 8, 10, 12).
+
+2. **Second part: `s[::-3]`**
+   - `s[::-3]` takes every third character from the string but in reverse order.
+   - Reversing `"string slicing"` gives `"gnicils gnirts"`, and taking every third character results in `'gcsnt'` (characters at positions -1, -4, -7, -10, -13).
+
+3. **Combining the two parts:**
+   - The two slices are concatenated: `'srn lcn' + 'gcsnt'` gives `'srn lcngcsnt'`.
+
+**Output:**
+- The final result is `'srn lcngcsnt'`.
+
+
+### Reverse the string and then slice it in steps of 2:
+
+```python
+s = "string slicing"
+s[::-1][::2]  # "gcnr"
+```
+
+**Step-by-Step Explanation:**
+
+1. **First part: `s[::-1]`**
+   - `s[::-1]` reverses the string `"string slicing"`, giving `"gnicils gnirts"`.
+
+2. **Second part: `[::2]` on `s[::-1]` (i.e., `"gnicils gnirts"`)**
+   - `s[::-1][::2]` takes every second character of the reversed string.
+   - From `"gnicils gnirts"`, we get `'giisgit'` (characters at positions 0, 2, 4, 6, 8, 10, 12).
+
+**Output:**
+- The final result is `'giisgit'`.
+
+**Note:**
+- By reversing the string first and then slicing with a step of 2 (`[::2]`), you can extract characters in a specific pattern.
+- This method can be useful when you want to manipulate a string both by reversing it and applying a specific step size to the result.
+
+---
+
+
 
 ### Practical Exercises:
-22. **Extract the first word from the string**:
+1. **Extract the first word from the string**:
     ```python
     s = "string slicing"
+
+    s.split() # ['string', 'slicing']
+
     s.split()[0]  # "string"
     ```
 
@@ -177,6 +246,9 @@
     ```
 
 
+---
+
+
 # String Templating
 
 ```python
@@ -209,6 +281,7 @@ greeting = template.safe_substitute(name="Alice")
 print(greeting)  # Output: Hello, my name is Alice and I am $age years old.
 ```
 
+---
 
 # Maketrans 
 
@@ -259,3 +332,5 @@ translated_text = text.translate(trans_table)
 print(translated_text)  # Output: "h2ll4 w4rld"
 ```
 This example replaces the vowels 'a', 'e', 'i', 'o', 'u' with the digits '1', '2', '3', '4', '5'.
+
+
