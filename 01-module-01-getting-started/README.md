@@ -17,10 +17,10 @@
 
 <span style="display: flex; justify-content: space-between; width: 100%;">
     <a href="/Python-Bootcamp/00-curriculum/README.md">
-        <img src="https://img.shields.io/badge/Previous-Curriculum-blue" width="150" height="30" style="margin-right: 20px;">
+        <img src="https://img.shields.io/badge/Previous-Curriculum-blue" width="200" height="35" style="margin-right: 20px;">
     </a>
     <a href="/Python-Bootcamp/02-module-02-python-fundamentals/README.md">
-        <img src="https://img.shields.io/badge/Build-passing-brightgreen" width="150" height="30" style="margin-left: 20px;">
+        <img src="https://img.shields.io/badge/Next-Python Fundamentals-brightgreen" width="250" height="35" style="margin-left: 20px;">
     </a>
 </span>
 
