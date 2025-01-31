@@ -505,55 +505,55 @@ This will print:
 
 
 
-## String Methods
+# String Methods 
 
-| **Method**        | **Description**                                                      | **Example**                                                |
-|-------------------|----------------------------------------------------------------------|------------------------------------------------------------|
-| `capitalize()`     | Converts the first character to uppercase.                            | `"hello".capitalize()` -> `"Hello"`                         |
-| `casefold()`       | Converts the entire string to lowercase.                              | `"HELLO".casefold()` -> `"hello"`                           |
-| `center()`         | Centers the string within a specified width, padding with spaces.     | `"hello".center(10, "*")` -> `"**hello***"`                 |
-| `count()`          | Counts the occurrences of a substring.                               | `"hello world".count("o")` -> `2`                           |
-| `encode()`         | Returns an encoded version of the string.                            | `"hello".encode()` -> `b'hello'`                            |
-| `endswith()`       | Returns `True` if the string ends with the specified value.           | `"hello".endswith("lo")` -> `True`                          |
-| `expandtabs()`     | Sets the tab size of the string.                                      | `"hello\tworld".expandtabs(4)` -> `"hello   world"`         |
-| `find()`           | Finds the first occurrence of a substring. Returns `-1` if not found. | `"hello world".find("world")` -> `6`                        |
-| `format()`         | Formats specified values in a string.                                | `"Hello {}".format("world")` -> `"Hello world"`            |
-| `format_map()`     | Similar to `format()`, but uses a mapping (e.g., dictionary).         | `"Hello {name}".format_map({"name": "Alice"})` -> `"Hello Alice"` |
-| `index()`          | Similar to `find()`, but raises an error if the substring is not found. | `"hello world".index("world")` -> `6`                      |
-| `isalnum()`        | Returns `True` if all characters in the string are alphanumeric.     | `"hello123".isalnum()` -> `True`                            |
-| `isalpha()`        | Returns `True` if all characters in the string are alphabetic.       | `"hello".isalpha()` -> `True`                               |
-| `isascii()`        | Returns `True` if all characters in the string are ASCII characters. | `"hello".isascii()` -> `True`                               |
-| `isdecimal()`      | Returns `True` if all characters in the string are decimals.         | `"12345".isdecimal()` -> `True`                             |
-| `isdigit()`        | Returns `True` if all characters in the string are digits.           | `"12345".isdigit()` -> `True`                               |
-| `isidentifier()`   | Returns `True` if the string is a valid identifier.                   | `"myVar".isidentifier()` -> `True`                          |
-| `islower()`        | Returns `True` if all characters in the string are lowercase.        | `"hello".islower()` -> `True`                               |
-| `isnumeric()`      | Returns `True` if all characters in the string are numeric.          | `"12345".isnumeric()` -> `True`                             |
-| `isprintable()`    | Returns `True` if all characters in the string are printable.        | `"hello".isprintable()` -> `True`                           |
-| `isspace()`        | Returns `True` if all characters in the string are whitespaces.      | `"   ".isspace()` -> `True`                                 |
-| `istitle()`        | Returns `True` if the string is in title case.                       | `"Hello World".istitle()` -> `True`                         |
-| `isupper()`        | Returns `True` if all characters in the string are uppercase.        | `"HELLO".isupper()` -> `True`                               |
-| `join()`           | Joins elements of an iterable into a string.                         | `" ".join(['hello', 'world'])` -> `"hello world"`           |
-| `ljust()`          | Returns a left justified version of the string.                      | `"hello".ljust(10, "-")` -> `"hello-----"`                  |
-| `lower()`          | Converts all characters to lowercase.                                | `"HELLO".lower()` -> `"hello"`                              |
-| `lstrip()`         | Returns a left trim version of the string.                           | `"   hello".lstrip()` -> `"hello"`                          |
-| [`maketrans()`](/Python-Bootcamp/06-module-06-string-manipulation/MISC.md#maketrans)      | Returns a translation table to be used in translations.              | `str.maketrans("abc", "123")` -> `{97: 49, 98: 50, 99: 51}` |
-| `partition()`      | Returns a tuple where the string is parted into three parts.        | `"hello world".partition(" ")` -> `('hello', ' ', 'world')` |
-| `replace()`        | Replaces a specified substring with another string.                 | `"hello world".replace("world", "Python")` -> `"hello Python"` |
-| `rfind()`          | Finds the last occurrence of a substring. Returns `-1` if not found. | `"hello world".rfind("o")` -> `7`                           |
-| `rindex()`         | Similar to `rfind()`, but raises an error if the substring is not found. | `"hello world".rindex("o")` -> `7`                         |
-| `rjust()`          | Returns a right justified version of the string.                     | `"hello".rjust(10, "-")` -> `"-----hello"`                  |
-| `rpartition()`     | Returns a tuple where the string is parted into three parts from the right. | `"hello world".rpartition(" ")` -> `('hello', ' ', 'world')` |
-| `rsplit()`         | Splits the string at the specified separator from the right.        | `"hello world".rsplit()` -> `['hello', 'world']`           |
-| `rstrip()`         | Returns a right trim version of the string.                         | `"hello   ".rstrip()` -> `"hello"`                          |
-| `split()`          | Splits the string at the specified separator.                       | `"hello world".split()` -> `['hello', 'world']`             |
-| `splitlines()`     | Splits the string at line breaks and returns a list.                | `"hello\nworld".splitlines()` -> `['hello', 'world']`       |
-| `startswith()`     | Returns `True` if the string starts with the specified value.       | `"hello".startswith("he")` -> `True`                        |
-| `strip()`          | Returns a trimmed version of the string.                            | `"   hello   ".strip()` -> `"hello"`                        |
-| `swapcase()`       | Swaps the case of the string (lowercase to uppercase and vice versa). | `"Hello".swapcase()` -> `"hELLO"`                         |
-| `title()`          | Converts the first character of each word to uppercase.             | `"hello world".title()` -> `"Hello World"`                  |
-| `translate()`      | Translates characters using a translation table.                    | `"hello".translate(str.maketrans("aeiou", "12345"))` -> `"h2ll4"` |
-| `upper()`          | Converts all characters to uppercase.                               | `"hello".upper()` -> `"HELLO"`                              |
-| `zfill()`          | Fills the string with a specified number of `0` values at the beginning. | `"42".zfill(5)` -> `"00042"`                              |
+| **No.** | **Method**        | **Description**                                                      | **Example**                                                |
+|--------|-------------------|----------------------------------------------------------------------|------------------------------------------------------------|
+| 1      | `capitalize()`     | Converts the first character to uppercase.                            | `"hello".capitalize()` -> `"Hello"`                         |
+| 2      | `casefold()`       | Converts the entire string to lowercase.                              | `"HELLO".casefold()` -> `"hello"`                           |
+| 3      | `center()`         | Centers the string within a specified width, padding with spaces.     | `"hello".center(10, "*")` -> `"**hello***"`                 |
+| 4      | `count()`          | Counts the occurrences of a substring.                               | `"hello world".count("o")` -> `2`                           |
+| 5      | `encode()`         | Returns an encoded version of the string.                            | `"hello".encode()` -> `b'hello'`                            |
+| 6      | `endswith()`       | Returns `True` if the string ends with the specified value.           | `"hello".endswith("lo")` -> `True`                          |
+| 7      | `expandtabs()`     | Sets the tab size of the string.                                      | `"hello\tworld".expandtabs(4)` -> `"hello   world"`         |
+| 8      | `find()`           | Finds the first occurrence of a substring. Returns `-1` if not found. | `"hello world".find("world")` -> `6`                        |
+| 9      | `format()`         | Formats specified values in a string.                                | `"Hello {}".format("world")` -> `"Hello world"`            |
+| 10     | `format_map()`     | Similar to `format()`, but uses a mapping (e.g., dictionary).         | `"Hello {name}".format_map({"name": "Alice"})` -> `"Hello Alice"` |
+| 11     | `index()`          | Similar to `find()`, but raises an error if the substring is not found. | `"hello world".index("world")` -> `6`                      |
+| 12     | `isalnum()`        | Returns `True` if all characters in the string are alphanumeric.     | `"hello123".isalnum()` -> `True`                            |
+| 13     | `isalpha()`        | Returns `True` if all characters in the string are alphabetic.       | `"hello".isalpha()` -> `True`                               |
+| 14     | `isascii()`        | Returns `True` if all characters in the string are ASCII characters. | `"hello".isascii()` -> `True`                               |
+| 15     | `isdecimal()`      | Returns `True` if all characters in the string are decimals.         | `"12345".isdecimal()` -> `True`                             |
+| 16     | `isdigit()`        | Returns `True` if all characters in the string are digits.           | `"12345".isdigit()` -> `True`                               |
+| 17     | `isidentifier()`   | Returns `True` if the string is a valid identifier.                   | `"myVar".isidentifier()` -> `True`                          |
+| 18     | `islower()`        | Returns `True` if all characters in the string are lowercase.        | `"hello".islower()` -> `True`                               |
+| 19     | `isnumeric()`      | Returns `True` if all characters in the string are numeric.          | `"12345".isnumeric()` -> `True`                             |
+| 20     | `isprintable()`    | Returns `True` if all characters in the string are printable.        | `"hello".isprintable()` -> `True`                           |
+| 21     | `isspace()`        | Returns `True` if all characters in the string are whitespaces.      | `"   ".isspace()` -> `True`                                 |
+| 22     | `istitle()`        | Returns `True` if the string is in title case.                       | `"Hello World".istitle()` -> `True`                         |
+| 23     | `isupper()`        | Returns `True` if all characters in the string are uppercase.        | `"HELLO".isupper()` -> `True`                               |
+| 24     | `join()`           | Joins elements of an iterable into a string.                         | `" ".join(['hello', 'world'])` -> `"hello world"`           |
+| 25     | `ljust()`          | Returns a left justified version of the string.                      | `"hello".ljust(10, "-")` -> `"hello-----"`                  |
+| 26     | `lower()`          | Converts all characters to lowercase.                                | `"HELLO".lower()` -> `"hello"`                              |
+| 27     | `lstrip()`         | Returns a left trim version of the string.                           | `"   hello".lstrip()` -> `"hello"`                          |
+| 28     | `maketrans()`      | Returns a translation table to be used in translations.              | `str.maketrans("abc", "123")` -> `{97: 49, 98: 50, 99: 51}` |
+| 29     | `partition()`      | Returns a tuple where the string is parted into three parts.        | `"hello world".partition(" ")` -> `('hello', ' ', 'world')` |
+| 30     | `replace()`        | Replaces a specified substring with another string.                 | `"hello world".replace("world", "Python")` -> `"hello Python"` |
+| 31     | `rfind()`          | Finds the last occurrence of a substring. Returns `-1` if not found. | `"hello world".rfind("o")` -> `7`                           |
+| 32     | `rindex()`         | Similar to `rfind()`, but raises an error if the substring is not found. | `"hello world".rindex("o")` -> `7`                         |
+| 33     | `rjust()`          | Returns a right justified version of the string.                     | `"hello".rjust(10, "-")` -> `"-----hello"`                  |
+| 34     | `rpartition()`     | Returns a tuple where the string is parted into three parts from the right. | `"hello world".rpartition(" ")` -> `('hello', ' ', 'world')` |
+| 35     | `rsplit()`         | Splits the string at the specified separator from the right.        | `"hello world".rsplit()` -> `['hello', 'world']`           |
+| 36     | `rstrip()`         | Returns a right trim version of the string.                         | `"hello   ".rstrip()` -> `"hello"`                          |
+| 37     | `split()`          | Splits the string at the specified separator.                       | `"hello world".split()` -> `['hello', 'world']`             |
+| 38     | `splitlines()`     | Splits the string at line breaks and returns a list.                | `"hello\nworld".splitlines()` -> `['hello', 'world']`       |
+| 39     | `startswith()`     | Returns `True` if the string starts with the specified value.       | `"hello".startswith("he")` -> `True`                        |
+| 40     | `strip()`          | Returns a trimmed version of the string.                            | `"   hello   ".strip()` -> `"hello"`                        |
+| 41     | `swapcase()`       | Swaps the case of the string (lowercase to uppercase and vice versa). | `"Hello".swapcase()` -> `"hELLO"`                         |
+| 42     | `title()`          | Converts the first character of each word to uppercase.             | `"hello world".title()` -> `"Hello World"`                  |
+| 43     | `translate()`      | Translates characters using a translation table.                    | `"hello".translate(str.maketrans("aeiou", "12345"))` -> `"h2ll4"` |
+| 44     | `upper()`          | Converts all characters to uppercase.                               | `"hello".upper()` -> `"HELLO"`                              |
+| 45     | `zfill()`          | Fills the string with a specified number of `0` values at the beginning. | `"42".zfill(5)` -> `"00042"`                              |
 
 
 
