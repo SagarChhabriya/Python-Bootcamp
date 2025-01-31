@@ -1,5 +1,15 @@
 # 6. String Manipulation
 
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../05-module-05-debugging/README.md">
+        <img src="https://img.shields.io/badge/Previous-Debugging-blue" width="200" height="35">
+    </a>
+    <a href="../07-module-07-lists/README.md">
+        <img src="https://img.shields.io/badge/Next-Python_Lists-brightgreen" width="170" height="35">
+    </a>
+</span>
+<br><br>
+
 - [**6.1 Introduction to Python Strings**](session-6.0.md#61-introduction-to-python-strings) 
   - Immutable Nature of Strings (Mutation in strings)
 
