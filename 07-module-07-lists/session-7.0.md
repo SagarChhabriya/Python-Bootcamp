@@ -162,7 +162,7 @@ print(my_list)  # Output: [100, 20, 30, 40, 50]
   print(a, b, c)  # Output: 1 2 3
   ```
 
-## 7.9 Limitations and Iteration 
+## 7.7 Limitations and Iteration 
 
 ### Limitations of Lists
 - Lists **cannot** hold immutable elements (e.g., tuples, sets).
