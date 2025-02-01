@@ -1,5 +1,17 @@
 # 8. Tuples
 
+
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../07-module-07-lists/README.md">
+        <img src="https://img.shields.io/badge/Previous-Python_Lists-blue" width="200" height="35">
+    </a>
+    <a href="../09-module-09-dictionaries/README.md">
+        <img src="https://img.shields.io/badge/Next-Python_Dictionaries-brightgreen" width="200" height="35">
+    </a>
+</span>
+<br><br>
+
+
 ## 8.1 Introduction to Tuples
 Tuples are immutable sequences in Python. They are used to store a collection of items that should not be changed after creation. Since tuples are immutable, they offer benefits like performance optimization and protection from accidental modification.
 
@@ -249,4 +261,18 @@ In contrast, using a list as a key would raise a `TypeError`:
 ```python
 # List as a key (will raise an error)
 my_dict = { [1, 2]: "value1" }  # TypeError: unhashable type: 'list'
+```
 
+
+
+<br><br>
+
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../07-module-07-lists/README.md">
+        <img src="https://img.shields.io/badge/Previous-Python_Lists-blue" width="200" height="35">
+    </a>
+    <a href="../09-module-09-dictionaries/README.md">
+        <img src="https://img.shields.io/badge/Next-Python_Dictionaries-brightgreen" width="200" height="35">
+    </a>
+</span>
+<br><br>

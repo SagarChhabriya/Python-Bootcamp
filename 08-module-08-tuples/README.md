@@ -1,5 +1,16 @@
 # 8. [Tuples](session-8.0.md#8-tuples)
 
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../07-module-07-lists/README.md">
+        <img src="https://img.shields.io/badge/Previous-Python_Lists-blue" width="200" height="35">
+    </a>
+    <a href="../09-module-09-dictionaries/README.md">
+        <img src="https://img.shields.io/badge/Next-Python_Dictionaries-brightgreen" width="200" height="35">
+    </a>
+</span>
+<br><br>
+
+
 ## [8.1 Introduction to Tuples](session-8.0.md#81-introduction-to-tuples)
 - Characteristics and Use of Tuples in Python
 - Comparison with Lists
