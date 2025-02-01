@@ -1,7 +1,16 @@
-Here’s a clean and easy-to-understand set of notes covering lists in Python for your markdown file:
-
-```markdown
 # Python Lists: Basic Concepts and Operations
+
+
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../06-module-06-string-manipulation/README.md">
+        <img src="https://img.shields.io/badge/Previous-Debugging-blue" width="200" height="35">
+    </a>
+    <a href="../08-module-08-tuples/README.md">
+        <img src="https://img.shields.io/badge/Next-Python_Lists-brightgreen" width="170" height="35">
+    </a>
+</span>
+<br><br>
+
 
 ## 7.1 Introduction to Python Lists
 A list in Python is a collection of ordered, mutable (changeable) items. Lists can store elements of different data types, including numbers, strings, and other objects.
@@ -12,7 +21,9 @@ A list in Python is a collection of ordered, mutable (changeable) items. Lists c
 - **Indexed**: Items in a list are indexed, starting from 0.
 - **Heterogeneous**: Lists can hold items of different data types.
 
-## 7.2 Creating Lists
+## 7.2 Creating and Accessing Lists
+
+### Creating Lists
 You can create lists using different methods:
 
 1. **Using List Literals**:
@@ -30,7 +41,7 @@ You can create lists using different methods:
    empty_list = []
    ```
 
-## 7.3 Accessing List Elements
+### Accessing List Elements
 You can access elements in a list using **indexing**.
 
 ### Indexing:
@@ -51,7 +62,7 @@ To access an element:
 print(my_list[1])  # Output: 20
 ```
 
-## 7.4 Modifying Lists
+## 7.3 Modifying Lists
 You can modify lists in several ways:
 
 1. **Joining Lists**:
@@ -74,7 +85,7 @@ You can modify lists in several ways:
    print(my_list[1:4])  # Output: [20, 30, 40]
    ```
 
-## 7.5 Common List Methods
+## 7.4 Common List Methods
 
 1. **`append()`**: Adds an element at the end of the list.
    ```python
@@ -117,7 +128,7 @@ Use `insert()` or list concatenation to prepend items:
 my_list.insert(0, "new_first_element")
 ```
 
-## 7.6 List Comprehension
+## 7.5 List Comprehension
 List comprehension provides a concise way to create lists.
 
 ### Syntax:
@@ -130,7 +141,7 @@ new_list = [expression for item in iterable if condition]
 squares = [x ** 2 for x in range(5)]  # Output: [0, 1, 4, 9, 16]
 ```
 
-## 7.7 List Mutation
+## 7.6 List Mutation and Packing/Unpacking
 Lists are **mutable**, meaning you can change their elements in place.
 
 Example:
@@ -139,7 +150,7 @@ my_list[0] = 100  # Modifying the first element
 print(my_list)  # Output: [100, 20, 30, 40, 50]
 ```
 
-## 7.8 Packing and Unpacking Lists
+### Packing and Unpacking Lists
 - **Packing**: Multiple elements packed into a list.
   ```python
   packed = [1, 2, 3]
@@ -151,12 +162,14 @@ print(my_list)  # Output: [100, 20, 30, 40, 50]
   print(a, b, c)  # Output: 1 2 3
   ```
 
-## 7.9 Limitations of Lists
+## 7.9 Limitations and Iteration 
+
+### Limitations of Lists
 - Lists **cannot** hold immutable elements (e.g., tuples, sets).
 - Lists have a **fixed size** when created but can grow or shrink dynamically.
 - Lists are not the most efficient for large-scale data due to their performance considerations.
 
-## 7.10 Iteration over Lists
+### Iteration over Lists
 You can iterate over a list using a `for` loop or list comprehension.
 
 ### Example with `for` Loop:
@@ -170,7 +183,9 @@ for item in my_list:
 squared = [x**2 for x in my_list if isinstance(x, int)]
 ```
 
-## 7.11 Membership Operators
+## 7.8 Membership and Concatenation
+
+### Membership Operators
 Check if an element is present in a list using the `in` and `not in` operators.
 
 ### Example:
@@ -179,22 +194,22 @@ print(10 in my_list)  # Output: True or False
 print(100 not in my_list)  # Output: True
 ```
 
-## 7.12 List Concatenation
+### List Concatenation
 You can combine multiple lists using `+` or `extend()`.
 
-### Using `+`:
+#### Using `+`:
 ```python
 list1 = [1, 2]
 list2 = [3, 4]
 combined = list1 + list2  # Output: [1, 2, 3, 4]
 ```
 
-### Using `extend()`:
+#### Using `extend()`:
 ```python
 list1.extend(list2)  # List1 is now [1, 2, 3, 4]
 ```
 
-## 7.13 Multi-dimensional Lists
+## 7.9 Multi-dimensional Lists
 A multi-dimensional list (nested list) is a list containing other lists as elements.
 
 ### Example:
@@ -204,7 +219,9 @@ print(matrix[1])  # Output: [3, 4]
 print(matrix[1][0])  # Output: 3
 ```
 
-## 7.14 Deleting Elements
+## 7.10 Deleting and Reassigning Elements
+
+### Deleting Elements
 You can delete elements from a list using `del`, `pop()`, or `remove()`.
 
 1. **`del`**:
@@ -222,7 +239,7 @@ You can delete elements from a list using `del`, `pop()`, or `remove()`.
    my_list.remove(20)
    ```
 
-## 7.15 Reassigning List Elements
+### Reassigning List Elements
 You can reassign values to specific indexes.
 
 ### Example:
@@ -230,7 +247,9 @@ You can reassign values to specific indexes.
 my_list[2] = 99  # Change the element at index 2
 ```
 
-## **7.16 Copying Lists**
+## 7.11 Advanced List Operations
+
+### Copying Lists
 
 - **Shallow Copy**:
   - Creates a new list but references the same objects.
@@ -251,7 +270,7 @@ my_list[2] = 99  # Change the element at index 2
 
 ---
 
-## **7.17 List Equality and Identity**
+### List Equality and Identity
 
 - **Equality (`==`)**:
   - Checks if two lists have the same elements in the same order.
@@ -269,7 +288,7 @@ my_list[2] = 99  # Change the element at index 2
 
 ---
 
-## **7.18 List as Stack or Queue**
+## List as Stack or Queue
 
 - **Stack (LIFO)**:
   - Use `append()` to push and `pop()` to pop.
@@ -291,7 +310,7 @@ my_list[2] = 99  # Change the element at index 2
 
 ---
 
-## **7.19 List Filtering**
+## List Filtering
 
 - **Using `filter()`**:
   - Filters elements based on a condition.
@@ -309,7 +328,7 @@ my_list[2] = 99  # Change the element at index 2
 
 ---
 
-## **7.20 List Sorting**
+## List Sorting
 
 - **Sorting in Place**:
   ```python
@@ -330,7 +349,7 @@ my_list[2] = 99  # Change the element at index 2
 
 ---
 
-## **7.21 List Reversal**
+## List Reversal
 
 - **Reversing in Place**:
   ```python
@@ -345,7 +364,7 @@ my_list[2] = 99  # Change the element at index 2
 
 ---
 
-## **7.22 List to String Conversion**
+## List to String Conversion
 
 - **Using `join()`**:
   ```python
@@ -355,7 +374,7 @@ my_list[2] = 99  # Change the element at index 2
 
 ---
 
-## **7.23 List to Other Data Structures**
+## List to Other Data Structures
 
 - **List to Tuple**:
   ```python
@@ -375,7 +394,9 @@ my_list[2] = 99  # Change the element at index 2
 
 ---
 
-## **7.24 List Performance Considerations**
+## 7.12 Performance and Best Practices
+
+### List Performance Considerations
 
 - **Time Complexity**:
   - **Access**: O(1) (constant time for indexing).
@@ -388,7 +409,7 @@ my_list[2] = 99  # Change the element at index 2
 
 ---
 
-## **7.25 List vs Other Data Structures**
+### List vs Other Data Structures
 
 - **Lists vs Tuples**:
   - Lists are mutable; tuples are immutable.
@@ -405,7 +426,7 @@ my_list[2] = 99  # Change the element at index 2
 
 ---
 
-## **7.26 List Aliasing**
+### List Aliasing
 
 - **Aliasing**:
   - When two variables reference the same list object.
@@ -420,7 +441,7 @@ my_list[2] = 99  # Change the element at index 2
 
 
 
-## **7.26 List as Function Arguments**
+### List as Function Arguments
 
 - **Mutable Default Arguments**:
   - Avoid using mutable default arguments (e.g., lists) in functions.
@@ -436,7 +457,7 @@ my_list[2] = 99  # Change the element at index 2
 ---
 
 
-## 7.27 Indexing Errors
+### Indexing Errors
 Trying to access an index that doesn't exist will raise an `IndexError`.
 
 ### Example:
@@ -445,7 +466,7 @@ my_list = [10, 20, 30]
 print(my_list[5])  # Raises IndexError: list index out of range
 ```
 
-## 7.28 Nested List Comprehension
+### Nested List Comprehension
 You can use list comprehensions inside other list comprehensions for multi-dimensional lists.
 
 ### Example:
@@ -455,7 +476,7 @@ flat = [item for sublist in matrix for item in sublist]
 # Output: [1, 2, 3, 4, 5, 6]
 ```
 
-## 7.29 `clear()` Method
+###  `clear()` Method
 Removes all elements from the list.
 
 ### Example:
@@ -464,7 +485,7 @@ my_list.clear()  # Removes all elements from the list
 ```
 
 
-## 7.30 Using `*args` to Accept List-like Arguments
+### Using `*args` to Accept List-like Arguments
 In function definitions, you can use `*args` to accept a variable number of arguments as a list.
 
 ### Example:
@@ -477,7 +498,7 @@ print_elements(1, 2, 3)  # Output: 1 2 3
 ```
 
 
-## 7.31 `max()` and `min()` Functions
+### `max()` and `min()` Functions
 You can use `max()` and `min()` to find the largest and smallest elements in a list.
 
 ### Example:
@@ -487,22 +508,20 @@ min_value = min(my_list)
 ```
 
 
-
-## 7.32 List Aliasing
-When two variables reference the same list object, changes to one affect the other.
-
-### Example:
-```python
-list1 = [1, 2, 3]
-list2 = list1
-list2[0] = 99
-print(list1)  # Output: [99, 2, 3]
-```
-
-## 7.33 List Memory Management
+### List Memory Management
 - **Garbage Collection**: Python automatically frees memory for unused lists.
 - **Explicit Deletion**: Use `del` to delete a list explicitly.
   ```python
   del list1
   ```
+<br><br>
+<br><br>
 
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../06-module-06-string-manipulation/README.md">
+        <img src="https://img.shields.io/badge/Previous-Debugging-blue" width="200" height="35">
+    </a>
+    <a href="../08-module-08-tuples/README.md">
+        <img src="https://img.shields.io/badge/Next-Python_Lists-brightgreen" width="170" height="35">
+    </a>
+</span>
