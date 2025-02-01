@@ -1,3 +1,4 @@
+# String Manipulation
 <span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
     <a href="../05-module-05-debugging/README.md">
         <img src="https://img.shields.io/badge/Previous-Debugging-blue" width="200" height="35">
