@@ -1,4 +1,8 @@
+# Data Handling
+
 ## **3.1 Data Types in Python**
+
+[Click Here to Review Notes on 3.1 Data Types in Python](session-3.0.md#31-data-types-in-python)
 
 ### **Easy Questions**
 1. What are the built-in data types in Python?
@@ -10,39 +14,41 @@
 7. What is the purpose of the `None` data type in Python?
 8. How do you check the data type of a variable in Python?
 9. What is the output of `type(10.5)`?
-10. What is the difference between `list` and `tuple` in Python?
+<!-- 10. What is the difference between `list` and `tuple` in Python? -->
 
 ---
 
 ### **Medium Questions**
-11. How do you represent a binary number in Python?
-12. What is the output of `int(10.5)`?
-13. How do you convert a string to a float in Python?
-14. What is the difference between `complex(10)` and `complex(10, 5)`?
-15. How do you check if a string contains only digits?
-16. What is the purpose of the `bool()` function in Python?
-17. How do you create a multi-line string in Python?
-18. What is the difference between `set` and `frozenset` in Python?
-19. How do you represent a hexadecimal number in Python?
-20. What is the output of `type(range(10))`?
+1. How do you represent a binary number in Python?
+2. What is the output of `int(10.5)`?
+3. How do you convert a string to a float in Python?
+4. What is the difference between `complex(10)` and `complex(10, 5)`?
+<!-- 15. How do you check if a string contains only digits? -->
+5. What is the purpose of the `bool()` function in Python?
+6. How do you create a multi-line string in Python?
+<!-- 18. What is the difference between `set` and `frozenset` in Python? -->
+7. How do you represent a hexadecimal number in Python?
+<!-- 20. What is the output of `type(range(10))`? -->
 
 ---
 
 ### **Hard Questions**
-21. How do you convert a binary number to a decimal number in Python?
-22. What is the difference between `int("10")` and `int("10.5")`?
-23. How do you represent a large integer in Python?
-24. What is the purpose of the `bytes` data type in Python?
-25. How do you convert a string to a list of characters in Python?
-26. What is the difference between `list` and `dict` in Python?
-27. How do you represent a floating-point number in scientific notation?
-28. What is the output of `type(10 + 5j)`?
-29. How do you convert a list to a tuple in Python?
-30. What is the difference between `str` and `bytearray` in Python?
+1. How do you convert a binary number to a decimal number in Python?
+2. What is the difference between `int("10")` and `int("10.5")`?
+3. How do you represent a large integer in Python?
+4. What is the purpose of the `bytes` data type in Python?
+<!-- 25. How do you convert a string to a list of characters in Python? -->
+<!-- 26. What is the difference between `list` and `dict` in Python? -->
+5. How do you represent a floating-point number in scientific notation?
+6. What is the output of `type(10 + 5j)`?
+<!-- 29. How do you convert a list to a tuple in Python? -->
+7. What is the difference between `str` and `bytearray` in Python?
 
 ---
 
 ## **3.2 Type Conversion in Python**
+
+[Click Here to Review Notes on 3.2 Type Conversion in Python](session-3.0.md#32-type-conversion-in-python)
 
 ### **Easy Questions**
 1. What is type conversion in Python?
@@ -88,6 +94,8 @@
 
 ## **3.3 Constants in Python**
 
+[Click Here to Review Notes on 3.3 Constants in Python](session-3.0.md#33-constants-in-python)
+
 ### **Easy Questions**
 1. What is a constant in Python?
 2. How do you define a constant in Python?
@@ -131,6 +139,8 @@
 ---
 
 ## **3.4 Special Data Types**
+
+[Click Here to Review Notes on 3.4 Special Data Types](session-3.0.md#34-special-data-types)
 
 ### **Easy Questions**
 1. What is the `None` data type in Python?
@@ -177,6 +187,8 @@
 
 ### **3.6.1 Introduction to Date and Time in Python**
 
+[Click Here to Review Notes on 3.6.1 Introduction to Date and Time in Python](session-3.0.md#361-introduction-to-date-and-time-in-python)
+
 #### **Easy Questions**
 1. What is the purpose of the `datetime` module in Python?
 2. Which Python module would you use to work with the current time?
@@ -216,6 +228,8 @@
 ---
 
 ### **3.6.2 Date and Time Now**
+
+[Click Here to Review Notes on 3.6.2 Date and Time Now](session-3.0.md#362-date-and-time-now)
 
 #### **Easy Questions**
 1. What function can you use to get the current local date and time in Python?
@@ -257,6 +271,8 @@
 
 ### **3.6.3 Combining Date and Time**
 
+[Click Here to Review Notes on 3.6.3 Combining Date and Time](session-3.0.md#363-combining-date-and-time)
+
 #### **Easy Questions**
 1. What is the purpose of `datetime.combine()` in Python?
 2. How do you combine a date object and a time object into a single `datetime` object?
@@ -296,6 +312,8 @@
 ---
 
 ### **3.6.4 Formatting Dates and Times**
+
+[Click Here to Review Notes on 3.6.4 Formatting Dates and Times](session-3.0.md#364-formatting-dates-and-times)
 
 #### **Easy Questions**
 1. What does the `strftime()` function do in Python?
@@ -338,6 +356,8 @@ SS` format using `strftime()`?
 ---
 
 ### **3.6.5 Finding Durations**
+
+[Click Here to Review Notes on 3.6.5 Finding Durations](session-3.0.md#365-finding-durations)
 
 #### **Easy Questions**
 1. What is a `timedelta` object used for in Python?

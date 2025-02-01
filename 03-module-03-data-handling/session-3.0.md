@@ -706,6 +706,8 @@ x = "Hello"  # This will not raise an error at runtime, but linters will warn ab
 
 <!-- Static vs Dynamic Binding -->
    
+[Click Here For Exercises on 3.1 Data Types in Python](exercises.md#31-data-types-in-python)
+
 
 # 3.2 Type Conversion in Python
 
@@ -849,7 +851,9 @@ str(True)          # Converts boolean True to string: "True"
 
   - Implicit and Explicit Conversion
 
-## 3.3 Constants in Python
+[Click Here For Exercises on 3.2 Type Conversion in Python](exercises.md#32-type-conversion-in-python)
+
+# 3.3 Constants in Python
 
 
 - **Definition**:  
@@ -906,6 +910,8 @@ str(True)          # Converts boolean True to string: "True"
   - Developers must rely on conventions and discipline to enforce constant behavior.
 
 ---
+
+[Click Here For Exercises on 3.3 Constants in Python](exercises.md#33-constants-in-python)
 
 # 3.4 Special Data Types
 
@@ -983,6 +989,8 @@ default_value = None
 if default_value is None:
     print("No default value assigned yet.")  # This will print
 ```
+
+[Click Here For Exercsies on 3.4 Special Data Types](exercises.md#34-special-data-types)
 
 # 3.5 Introduction to Python Collection/Data Structures
 
@@ -1360,6 +1368,7 @@ print(calendar.month(2025, 1))  # Displays the calendar for January 2025
   print(calendar.isleap(2024))  # Output: True
   ```
 
+[Click Here For Exercises on 3.6 Working with Date and Time](exercises.md#361-introduction-to-date-and-time-in-python)
 
 
 <span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
