@@ -53,7 +53,7 @@
 ### **Easy Questions**
 1. What is type conversion in Python?
 2. How do you convert an integer to a float in Python?
-3. What is the output of `int(10.5)`?
+<!-- 3. What is the output of `int(10.5)`? -->
 4. How do you convert a string to an integer in Python?
 5. What is the purpose of the `float()` function in Python?
 6. How do you convert a boolean to an integer in Python?
@@ -65,30 +65,30 @@
 ---
 
 ### **Medium Questions**
-11. What is the difference between `int("10")` and `int("10.5")`?
-12. How do you convert a binary string to an integer in Python?
-13. What is the output of `complex(10)`?
-14. How do you convert a hexadecimal string to an integer in Python?
-15. What is the purpose of the `bool()` function in Python?
-16. How do you convert a list to a string in Python?
-17. What is the output of `float("10.5")`?
-18. How do you convert a tuple to a list in Python?
-19. What is the difference between `int(True)` and `int(False)`?
-20. How do you convert a string to a complex number in Python?
+<!-- 11. What is the difference between `int("10")` and `int("10.5")`? -->
+1. How do you convert a binary string to an integer in Python?
+<!-- 13. What is the output of `complex(10)`? -->
+2. How do you convert a hexadecimal string to an integer in Python?
+3. What is the purpose of the `bool()` function in Python?
+<!-- 16. How do you convert a list to a string in Python? -->
+4. What is the output of `float("10.5")`?
+<!-- 18. How do you convert a tuple to a list in Python? -->
+5. What is the difference between `int(True)` and `int(False)`?
+6. How do you convert a string to a complex number in Python?
 
 ---
 
 ### **Hard Questions**
-21. How do you convert a binary number to a hexadecimal number in Python?
-22. What is the output of `int("0b1010", 2)`?
-23. How do you convert a list of integers to a string in Python?
-24. What is the difference between `int(10.5)` and `int("10.5")`?
-25. How do you convert a string to a list of integers in Python?
-26. What is the output of `bool("False")`?
-27. How do you convert a dictionary to a list in Python?
-28. What is the difference between `str(10)` and `str(10.5)`?
-29. How do you convert a list of strings to a list of integers in Python?
-30. What is the output of `float("10.5e2")`?
+1. How do you convert a binary number to a hexadecimal number in Python?
+2. What is the output of `int("0b1010", 2)`?
+<!-- 23. How do you convert a list of integers to a string in Python? -->
+<!-- 24. What is the difference between `int(10.5)` and `int("10.5")`? -->
+<!-- 25. How do you convert a string to a list of integers in Python? -->
+3. What is the output of `bool("False")`?
+<!-- 27. How do you convert a dictionary to a list in Python? -->
+4. What is the difference between `str(10)` and `str(10.5)`?
+<!-- 29. How do you convert a list of strings to a list of integers in Python? -->
+5. What is the output of `float("10.5e2")`?
 
 ---
 
@@ -105,36 +105,36 @@
 6. What is the difference between a constant and a variable in Python?
 7. How do you use constants in a Python program?
 8. What is the purpose of the `None` constant in Python?
-9. How do you define a constant in a function in Python?
-10. What is the output of `print(True)`?
+<!-- 9. How do you define a constant in a function in Python? -->
+9. What is the output of `print(True)`?
 
 ---
 
 ### **Medium Questions**
-11. How do you define a constant in a class in Python?
-12. What is the difference between `True` and `False` in Python?
-13. How do you define a constant in a dictionary in Python?
-14. What is the purpose of the `math.pi` constant in Python?
-15. How do you define a constant in a list in Python?
-16. What is the difference between `None` and `False` in Python?
-17. How do you define a constant in a tuple in Python?
-18. What is the purpose of the `sys.maxsize` constant in Python?
-19. How do you define a constant in a set in Python?
-20. What is the output of `print(None)`?
+<!-- 11. How do you define a constant in a class in Python? -->
+1. What is the difference between `True` and `False` in Python?
+<!-- 13. How do you define a constant in a dictionary in Python? -->
+2. What is the purpose of the `math.pi` constant in Python?
+<!-- 15. How do you define a constant in a list in Python? -->
+3. What is the difference between `None` and `False` in Python?
+<!-- 17. How do you define a constant in a tuple in Python? -->
+<!-- 18. What is the purpose of the `sys.maxsize` constant in Python? -->
+<!-- 19. How do you define a constant in a set in Python? -->
+4. What is the output of `print(None)`?
 
 ---
 
 ### **Hard Questions**
-21. How do you define a constant in a nested function in Python?
-22. What is the difference between `None` and `0` in Python?
-23. How do you define a constant in a lambda function in Python?
-24. What is the purpose of the `math.e` constant in Python?
-25. How do you define a constant in a generator in Python?
-26. What is the difference between `None` and `""` in Python?
-27. How do you define a constant in a decorator in Python?
-28. What is the purpose of the `os.path.sep` constant in Python?
-29. How do you define a constant in a context manager in Python?
-30. What is the output of `print(bool(None))`?
+<!-- 21. How do you define a constant in a nested function in Python? -->
+1. What is the difference between `None` and `0` in Python?
+<!-- 23. How do you define a constant in a lambda function in Python? -->
+<!-- 24. What is the purpose of the `math.e` constant in Python? -->
+<!-- 25. How do you define a constant in a generator in Python? -->
+2. What is the difference between `None` and `""` in Python?
+<!-- 27. How do you define a constant in a decorator in Python? -->
+<!-- 28. What is the purpose of the `os.path.sep` constant in Python? -->
+<!-- 29. How do you define a constant in a context manager in Python? -->
+3. What is the output of `print(bool(None))`?
 
 ---
 
@@ -396,3 +396,79 @@ SS` format using `strftime()`?
 10. How would you handle custom durations like 10 business days or 5 work weeks using `timedelta` in Python?
 
 ---
+
+
+<!-- # Data Handling -->
+
+<!-- ## **3.1 Data Types in Python** -->
+
+
+<!-- ### **Easy Questions** -->
+<!-- 10. What is the difference between `list` and `tuple` in Python? -->
+
+---
+
+<!-- ### **Medium Questions** -->
+<!-- 15. How do you check if a string contains only digits? -->
+<!-- 18. What is the difference between `set` and `frozenset` in Python? -->
+<!-- 20. What is the output of `type(range(10))`? -->
+
+---
+
+<!-- ### **Hard Questions** -->
+<!-- 25. How do you convert a string to a list of characters in Python? -->
+<!-- 26. What is the difference between `list` and `dict` in Python? -->
+<!-- 29. How do you convert a list to a tuple in Python? -->
+
+---
+
+<!-- ## **3.2 Type Conversion in Python** -->
+
+
+<!-- ### **Easy Questions** -->
+<!-- 3. What is the output of `int(10.5)`? -->
+
+---
+
+<!-- ### **Medium Questions** -->
+<!-- 11. What is the difference between `int("10")` and `int("10.5")`? -->
+<!-- 13. What is the output of `complex(10)`? -->
+<!-- 16. How do you convert a list to a string in Python? -->
+<!-- 18. How do you convert a tuple to a list in Python? -->
+---
+
+<!-- ### **Hard Questions** -->
+<!-- 23. How do you convert a list of integers to a string in Python? -->
+<!-- 24. What is the difference between `int(10.5)` and `int("10.5")`? -->
+<!-- 25. How do you convert a string to a list of integers in Python? -->
+<!-- 27. How do you convert a dictionary to a list in Python? -->
+<!-- 29. How do you convert a list of strings to a list of integers in Python? -->
+
+---
+
+<!-- ## **3.3 Constants in Python** -->
+
+
+<!-- ### **Easy Questions** -->
+<!-- 9. How do you define a constant in a function in Python? -->
+
+---
+
+<!-- ### **Medium Questions** -->
+<!-- 11. How do you define a constant in a class in Python? -->
+<!-- 13. How do you define a constant in a dictionary in Python? -->
+<!-- 15. How do you define a constant in a list in Python? -->
+<!-- 17. How do you define a constant in a tuple in Python? -->
+<!-- 18. What is the purpose of the `sys.maxsize` constant in Python? -->
+<!-- 19. How do you define a constant in a set in Python? -->
+
+---
+
+<!-- ### **Hard Questions** -->
+<!-- 21. How do you define a constant in a nested function in Python? -->
+<!-- 23. How do you define a constant in a lambda function in Python? -->
+<!-- 24. What is the purpose of the `math.e` constant in Python? -->
+<!-- 25. How do you define a constant in a generator in Python? -->
+<!-- 27. How do you define a constant in a decorator in Python? -->
+<!-- 28. What is the purpose of the `os.path.sep` constant in Python? -->
+<!-- 29. How do you define a constant in a context manager in Python? -->
