@@ -3,10 +3,10 @@
 
 <span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
     <a href="../06-module-06-string-manipulation/README.md">
-        <img src="https://img.shields.io/badge/Previous-Debugging-blue" width="200" height="35">
+        <img src="https://img.shields.io/badge/Previous-String_Manipulation-blue" width="200" height="35">
     </a>
     <a href="../08-module-08-tuples/README.md">
-        <img src="https://img.shields.io/badge/Next-Python_Lists-brightgreen" width="170" height="35">
+        <img src="https://img.shields.io/badge/Next-Python_Tuples-brightgreen" width="170" height="35">
     </a>
 </span>
 <br><br>
@@ -519,9 +519,9 @@ min_value = min(my_list)
 
 <span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
     <a href="../06-module-06-string-manipulation/README.md">
-        <img src="https://img.shields.io/badge/Previous-Debugging-blue" width="200" height="35">
+        <img src="https://img.shields.io/badge/Previous-String_Manipulation-blue" width="200" height="35">
     </a>
     <a href="../08-module-08-tuples/README.md">
-        <img src="https://img.shields.io/badge/Next-Python_Lists-brightgreen" width="170" height="35">
+        <img src="https://img.shields.io/badge/Next-Python_Tuples-brightgreen" width="170" height="35">
     </a>
 </span>
