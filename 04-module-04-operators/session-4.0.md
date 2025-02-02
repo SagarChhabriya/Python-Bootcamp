@@ -583,7 +583,7 @@ Bitwise operators perform operations on binary numbers (bits).
 | Operator | Description            | Example           | Output   |
 |----------|------------------------|-------------------|----------|
 | `&`      | Bitwise AND            | `5 & 3`           | `1`      |
-| `|`      | Bitwise OR             | `5 | 3`           | `7`      |
+| `\|`      | Bitwise OR             | `5 \| 3`           | `7`      |
 | `^`      | Bitwise XOR            | `5 ^ 3`           | `6`      |
 | `<<`     | Bitwise left shift     | `5 << 1`          | `10`     |
 | `>>`     | Bitwise right shift    | `5 >> 1`          | `2`      |
