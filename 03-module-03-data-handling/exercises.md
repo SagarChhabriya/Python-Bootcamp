@@ -438,3 +438,16 @@ SS` format using `strftime()`?
 <!-- 27. How do you define a constant in a decorator in Python? -->
 <!-- 28. What is the purpose of the `os.path.sep` constant in Python? -->
 <!-- 29. How do you define a constant in a context manager in Python? -->
+
+
+<br><br>
+<br><br>
+
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../02-module-02-python-fundamentals/README.md">
+        <img src="https://img.shields.io/badge/Previous-Python_Fundamentals-blue" width="250" height="35">
+    </a>
+    <a href="../04-module-04-operators/README.md">
+        <img src="https://img.shields.io/badge/Next-Operators-brightgreen" width="170" height="35">
+    </a>
+</span>
