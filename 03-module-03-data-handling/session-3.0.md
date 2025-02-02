@@ -1165,6 +1165,8 @@ The `datetime` module provides multiple ways to get the current date and time.
 - `datetime.now()` returns the current local time, considering your system's time zone.
 - `datetime.utcnow()` returns the current time in UTC, which is independent of local time zones.
 
+[Click Here to Read Detailed Notes on Difference between `datetime.now()` and `datetime.utcnow()](MISC.md#1-datetimenow)
+
 ---
 
 ## 3.6.3 Combining Date and Time

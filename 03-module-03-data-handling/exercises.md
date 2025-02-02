@@ -129,26 +129,26 @@
 11. How do you use `None` in a list in Python?
 12. What is the difference between `None` and `0` in Python?
 13. How do you use `None` in a dictionary in Python?
-14. What is the purpose of the `None` data type in Python?
+<!-- 14. What is the purpose of the `None` data type in Python? -->
 15. How do you use `None` in a tuple in Python?
 16. What is the difference between `None` and `""` in Python?
 17. How do you use `None` in a set in Python?
-18. What is the purpose of the `None` data type in Python?
+<!-- 18. What is the purpose of the `None` data type in Python? -->
 19. How do you use `None` in a class in Python?
 20. What is the output of `print(bool(None))`?
 
 ---
 
 ### **Hard Questions**
-21. How do you use `None` in a nested function in Python?
-22. What is the difference between `None` and `[]` in Python?
-23. How do you use `None` in a lambda function in Python?
-24. What is the purpose of the `None` data type in Python?
-25. How do you use `None` in a generator in Python?
-26. What is the difference between `None` and `{}` in Python?
-27. How do you use `None` in a decorator in Python?
-28. What is the purpose of the `None` data type in Python?
-29. How do you use `None` in a context manager in Python?
+<!-- 21. How do you use `None` in a nested function in Python? -->
+<!-- 22. What is the difference between `None` and `[]` in Python? -->
+<!-- 23. How do you use `None` in a lambda function in Python? -->
+<!-- 24. What is the purpose of the `None` data type in Python? -->
+<!-- 25. How do you use `None` in a generator in Python? -->
+<!-- 26. What is the difference between `None` and `{}` in Python? -->
+<!-- 27. How do you use `None` in a decorator in Python? -->
+<!-- 28. What is the purpose of the `None` data type in Python? -->
+<!-- 29. How do you use `None` in a context manager in Python? -->
 30. What is the output of `print(None is None)`?
 
 ---
@@ -194,6 +194,7 @@
 9. Explain the concept of "naive" and "aware" `datetime` objects in Python. How would you handle both types?
 10. How can you handle time zones and UTC offsets when working with the `datetime` module?
 
+<!-- 
 ---
 
 ### **3.6.2 Date and Time Now**
@@ -362,9 +363,13 @@ SS` format using `strftime()`?
 7. Can you calculate the exact number of seconds between two `timedelta` objects that span multiple months? How?
 8. How would you optimize a program that performs frequent date duration calculations over large datasets?
 9. How does Python manage large `timedelta` objects with extremely large date ranges (e.g., thousands of years)?
-10. How would you handle custom durations like 10 business days or 5 work weeks using `timedelta` in Python?
+10. How would you handle custom durations like 10 business days or 5 work weeks using `timedelta` in Python? -->
 
----
+
+
+
+
+
 
 
 <!-- # Data Handling -->
@@ -381,7 +386,6 @@ SS` format using `strftime()`?
 <!-- 18. What is the difference between `set` and `frozenset` in Python? -->
 <!-- 20. What is the output of `type(range(10))`? -->
 
----
 
 <!-- ### **Hard Questions** -->
 <!-- 25. How do you convert a string to a list of characters in Python? -->
