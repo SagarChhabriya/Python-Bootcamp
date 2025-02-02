@@ -181,7 +181,7 @@ s[::2] + s[::-3]  # 'srn lcngcsnt'
 
 ```python
 s = "string slicing"
-s[::-1][::2]  # "gcnr"
+s[::-1][::2]  # 'giisgit'
 ```
 
 **Step-by-Step Explanation:**
@@ -223,20 +223,20 @@ s[::-1][::2]  # "gcnr"
 24. **Extract every third letter of the string**:
     ```python
     s = "string slicing"
-    s[::3]  # "stsc"
+    s[::3]  # 'si in'
     ```
 
 25. **Reverse and extract every second character**:
     ```python
     s = "string slicing"
-    s[::-1][::2]  # "gnns"
+    s[::-1][::2]  # 'giisgit'
     ```
 
 26. **Extract characters from the middle of the string**:
     ```python
     s = "string slicing"
     mid = len(s) // 2
-    s[mid-2:mid+3]  # "li "
+    s[mid-2:mid+3]  # 'g sli'
     ```
 
 27. **Get the substring without the first and last characters**:

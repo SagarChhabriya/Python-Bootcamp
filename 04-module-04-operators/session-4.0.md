@@ -9,7 +9,7 @@
     </a>
 </span>
 <br><br>
-
+ 
 ## 4.1 Arithmetic Operators
 
 Arithmetic operators are used to perform mathematical operations between numeric values.
@@ -26,6 +26,85 @@ Arithmetic operators are used to perform mathematical operations between numeric
 
 ---
 
+
+
+### Examples:
+
+```python
+a = 10
+b = 2
+
+print("a + b ", a + b)  # Addition: a + b = 12
+print("a - b ", a - b)  # Subtraction: a - b = 8
+print("a * b ", a * b)  # Multiplication: a * b = 20
+print("a / b ", a / b)  # Division (Floating point): a / b = 5.0
+print("a // b ", a // b)  # Floor Division: a // b = 5
+print("a % b", a % b)  # Modulo (Remainder): a % b = 0
+print("a ** b", a ** b)  # Exponentiation: a ** b = 100
+
+print(10/2)   # Floating point division: 10/2 = 5.0
+print(10//2)  # Floor division with integers: 10//2 = 5
+print(10.0/2)  # Floating point division: 10.0/2 = 5.0
+print(10.0//2) # Floor division with float: 10.0//2 = 5.0
+```
+
+
+### Notes on Division Operators:
+
+- The `/` operator **always performs floating-point arithmetic**, and it will always return a float value.
+- The `//` operator performs **floor division**. It behaves differently based on the types of arguments:
+  - If both arguments are integers, the result will be an **integer**.
+  - If at least one of the arguments is a float, the result will be a **float**.
+
+---
+
+### String Operations with `+` and `*`
+
+#### **Using the `+` operator with strings**:
+
+You can concatenate strings using the `+` operator. However, both operands must be of type **string**. If you try to combine a string with a non-string (like an integer), a `TypeError` will be raised.
+
+```python
+# Valid example
+name = "sagar" + "10"
+print(name)  # Output: "sagar10"
+
+# Invalid example: Raises TypeError
+name = "sagar" + 10
+# TypeError: must be str, not int
+```
+
+#### **Using the `*` operator with strings**:
+
+You can use the `*` operator to repeat a string a specified number of times. One operand should be an **integer**, and the other should be a **string**. Using a non-integer (e.g., float) for repetition will raise a `TypeError`.
+
+```python
+name = "Sagar"
+print(name * 3)  # Output: "SagarSagarSagar"
+
+# Invalid example: Raises TypeError
+print(name * 2.5)
+# TypeError: can't multiply sequence by non-int of type 'float'
+```
+
+---
+
+### Division by Zero
+
+- **`x / 0`** and **`x % 0`** will raise a `ZeroDivisionError`.
+  
+  ```python
+  a = 10
+  print(a / 0)  # Raises ZeroDivisionError
+  print(a % 0)  # Raises ZeroDivisionError
+  ```
+
+---
+
+
+
+
+
 ## 4.2 Relational Operators
 
 Relational operators are used to compare two values and return a Boolean value (`True` or `False`).
@@ -39,6 +118,66 @@ Relational operators are used to compare two values and return a Boolean value (
 | `>=`     | Greater than or equal to | `5 >= 5` | `True` |
 | `<=`     | Less than or equal to    | `3 <= 5` | `True` |
 
+
+### Example 1: Relatoinal operators with int type
+
+```python
+a = 10
+b = 20
+print("a > b ", a > b)      # False
+print("a >= b ", a >= b)    # False
+print("a < b ", a < b)      # True
+print("a <= b ", a <= b)    # True
+
+```
+
+### Example 2: Relational operators with string type
+
+```python
+a = "sagar"
+b = "sagar"
+print("a > b ", a > b)      # False
+print("a >= b ", a >= b)    # True
+print("a < b ", a < b)      # False 
+print("a <= b ", a <= b)    # True
+print(7 > "sagar")          # TypeError: '>' not supported between instances of int and str
+
+```
+
+### Example 3: Chaining of relational operators  
+In the chaining, if all comparisions returns True then the result will be True. If atleast one comparision returns False then the result is False.
+
+```python
+
+print(5 < 6)            # True
+print(5 < 6 < 6)        # True
+print(5 < 6 < 7 < 8)    # True
+print(5 < 6 < 7 < 8 > 9)# False
+
+```
+
+### Example 4: Equality Operators `==` and `!=`
+These operators can be applied on variables of any type even they are not compatible.
+
+```python
+print(1 == 2)       # False     
+print(1 != 2)       # True
+print(4 == True)    # False
+print(False == False)       # True
+print("Sagar" == "sagar")   # False
+print("Sagar" == 5)         # False
+
+```
+
+### Example 5: Chaining of Equality Operators
+
+```python
+print( 5 == 6 == 7 == 8)    # False
+print( 5 == 5 == 5 == 5)    # True
+
+```
+
+
 ---
 
 ## 4.3 Logical Operators
@@ -51,7 +190,145 @@ Logical operators are used to combine conditional statements and return a Boolea
 | `or`     | Returns `True` if at least one condition is true | `True or False`  | `True`   |
 | `not`    | Reverses the result of the condition | `not True`        | `False`  |
 
+
+Here’s an expanded version with additional examples of how `and`, `or`, and `not` work with various data types (such as lists, dictionaries, etc.) in Python, including the ones you missed:
+
 ---
+
+
+### Example 1: Boolean Type
+- **`and`**: If both arguments are `True`, then the result is `True`.
+- **`or`**: If at least one argument is `True`, then the result is `True`.
+- **`not`**: Complement (i.e., opposite of the value).
+
+```python
+print(True and True)    # True
+print(True or False)    # True
+print(not False)        # True
+```
+
+> **Note:** These examples also include the operations on Python collections, such as `list`, `tuple`, etc. You will learn more about these collections in the next modules, so feel free to revisit these examples when you reach that part of your learning journey.
+
+### Example 2: Non-Boolean Type
+
+- **`0`** is treated as `False`.
+- **Non-zero values** are treated as `True`.
+- **Empty strings** are treated as `False`.
+- **Empty lists** `[]`, **empty tuples** `()`, **empty dictionaries** `{}`, and **empty sets** `set()` are treated as `False`.
+- **Non-empty containers** (e.g., lists, dictionaries, sets) are treated as `True`.
+
+#### `and` operation:
+If `x` evaluates to `False`, the result is `x`; otherwise, the result is `y`.
+
+```python
+print(10 and 20)   # 20 (since 10 is non-zero, return 20)
+print(0 and 5)     # 0 (since 0 is false, return 0)
+print([] and 5)    # [] (empty list is falsy)
+print([1, 2] and 5)  # 5 (non-empty list is truthy)
+```
+
+#### `or` operation:
+If `x` evaluates to `True`, the result is `x`; otherwise, the result is `y`.
+
+```python
+print(10 or 15)    # 10 (since 10 is non-zero, return 10)
+print(0 or 15)     # 15 (since 0 is false, return 15)
+print([] or [5])   # [5] (empty list is falsy, return the second value)
+print([1, 2] or [5])  # [1, 2] (non-empty list is truthy, return the first value)
+```
+
+#### `not` operation:
+If `x` evaluates to `False`, the result is `True`; otherwise, the result is `False`.
+
+```python
+print(not 9)       # False (since 9 is non-zero, return False)
+print(not 0)       # True (since 0 is false, return True)
+print(not [])      # True (empty list is falsy)
+print(not [1, 2])  # False (non-empty list is truthy)
+```
+
+---
+
+### String Operations with `and`, `or`, `not`
+
+- **`and`**: Returns the first falsy value or the last value.
+- **`or`**: Returns the first truthy value or the last value.
+- **`not`**: Reverses the truthiness of the value.
+
+```python
+print("sagar" and "sagar chhabriya")  # "sagar chhabriya" (both are non-empty strings, returns the last)
+print("" and "sagar")                 # "" (empty string, returns the first value)
+print("sagar" and "")                 # "" (empty string, returns the last value)
+
+print("sagar" or "sagar chhabriya")   # "sagar" (first string is truthy, returns the first value)
+print("" or "sagar")                  # "sagar" (empty string, returns the second value)
+print("sagar" or "")                  # "sagar" (first string is truthy, returns the first value)
+
+print(not "")                         # True (empty string is falsy, so `not` returns True)
+print(not "sagar")                    # False (non-empty string is truthy, so `not` returns False)
+```
+
+---
+
+### Additional Examples with Other Types
+
+#### Lists:
+- **Empty list `[]`** is falsy.
+- **Non-empty list `[1, 2]`** is truthy.
+
+```python
+print([] and [1])         # [] (empty list, returns the first value)
+print([1] or [])          # [1] (non-empty list, returns the first value)
+print(not [])             # True (empty list is falsy)
+print(not [1, 2])         # False (non-empty list is truthy)
+```
+
+#### Dictionaries:
+- **Empty dictionary `{}`** is falsy.
+- **Non-empty dictionary `{"a": 1}`** is truthy.
+
+```python
+print({} and {"a": 1})    # {} (empty dictionary, returns the first value)
+print({"a": 1} or {})      # {"a": 1} (non-empty dictionary, returns the first value)
+print(not {})             # True (empty dictionary is falsy)
+print(not {"a": 1})       # False (non-empty dictionary is truthy)
+```
+
+#### Tuples:
+- **Empty tuple `()`** is falsy.
+- **Non-empty tuple `(1, 2)`** is truthy.
+
+```python
+print(() and (1, 2))      # () (empty tuple, returns the first value)
+print((1, 2) or ())       # (1, 2) (non-empty tuple, returns the first value)
+print(not ())             # True (empty tuple is falsy)
+print(not (1, 2))         # False (non-empty tuple is truthy)
+```
+
+#### Sets:
+- **Empty set `set()`** is falsy.
+- **Non-empty set `{"a", "b"}`** is truthy.
+
+```python
+print(set() and {"a"})   # set() (empty set, returns the first value)
+print({"a"} or set())     # {"a"} (non-empty set, returns the first value)
+print(not set())          # True (empty set is falsy)
+print(not {"a", "b"})     # False (non-empty set is truthy)
+```
+
+---
+
+### To Concise:
+- **`and`**: Returns the first falsy value or the last value if both are truthy.
+- **`or`**: Returns the first truthy value or the last value if both are falsy.
+- **`not`**: Reverses the truthiness of the value.
+- `0`, `""` (empty string), empty lists `[]`, empty tuples `()`, empty dictionaries `{}`, and empty sets `set()` are treated as **False**.
+- Any non-zero number or non-empty container (list, dictionary, string, tuple, set) is treated as **True**.
+
+
+
+---
+
 
 ## 4.4 Membership Operators
 
@@ -61,6 +338,111 @@ Membership operators are used to check if a value is found within a sequence (su
 |-------------|-----------------------------------|-----------------|--------|
 | `in`        | Returns `True` if the value is found in the sequence | `3 in [1, 2, 3]` | `True` |
 | `not in`    | Returns `True` if the value is not found in the sequence | `4 not in [1, 2, 3]` | `True` |
+
+
+### `in` Operator:
+The **`in`** operator is used to check if a value is present in a sequence (like a list, tuple, string, or set). It returns `True` if the value is found and `False` otherwise.
+
+#### Example 1: Using `in` with a List
+
+```python
+print(3 in [1, 2, 3])   # True (3 is in the list)
+```
+
+#### Example 2: Using `in` with a String
+
+```python
+print("a" in "apple")   # True ('a' is in the string "apple")
+print("z" in "apple")   # False ('z' is not in the string "apple")
+```
+
+#### Example 3: Using `in` with a Tuple
+
+```python
+print(4 in (1, 2, 3, 4))    # True (4 is in the tuple)
+print(5 in (1, 2, 3, 4))    # False (5 is not in the tuple)
+```
+
+#### Example 4: Using `in` with a Set
+
+```python
+print(1 in {1, 2, 3})   # True (1 is in the set)
+print(10 in {1, 2, 3})  # False (10 is not in the set)
+```
+
+#### Example 5: Using `in` with a Dictionary (checks keys)
+
+```python
+print("name" in {"name": "John", "age": 30})  # True (key 'name' is in the dictionary)
+print("address" in {"name": "John", "age": 30})  # False (key 'address' is not in the dictionary)
+```
+
+#### Example 6: Using `in` with an Empty Sequence
+
+```python
+print(3 in [])      # False (list is empty)
+print("a" in "")    # False (empty string)
+print(1 in ())      # False (empty tuple)
+```
+
+---
+
+### `not in` Operator:
+The **`not in`** operator is used to check if a value is **not** present in a sequence. It returns `True` if the value is not found in the sequence, and `False` otherwise.
+
+#### Example 1: Using `not in` with a List
+
+```python
+print(4 not in [1, 2, 3])   # True (4 is not in the list)
+print(3 not in [1, 2, 3])   # False (3 is in the list)
+```
+
+#### Example 2: Using `not in` with a String
+
+```python
+print("b" not in "apple")   # True ('b' is not in the string "apple")
+print("a" not in "apple")   # False ('a' is in the string "apple")
+```
+
+#### Example 3: Using `not in` with a Tuple
+
+```python
+print(5 not in (1, 2, 3, 4))    # True (5 is not in the tuple)
+print(2 not in (1, 2, 3, 4))    # False (2 is in the tuple)
+```
+
+#### Example 4: Using `not in` with a Set
+
+```python
+print(10 not in {1, 2, 3})  # True (10 is not in the set)
+print(2 not in {1, 2, 3})   # False (2 is in the set)
+```
+
+#### Example 5: Using `not in` with a Dictionary (checks keys)
+
+```python
+print("address" not in {"name": "John", "age": 30})  # True (key 'address' is not in the dictionary)
+print("name" not in {"name": "John", "age": 30})     # False (key 'name' is in the dictionary)
+```
+
+#### Example 6: Using `not in` with an Empty Sequence
+
+```python
+print(1 not in [])      # True (list is empty, so no 1 is present)
+print("z" not in "")    # True (empty string, so no 'z' is present)
+print(2 not in ())      # True (empty tuple, so no 2 is present)
+```
+
+
+
+### To Concise:
+- **`in`** is used to check if a value exists **in** a sequence (list, string, tuple, set, etc.).
+- **`not in`** is used to check if a value does **not exist** in the sequence.
+- These operators are very useful for checking membership and can be used with various types of sequences like lists, tuples, strings, sets, and dictionaries (where they check for keys).
+
+
+
+
 
 ---
 
@@ -72,6 +454,127 @@ Identity operators are used to compare objects and check if they are the same ob
 |-------------|------------------------------------|--------------------|--------|
 | `is`        | Returns `True` if both operands refer to the same object | `x is y` (where `x = 10`, `y = 10`) | `True` |
 | `is not`    | Returns `True` if both operands do not refer to the same object | `x is not y` (where `x = 10`, `y = 20`) | `True` |
+
+### `is` Operator:
+The **`is`** operator is used to check if two operands refer to the **same object** in memory. It returns `True` if both operands point to the same object (i.e., they have the same memory address), and `False` otherwise.
+
+#### Example 1: Comparing two variables with the same value
+
+```python
+x = 10
+y = 10
+print(x is y)    # True, since small integers are cached in Python
+```
+
+#### Example 2: Comparing two variables with different values
+
+```python
+x = 10
+y = 20
+print(x is y)    # False, since they refer to different objects in memory
+```
+
+#### Example 3: Comparing two lists with the same values but different memory locations
+
+```python
+x = [1, 2, 3]
+y = [1, 2, 3]
+print(x is y)    # False, lists are mutable and created in different memory locations
+```
+
+#### Example 4: Comparing two variables referencing the same list
+
+```python
+x = [1, 2, 3]
+y = x   # Both variables point to the same list object
+print(x is y)    # True, both variables refer to the same list in memory
+```
+
+#### Example 5: Comparing `None` with a variable
+
+```python
+x = None
+y = None
+print(x is y)    # True, both variables refer to the same `None` object in memory
+```
+
+#### Example 6: Comparing different objects of custom class
+
+```python
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+x = Person("Alice")
+y = Person("Alice")
+
+print(x is y)    # False, two different objects with the same data
+```
+
+---
+
+### `is not` Operator:
+The **`is not`** operator is used to check if two operands **do not refer** to the same object in memory. It returns `True` if the operands refer to different objects, and `False` otherwise.
+
+#### Example 1: Comparing two variables with different values
+
+```python
+x = 10
+y = 20
+print(x is not y)    # True, they refer to different objects in memory
+```
+
+#### Example 2: Comparing two variables with the same value but different memory locations
+
+```python
+x = [1, 2, 3]
+y = [1, 2, 3]
+print(x is not y)    # True, even though the lists have the same value, they are stored in different memory locations
+```
+
+#### Example 3: Comparing two variables that refer to the same object
+
+```python
+x = [1, 2, 3]
+y = x   # Both variables refer to the same list object
+print(x is not y)    # False, they are the same object in memory
+```
+
+#### Example 4: Comparing `None` with a variable
+
+```python
+x = None
+y = 10
+print(x is not y)    # True, they are different objects in memory
+```
+
+#### Example 5: Comparing two objects of a custom class
+
+```python
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+x = Person("Alice")
+y = Person("Alice")
+
+print(x is not y)    # True, they are two different objects, even though their attributes are the same
+```
+
+#### Example 6: Comparing different `None` references
+
+```python
+x = None
+y = None
+print(x is not y)    # False, they refer to the same `None` object in memory
+```
+
+
+
+### To Concise:
+- **`is`**: Checks if two variables point to the **same object** in memory (same memory address).
+- **`is not`**: Checks if two variables do **not point** to the same object in memory.
+- These identity operators are especially useful when working with immutable types like `None`, `True`, `False`, small integers, and strings that may be cached in Python. For mutable objects (e.g., lists, dictionaries), the `is` and `is not` operators check for **object identity** (memory address), not for equality of their contents.
 
 ---
 
@@ -87,6 +590,188 @@ Bitwise operators perform operations on binary numbers (bits).
 | `<<`     | Bitwise left shift     | `5 << 1`          | `10`     |
 | `>>`     | Bitwise right shift    | `5 >> 1`          | `2`      |
 | `~`      | Bitwise NOT            | `~5`              | `-6`     |
+
+
+
+### Bitwise AND (`&`):
+The **AND** operator (`&`) compares each bit of two numbers and returns `1` if both corresponding bits are `1`, otherwise returns `0`.
+
+#### Example 1: Basic Bitwise AND
+
+```python
+print(5 & 3)   # 5 = 0101, 3 = 0011 -> Result: 0001 -> 1
+```
+
+#### Example 2: Bitwise AND with 0
+
+```python
+print(0 & 3)   # 0 = 0000, 3 = 0011 -> Result: 0000 -> 0
+```
+
+#### Example 3: Bitwise AND with same numbers
+
+```python
+print(5 & 5)   # 5 = 0101, 5 = 0101 -> Result: 0101 -> 5
+```
+
+#### Example 4: Bitwise AND with negative numbers (in two's complement)
+
+```python
+print(-5 & 3)  # -5 = ...11111011, 3 = 00000011 -> Result: 00000001 -> 1
+```
+
+---
+
+### Bitwise OR (`|`):
+The **OR** operator (`|`) compares each bit of two numbers and returns `1` if at least one of the corresponding bits is `1`, otherwise returns `0`.
+
+#### Example 1: Basic Bitwise OR
+
+```python
+print(5 | 3)   # 5 = 0101, 3 = 0011 -> Result: 0111 -> 7
+```
+
+#### Example 2: Bitwise OR with 0
+
+```python
+print(0 | 3)   # 0 = 0000, 3 = 0011 -> Result: 0011 -> 3
+```
+
+#### Example 3: Bitwise OR with same numbers
+
+```python
+print(5 | 5)   # 5 = 0101, 5 = 0101 -> Result: 0101 -> 5
+```
+
+#### Example 4: Bitwise OR with negative numbers
+
+```python
+print(-5 | 3)  # -5 = ...11111011, 3 = 00000011 -> Result: 00000011 -> 3
+```
+
+---
+
+### Bitwise XOR (`^`):
+The **XOR** operator (`^`) compares each bit of two numbers and returns `1` if the bits are different, otherwise returns `0`.
+
+#### Example 1: Basic Bitwise XOR
+
+```python
+print(5 ^ 3)   # 5 = 0101, 3 = 0011 -> Result: 0110 -> 6
+```
+
+#### Example 2: Bitwise XOR with 0
+
+```python
+print(0 ^ 3)   # 0 = 0000, 3 = 0011 -> Result: 0011 -> 3
+```
+
+#### Example 3: Bitwise XOR with same numbers (results in 0)
+
+```python
+print(5 ^ 5)   # 5 = 0101, 5 = 0101 -> Result: 0000 -> 0
+```
+
+#### Example 4: Bitwise XOR with negative numbers
+
+```python
+print(-5 ^ 3)  # -5 = ...11111011, 3 = 00000011 -> Result: 00000000 -> 0
+```
+
+---
+
+### Bitwise Left Shift (`<<`):
+The **left shift** operator (`<<`) shifts the bits of the number to the left by a specified number of positions. Each left shift is equivalent to multiplying the number by `2` for each position shifted.
+
+#### Example 1: Basic Bitwise Left Shift
+
+```python
+print(5 << 1)   # 5 = 0101 -> Shift left by 1 -> 1010 -> 10
+```
+
+#### Example 2: Left shift with 0
+
+```python
+print(0 << 2)   # 0 = 0000 -> Shift left by 2 -> 0000 -> 0
+```
+
+#### Example 3: Left shift by more than one position
+
+```python
+print(5 << 2)   # 5 = 0101 -> Shift left by 2 -> 10100 -> 20
+```
+
+#### Example 4: Left shift with negative numbers
+
+```python
+print(-5 << 1)  # -5 = ...11111011 -> Shift left by 1 -> ...11110110 -> -10
+```
+
+---
+
+### Bitwise Right Shift (`>>`):
+The **right shift** operator (`>>`) shifts the bits of the number to the right by a specified number of positions. Each right shift is equivalent to integer division by `2` for each position shifted.
+
+#### Example 1: Basic Bitwise Right Shift
+
+```python
+print(5 >> 1)   # 5 = 0101 -> Shift right by 1 -> 0010 -> 2
+```
+
+#### Example 2: Right shift with 0
+
+```python
+print(0 >> 2)   # 0 = 0000 -> Shift right by 2 -> 0000 -> 0
+```
+
+#### Example 3: Right shift by more than one position
+
+```python
+print(5 >> 2)   # 5 = 0101 -> Shift right by 2 -> 0001 -> 1
+```
+
+#### Example 4: Right shift with negative numbers
+
+```python
+print(-5 >> 1)  # -5 = ...11111011 -> Shift right by 1 -> ...11111101 -> -3
+```
+
+---
+
+### Bitwise NOT (`~`):
+The **NOT** operator (`~`) inverts all the bits of a number, i.e., it changes all `1`s to `0`s and all `0`s to `1`s. In Python, this is implemented as `-(x+1)` due to two's complement representation of negative integers.
+
+#### Example 1: Basic Bitwise NOT
+
+```python
+print(~5)    # 5 = 0101 -> Invert bits -> ...1010 -> -6 (because of two's complement representation)
+```
+
+#### Example 2: Bitwise NOT with 0
+
+```python
+print(~0)    # 0 = 0000 -> Invert bits -> ...1111 -> -1
+```
+
+#### Example 3: Bitwise NOT with negative numbers
+
+```python
+print(~-5)   # -5 = ...11111011 -> Invert bits -> ...00000100 -> 4
+```
+
+---
+
+
+### To Concise:
+- **Bitwise AND (`&`)**: Only `1` when both bits are `1`.
+- **Bitwise OR (`|`)**: `1` when at least one bit is `1`.
+- **Bitwise XOR (`^`)**: `1` when bits are different.
+- **Bitwise Left Shift (`<<`)**: Shifts bits to the left (multiplies by 2 for each shift).
+- **Bitwise Right Shift (`>>`)**: Shifts bits to the right (divides by 2 for each shift).
+- **Bitwise NOT (`~`)**: Inverts all bits (works with two's complement).
+
+These operators are commonly used in low-level programming, encryption algorithms, and performance-critical applications where bit manipulation is necessary.
+
 
 ---
 
