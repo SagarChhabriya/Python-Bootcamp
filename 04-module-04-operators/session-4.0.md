@@ -680,7 +680,7 @@ print(-5 ^ 3)  # -5 = ...11111011, 3 = 00000011 -> Result: 00000000 -> 0
 
 ---
 
-### Bitwise Left Shift (`<<`):
+### Bitwise Left Shift (`<<`): Put 0s from trailing bits directions
 The **left shift** operator (`<<`) shifts the bits of the number to the left by a specified number of positions. Each left shift is equivalent to multiplying the number by `2` for each position shifted.
 
 #### Example 1: Basic Bitwise Left Shift
@@ -709,7 +709,7 @@ print(-5 << 1)  # -5 = ...11111011 -> Shift left by 1 -> ...11110110 -> -10
 
 ---
 
-### Bitwise Right Shift (`>>`):
+### Bitwise Right Shift (`>>`): Put 0s from leading bits side
 The **right shift** operator (`>>`) shifts the bits of the number to the right by a specified number of positions. Each right shift is equivalent to integer division by `2` for each position shifted.
 
 #### Example 1: Basic Bitwise Right Shift
@@ -789,6 +789,415 @@ Assignment operators are used to assign values to variables and can also perform
 | `//=`    | Floor divides variable by value| `x //= 2`        | `x = 3` |
 | `%=`     | Modulo assigns result to variable | `x %= 2`        | `x = 1` |
 | `**=`    | Exponentiation assignment      | `x **= 2`        | `x = 25` |
+
+
+
+
+---
+
+### **1. `=` Assignment Operator (Assigns value to variable)**
+This operator simply assigns a value to a variable.
+
+#### **Variables:**
+```python
+x = 10       # Assigns 10 to x
+y = 3.5      # Assigns 3.5 to y
+z = "Hello"  # Assigns "Hello" to z
+```
+
+#### **Collections:**
+
+- **List**:
+```python
+lst = [1, 2, 3]  # Assigns a list to lst
+```
+
+- **Set**:
+```python
+my_set = {1, 2, 3}  # Assigns a set to my_set
+```
+
+- **Dictionary**:
+```python
+my_dict = {'a': 1, 'b': 2}  # Assigns a dictionary to my_dict
+```
+
+---
+
+### **2. `+=` (Adds to variable or collection)**
+This operator adds the value on the right to the variable on the left.
+#### **Variables:**
+
+- **Integers**:
+```python
+x = 5
+x += 3   # x = x + 3
+print(x) # Output: 8
+```
+
+- **Strings (concatenation)**:
+```python
+text = "Hello"
+text += " World"   # text = text + " World"
+print(text)         # Output: "Hello World"
+```
+
+#### **Collections:**
+
+- **List** (Appends and extends):
+```python
+lst = [1, 2, 3]
+lst += [4]         # Appends 4 to the list
+print(lst)         # Output: [1, 2, 3, 4]
+
+lst += [5, 6]      # Extends the list with another list
+print(lst)         # Output: [1, 2, 3, 4, 5, 6]
+```
+
+- **Set** (Adds an element):
+```python
+my_set = {1, 2, 3}
+my_set += {4}      # Adds 4 to the set (if it's not already present)
+print(my_set)      # Output: {1, 2, 3, 4}
+```
+
+- **Dictionary** (Merges another dictionary):
+
+
+```python
+# Merging two dictionaries
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'c': 3, 'd': 4}
+dict1 += dict2  # This will throw an error since `+=` is not supported for dictionaries
+print(dict1)    # This will raise TypeError: 'dict' object does not support item assignment
+
+# For dictionaries, use the update() method instead:
+dict1.update(dict2)  # Merges dict2 into dict1
+print(dict1)         # Output: {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+```
+---
+
+### **3. `-=` (Subtracts from variable or collection)**
+
+This operator subtracts the value on the right from the variable on the left.
+
+#### **Variables:**
+
+- **Integers**:
+```python
+x = 10
+x -= 4   # x = x - 4
+print(x) # Output: 6
+```
+
+- **Float**
+```python
+y = 5.5
+y -= 2.5  # Equivalent to y = y - 2.5
+print(y)  # Output: 3.0
+```
+
+- **String**
+```python
+text = "Hello"
+text -= "o"  # This will raise a TypeError
+```
+
+
+
+#### **Collections:**
+
+- **List** (Removes specific values):
+```python
+lst = [1, 2, 3, 4]
+lst -= [2, 4]    # Removes 2 and 4 from the list
+print(lst)       # Output: [1, 3]
+```
+
+- **Set** (Removes elements):
+```python
+my_set = {1, 2, 3, 4}
+my_set -= {2, 4}   # Removes 2 and 4
+print(my_set)      # Output: {1, 3}
+```
+
+- **Dictionary** (Removes key-value pairs using `del`):
+```python
+
+# Removing specific key-value pairs from a dictionary
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+my_dict -= {'a': 1, 'c': 3}  # This will raise an error. Use `del` or `pop()` instead.
+print(my_dict)              # Raises a TypeError: 'dict' object is not supported by -=
+
+# Instead, use a loop or pop() to remove key-value pairs:
+# Correct way to remove key-value pairs
+del my_dict['b']
+print(my_dict)  # Output: {'a': 1, 'c': 3}
+
+# or del keyword
+
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+del my_dict['b']   # Removes the key 'b' and its value
+print(my_dict)     # Output: {'a': 1, 'c': 3}
+```
+
+---
+
+### **4. `*=` (Multiplies variable by value)**
+This operator multiplies the value of the variable by the value on the right.
+
+#### **Variables:**
+
+- **Integer**
+```python
+x = 4
+x *= 2    # Equivalent to x = x * 2
+print(x)  # Output: 8
+```
+
+- **Float**
+```python
+y = 3.5
+y *= 2    # Equivalent to y = y * 2
+print(y)  # Output: 7.0
+```
+
+- **Strings** (Repetition):
+```python
+text = "abc"
+text *= 3  # Repeats the string 3 times
+print(text)  # Output: "abcabcabc"
+```
+
+#### **Collections:**
+
+- **List** (Repeats the list):
+```python
+lst = [1, 2, 3]
+lst *= 2   # Repeats the list twice
+print(lst) # Output: [1, 2, 3, 1, 2, 3]
+```
+
+- **Sets** (Cannot use `*=` with sets):
+```python
+my_set = {1, 2, 3}
+# my_set *= 2   # Raises TypeError: 'set' object cannot be multiplied
+```
+
+- **Dictionaries** (Cannot use `*=` with dictionaries):
+```python
+my_dict = {'a': 1, 'b': 2}
+# my_dict *= 2   # Raises TypeError: 'dict' object cannot be multiplied
+```
+
+---
+
+### **5. `/=` (Divides elements in variable or collection)**
+This operator divides the value of the variable by the value on the right.
+
+#### **Variables:**
+
+- **Integers**:
+```python
+x = 10
+x /= 2    # x = x / 2
+print(x)  # Output: 5.0 (Result is a float)
+```
+
+- **Float**
+```python
+y = 6.0
+y /= 2.0  # Equivalent to y = y / 2.0
+print(y)  # Output: 3.0
+```
+
+- **Dividing by zero (raises error)**
+
+```python
+x = 10
+x /= 0    # This will raise a ZeroDivisionError
+```
+
+
+
+#### **Collections:**
+The `/=` operator is not commonly used with collections like lists, sets, or dictionaries in Python. It is meant for scalar types like numbers. Using it with collections will raise errors.
+<br>
+However, you can use the division operator to perform operations on the elements of the collection, but you need to do this manually in a loop or list comprehension.
+
+
+
+- **List** (Dividing each element by 2):
+```python
+lst = [10, 20, 30]
+lst = [x / 2 for x in lst]   # Divide each element by 2
+print(lst)  # Output: [5.0, 10.0, 15.0]
+```
+
+- **Dictionaries** (Dividing each dictionary value by 2):
+```python
+my_dict = {'a': 10, 'b': 20}
+my_dict = {k: v / 2 for k, v in my_dict.items()}
+print(my_dict)  # Output: {'a': 5.0, 'b': 10.0}
+```
+
+---
+
+### **6. `//=` (Floor divides elements in variable or collection)**
+
+This operator performs floor division (division that rounds down the result). Similar to division, floor division will also need to be applied element-wise in collections.
+
+#### **Variables:**
+
+- **Integers**:
+```python
+x = 10
+x //= 3   # x = x // 3 (floor division)
+print(x)  # Output: 3
+```
+
+- **Floor dividing with a negative number**
+```python
+y = -7
+y //= 3   # Equivalent to y = y // 3
+print(y)  # Output: -3 (-7 // 3 = -3)
+
+# -7 / 3  ---> -2.3333333333333335
+# -7 // 3 ---> -3
+```
+
+
+- **Floor dividing with a positive number**
+```python
+y = 7
+y //= 3   # Equivalent to y = y // 3
+print(y)  # Output: 3 (7 // 3 = 2)
+
+#  7 / 3  --->  2.3333333333333335
+#  7 // 3 --->  2
+```
+
+
+
+
+#### **Collections:**
+
+- **List** (Floor dividing each element by 2):
+```python
+lst = [10, 20, 30]
+lst = [x // 2 for x in lst]   # Floor divide each element by 2
+print(lst)  # Output: [5, 10, 15]
+```
+
+- **Dictionaries** (Floor dividing each dictionary value by 2):
+```python
+my_dict = {'a': 10, 'b': 25}
+my_dict = {k: v // 2 for k, v in my_dict.items()}
+print(my_dict)  # Output: {'a': 5, 'b': 12}
+```
+
+---
+
+### **7. `%=` (Modulo operation on variable or collection)**
+
+This operator computes the remainder of the division of the variable by the value on the right.
+#### **Variables:**
+
+- **Integers**:
+```python
+x = 10
+x %= 3   # x = x % 3
+print(x)  # Output: 1
+```
+
+- **Float**
+```python
+y = 10.5
+y %= 3    # Equivalent to y = y % 3
+print(y)  # Output: 1.5 (10.5 % 3 = 1.5)
+```
+
+
+#### **Collections:**
+Modulo operation can be applied element-wise in a similar way as division or floor division.
+
+- **List** (Modulo each element by 3):
+```python
+lst = [10, 20, 30]
+lst = [x % 3 for x in lst]   # Apply modulo 3 to each element
+print(lst)  # Output: [1, 2, 0]
+```
+
+- **Dictionaries** (Modulo each value by 3):
+```python
+my_dict = {'a': 10, 'b': 25}
+my_dict = {k: v % 3 for k, v in my_dict.items()}
+print(my_dict)  # Output: {'a': 1, 'b': 1}
+```
+
+---
+
+### **8. `**=` (Exponentiation operation on variable or collection)**
+
+This operator raises the variable to the power of the value on the right.
+#### **Variables:**
+
+- **Integers**:
+```python
+x = 2
+x **= 3  # x = x ** 3
+print(x)  # Output: 8
+```
+
+- **Float**
+```python
+y = 3.0
+y **= 2   # Equivalent to y = y ** 2
+print(y)  # Output: 9.0 (3.0 ** 2 = 9.0)
+```
+
+- **Negative Exponents**
+```python
+z = 4
+z **= -2  # Equivalent to z = z ** -2
+print(z)  # Output: 0.0625 (4 ** -2 = 1/16 = 0.0625)
+```
+
+
+
+#### **Collections:**
+Exponentiation, like other operations, needs to be performed element-wise in collections.
+
+
+- **List** (Exponentiating each element):
+```python
+lst = [2, 3, 4]
+lst = [x ** 2 for x in lst]   # Raise each element to the power of 2
+print(lst)  # Output: [4, 9, 16]
+```
+
+- **Dictionaries** (Exponentiating each value):
+```python
+my_dict = {'a': 2, 'b': 3}
+my_dict = {k: v ** 2 for k, v in my_dict.items()}
+print(my_dict)  # Output: {'a': 4, 'b': 9}
+```
+
+---
+
+### To Concise:
+
+- **`=`**: Assigns values to variables or collections.
+- **`+=`**: Adds (or appends) to variables or collections (lists, sets, dictionaries).
+- **`-=`**: Subtracts from variables or removes elements from collections (lists, sets).
+- **`*=`**: Repeats elements in collections (lists, strings); not supported for sets or dictionaries.
+- **`/=`**: Divides variables
+
+ or elements in collections.
+- **`//=`**: Floor divides variables or elements in collections.
+- **`%=`**: Applies modulo operation on variables or elements in collections.
+- **`**=`**: Exponentiates variables or elements in collections.
+
 
 ---
 
@@ -943,9 +1352,7 @@ print(x)  # Output: 8
 ```python
 x = [1, 2, 3]
 y = [1, 2, 3]
-z =
-
- x
+z = x
 
 print(x == y)  # True (values are equal)
 print(x is y)  # False (different objects)
