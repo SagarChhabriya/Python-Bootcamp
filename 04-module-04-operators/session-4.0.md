@@ -191,8 +191,6 @@ Logical operators are used to combine conditional statements and return a Boolea
 | `not`    | Reverses the result of the condition | `not True`        | `False`  |
 
 
-Here’s an expanded version with additional examples of how `and`, `or`, and `not` work with various data types (such as lists, dictionaries, etc.) in Python, including the ones you missed:
-
 ---
 
 
