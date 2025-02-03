@@ -311,8 +311,9 @@ my_list[2] = 99  # Change the element at index 2
 ---
 
 ## List Filtering
+> Will be added soon!
 
-- **Using `filter()`**:
+<!-- - **Using `filter()`**:
   - Filters elements based on a condition.
   ```python
   numbers = [1, 2, 3, 4, 5]
@@ -324,7 +325,7 @@ my_list[2] = 99  # Change the element at index 2
   ```python
   even_numbers = [x for x in numbers if x % 2 == 0]
   print(even_numbers)  # Output: [2, 4]
-  ```
+  ``` -->
 
 ---
 

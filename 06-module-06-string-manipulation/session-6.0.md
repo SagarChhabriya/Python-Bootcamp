@@ -180,6 +180,12 @@ print(s[::-1])  # Output: '!ysae dna nuf repus si gnimmargorp nohtyP'
   ```python
   s = "HELLO"
   print(s.casefold())  # Output: 'hello'
+
+  # More importantly, casefold handles some special cases
+  s2 = "ß"
+  print(s2.lower())    # Output: 'ß'
+  print(s2.casefold()) # Output: 'ss'  (which is important in German)
+
   ```
 
 ---
@@ -544,6 +550,9 @@ The `string` module in Python provides a collection of useful constants and func
 
 ### **6.8.3 Classes in the `string` Module**
 
+> Will be added soon!
+
+<!--
 #### **`string.Formatter`**
 - A class for creating and customizing string formatting.
   ```python
@@ -613,7 +622,7 @@ def is_hex(s):
 
 print(is_hex("1a2f"))  # Output: True
 print(is_hex("1g2f"))  # Output: False
-```
+``` -->
 
 ---
 
