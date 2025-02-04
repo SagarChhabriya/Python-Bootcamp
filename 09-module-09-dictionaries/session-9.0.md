@@ -11,10 +11,10 @@
 <br><br>
 
 ## 9.1 Introduction to Dictionaries
-Dictionaries are mutable, unordered collections of key-value pairs. They are commonly used for mapping values to unique keys, where the keys are hashable.
+Dictionaries are mutable, ordered collections of key-value pairs. They are commonly used for mapping values to unique keys, where the keys are hashable.
 
 - **Characteristics and Use of Dictionaries in Python**:
-  - Unordered collection of key-value pairs.
+  - Ordered collection of key-value pairs.
   - Keys must be unique, but values can be duplicated.
   - Commonly used for looking up data via keys, like a phone book or database index.
 
@@ -112,6 +112,15 @@ Dictionaries come with several built-in methods that allow for easy manipulation
   print(dict3)  # Output: {'a': 1, 'b': 2, 'c': 3, 'd': 4}
   ```
 
+- **fromkeys()**
+  ```python
+  keys = ['a', 'b', 'c']
+  value = 0
+  new_dict = dict.fromkeys(keys, value)
+  print(new_dict)
+  ```
+
+
 ## 9.5 Dictionary Comprehension
 Dictionary comprehension allows you to create dictionaries from iterable data in a concise and readable way.
 
@@ -180,14 +189,22 @@ Dictionaries are mutable, which means you can modify their contents.
   print_info(name="Alice", age=30)
   ```
 
-  - **Merging Dictionaries**:
+- **Unpacking into variables**
+```python
 
-  ```python
-  dict1 = {'a': 1}
-  dict2 = {'b': 2}
-  merged_dict = {**dict1, **dict2}
-  print(merged_dict)  # Output: {'a': 1, 'b': 2}
-  ```
+# Unpacking into variables
+name, age = packed_dict.values()
+print(name, age)  # Output: John 25
+
+# Unpacking keys and values separately
+keys = {*packed_dict}
+values = {**packed_dict}
+print(keys)    # Output: {'name', 'age'}
+print(values)  # Output: {'name': 'John', 'age': 25}
+```
+
+
+
 
 ## 9.8 Limitations of Dictionaries
 
