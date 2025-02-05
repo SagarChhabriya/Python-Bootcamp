@@ -190,18 +190,18 @@ Dictionaries are mutable, which means you can modify their contents.
   ```
 
 - **Unpacking into variables**
-```python
+  ```python
 
-# Unpacking into variables
-name, age = packed_dict.values()
-print(name, age)  # Output: John 25
+  # Unpacking into variables
+  name, age = packed_dict.values()
+  print(name, age)  # Output: John 25
 
-# Unpacking keys and values separately
-keys = {*packed_dict}
-values = {**packed_dict}
-print(keys)    # Output: {'name', 'age'}
-print(values)  # Output: {'name': 'John', 'age': 25}
-```
+  # Unpacking keys and values separately
+  keys = {*packed_dict}
+  values = {**packed_dict}
+  print(keys)    # Output: {'name', 'age'}
+  print(values)  # Output: {'name': 'John', 'age': 25}
+  ```
 
 
 

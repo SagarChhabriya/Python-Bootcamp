@@ -13,7 +13,7 @@
 
 
 ## 7.1 Introduction to Python Lists
-A list in Python is a collection of ordered, mutable (changeable) items. Lists can store elements of different data types, including numbers, strings, and other objects.
+A list in Python is a collection of ordered, mutable (changeable) items. Lists can store elements of different data types, including numbers, strings, and other objects. List also allows duplicates.
 
 ### Characteristics of Lists:
 - **Ordered**: Items have a specific order and can be accessed by their position.
@@ -267,6 +267,38 @@ my_list[2] = 99  # Change the element at index 2
   deep_copy = copy.deepcopy(original)
   print(deep_copy)  # Output: [[1, 2], [3, 4]]
   ```
+
+- **Comparing List Objects**
+  We can use comparision operators for list objects.
+  
+  - **Equality Relational Operators**
+    ```python
+    x = ["Dog", "Cat", "Rat"]
+    y = ["Dog", "Cat", "Rat"]
+    z = ["DOG", "CAT", "RAT"]
+    
+    print(x==y)   # True
+    print(x==z)   # False
+    print(x!=z)   # True
+    ```
+  > **Note:** While using relational operators `<` `>` `<=` `>=` between list objects, only first elements are compared. While using `==` and `!=` operator on list object, following should be considered:
+    1. The number of elements
+    2. The order of elements
+    3. The content of elements (case sensitive) 
+
+- **Relational Operators**
+    ```python
+    x = ["Dog", "Cat", "Rat"]
+    y = ["Dog", "Cat", "Rat"]
+    
+    print(x > y)  # False
+    print(x >= y) # False
+    print(x < y)  # True
+    print(x <= y) # True
+
+
+    ```
+
 
 ---
 

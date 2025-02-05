@@ -13,7 +13,7 @@
 
 
 ## 8.1 Introduction to Tuples
-Tuples are immutable sequences in Python. They are used to store a collection of items that should not be changed after creation. Since tuples are immutable, they offer benefits like performance optimization and protection from accidental modification.
+Tuples are immutable sequences in Python. They are used to store a collection of items that should not be changed after creation. Since tuples are immutable, they offer benefits like performance optimization and protection from accidental modification. Tuples also allow duplicates.
 
 - **Characteristics of Tuples**:
   - Immutable: Once created, the elements of a tuple cannot be modified, added, or removed.
