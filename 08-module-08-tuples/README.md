@@ -30,7 +30,7 @@
 - Unpacking Tuple Elements into Variables
 - Extended Unpacking (for handling variable numbers of elements)
 
-## [8.5 Accessing Tuple Elements](session-8.0.md#85-accessing-tuple-elements)
+## [8.5 Accessing Tuple Elements and Tuple Comprehension](session-8.0.md#85-accessing-tuple-elements-and-tuple-comprehension)
 - Indexing (Positive and Negative Indexing)
 - Accessing Individual Elements
 - Using Slicing to Access Multiple Elements

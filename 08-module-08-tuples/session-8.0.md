@@ -140,7 +140,7 @@ print(rest)    # Output: [2, 3, 4, 5]
 
 ---
 
-## 8.5 Accessing Tuple Elements
+## 8.5 Accessing Tuple Elements and Tuple Comprehension
 You can access tuple elements using indexing and slicing.
 
 ### Indexing (Positive and Negative Indexing)
@@ -171,6 +171,17 @@ Slicing allows you to extract a part of the tuple.
 print(my_tuple[1:3])  # Output: (20, 30)
 print(my_tuple[:2])   # Output: (10, 20)
 ```
+
+### Tuple Comprehension
+Tuple comprehension is not supported by Python. 
+
+  ```python
+  t = (x ** 2 for x in range(5))
+  print(t)
+  <generator object <genexpr> at 0x0000029B36C3F850>
+  ```
+  > We will study about generators in upcoming module.
+
 
 ---
 
@@ -286,6 +297,8 @@ In contrast, using a list as a key would raise a `TypeError`:
 # List as a key (will raise an error)
 my_dict = { [1, 2]: "value1" }  # TypeError: unhashable type: 'list'
 ```
+
+
 
 
 
