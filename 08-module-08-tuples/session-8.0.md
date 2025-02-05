@@ -52,6 +52,30 @@ You can create tuples in multiple ways in Python.
   print(my_tuple)
   ```
 
+- **Literals with optional parentheses**
+  ```python
+  a = ()
+  print(type(a))  # <class 'tuple'>
+  
+  b = 10, 20, 30, 40
+  print(type(b))  # <class 'tuple'>
+
+  c = 10, 
+  print(type(c))  # <class 'tuple'>
+
+  d = 10
+  print(type(d))  # <class 'int'>
+
+  e = (10)
+  print(type(e))  # <class 'int'>
+  
+  f = (10,)
+  print(type(f))  # <class 'tuple'>
+
+  g = (10, 20, 30, 40)
+  print(type(g))  # <class 'tuple'>
+  ```
+
 ---
 
 ## 8.3 Single-item and Multiple-item Tuples
