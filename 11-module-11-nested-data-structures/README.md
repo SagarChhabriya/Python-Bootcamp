@@ -1,5 +1,17 @@
  # 11. Nested Data Structures
 
+
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../10-module-10-sets/README.md">
+        <img src="https://img.shields.io/badge/Previous-Python_Dictionaries-blue" width="250" height="35">
+    </a>
+    <a href="../12-module-12-program-control-flow/README.md">
+        <img src="https://img.shields.io/badge/Next-Program_Control_Flow-brightgreen" width="270" height="35">
+    </a>
+</span>
+<br><br>
+
+
 - **11.1 Introduction to Nested Data Structures**
   - Understanding Nested Structures and Their Use Cases
 

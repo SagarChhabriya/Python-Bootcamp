@@ -2,6 +2,18 @@
 
 Program control flow refers to the order in which statements and instructions are executed in a program. Python provides several tools for controlling the flow of a program, including **conditional statements** and **loops**.
 
+
+
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../11-module-11-nested-data-structures/README.md">
+        <img src="https://img.shields.io/badge/Previous-Python_Dictionaries-blue" width="250" height="35">
+    </a>
+    <a href="../12-module-12-program-control-flow/session-12.1.md">
+        <img src="https://img.shields.io/badge/Next-Case_Match-brightgreen" width="160" height="35">
+    </a>
+</span>
+<br><br>
+
 ## 12.1 Introduction to Program Control Flow
 
 - **Control Flow** refers to the way the program moves from one instruction to another.
@@ -554,3 +566,13 @@ Python does not have a built-in `switch` statement, but you can simulate it usin
 
 - **Explanation**: `yield` returns a value and pauses the function’s execution, allowing you to continue where you left off.
 
+
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../11-module-11-nested-data-structures/README.md">
+        <img src="https://img.shields.io/badge/Previous-Python_Dictionaries-blue" width="250" height="35">
+    </a>
+    <a href="../12-module-12-program-control-flow/session-12.1.md">
+        <img src="https://img.shields.io/badge/Next-Case_Match-brightgreen" width="160" height="35">
+    </a>
+</span>
+<br><br>

@@ -1,6 +1,18 @@
 # 11. Nested Data Structures 
 
+
 Nested data structures are collections (like lists, dictionaries, or tuples) that contain other collections as elements. They are useful for representing complex, hierarchical data.
+
+
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../10-module-10-sets/README.md">
+        <img src="https://img.shields.io/badge/Previous-Python_Dictionaries-blue" width="250" height="35">
+    </a>
+    <a href="../12-module-12-program-control-flow/README.md">
+        <img src="https://img.shields.io/badge/Next-Program_Control_Flow-brightgreen" width="270" height="35">
+    </a>
+</span>
+<br><br>
 
 ---
 
@@ -451,4 +463,12 @@ Nested data structures are collections (like lists, dictionaries, or tuples) tha
 ---
 
 
-
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../10-module-10-sets/README.md">
+        <img src="https://img.shields.io/badge/Previous-Python_Dictionaries-blue" width="250" height="35">
+    </a>
+    <a href="../12-module-12-program-control-flow/README.md">
+        <img src="https://img.shields.io/badge/Next-Program_Control_Flow-brightgreen" width="270" height="35">
+    </a>
+</span>
+<br><br>

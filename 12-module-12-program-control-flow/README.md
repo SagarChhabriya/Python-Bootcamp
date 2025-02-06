@@ -1,5 +1,16 @@
 # 12. Program Control Flow
 
+
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../11-module-11-nested-data-structures/README.md">
+        <img src="https://img.shields.io/badge/Previous-Python_Dictionaries-blue" width="250" height="35">
+    </a>
+    <a href="../13-module-13-functions/REAMDE.md">
+        <img src="https://img.shields.io/badge/Next-Functions-brightgreen" width="160" height="35">
+    </a>
+</span>
+<br><br>
+
 - **12.1 Introduction to Program Control Flow**
   - Overview of Conditional Statements and Loops
 

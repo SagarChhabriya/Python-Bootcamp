@@ -1,12 +1,13 @@
 # [10. Set and Frozenset](session-10.0.md#10-set-and-frozenset)
 
+
 <span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
     <a href="../09-module-09-dictionaries/README.md">
         <img src="https://img.shields.io/badge/Previous-Python_Dictionaries-blue" width="250" height="35">
     </a>
-    <!-- <a href="../11-module-11-nested-data-structures/README.md">
+    <a href="../11-module-11-nested-data-structures/README.md">
         <img src="https://img.shields.io/badge/Next-Nested_Data_Structures-brightgreen" width="270" height="35">
-    </a> -->
+    </a>
 </span>
 <br><br>
 

@@ -2,6 +2,17 @@
 
 Introduced in **Python 3.10**, the `match` statement (also known as **structural pattern matching**) provides a powerful way to handle complex conditional logic. It is similar to `switch-case` in other languages but more flexible and expressive.
 
+
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../11-module-11-nested-data-structures/README.md">
+        <img src="https://img.shields.io/badge/Previous-Python_Dictionaries-blue" width="250" height="35">
+    </a>
+    <a href="../13-module-13-functions/REAMDE.md">
+        <img src="https://img.shields.io/badge/Next-Functions-brightgreen" width="160" height="35">
+    </a>
+</span>
+<br><br>
+
 ---
 
 ## **1. Basic Syntax of `match`**
@@ -342,3 +353,14 @@ It's an integer
 - **No Direct Comparison**: Patterns are matched structurally, not by direct comparison (e.g., `==`).
 
 ---
+
+
+<span style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+    <a href="../11-module-11-nested-data-structures/README.md">
+        <img src="https://img.shields.io/badge/Previous-Python_Dictionaries-blue" width="250" height="35">
+    </a>
+    <a href="../13-module-13-functions/REAMDE.md">
+        <img src="https://img.shields.io/badge/Next-Functions-brightgreen" width="160" height="35">
+    </a>
+</span>
+<br><br>
