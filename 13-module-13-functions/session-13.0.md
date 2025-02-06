@@ -326,7 +326,7 @@ If the number of arguments is unknown, add a * before the parameter name:
   def show_value(value):
     print(value)
 
-  show_value(value = 42)  # Correct usage
+  show_value(value = 42)  # Error
   ```
 
 But when adding the , / you will get an error if you try to send a keyword argument:
@@ -360,18 +360,11 @@ But when adding the , / you will get an error if you try to send a keyword argum
   def show_value(value):
     print(value)
 
-  show_value(42)  # Correct usage
+  show_value(42)  # Error
   ```
 
-But with the *, you will get an error if you try to send a positional argument:
+- But with the *, you will get an error if you try to send a positional argument:
 
-- **Example:**
-  ```python
-  def my_function(*, x):
-    print(x)
-
-  my_function(3)
-  ```
 
 
 ### 13.6.3 Combining Positional-Only and Keyword-Only Arguments
@@ -394,16 +387,12 @@ But with the *, you will get an error if you try to send a positional argument:
 **Example (Recursion):**
 
   ```python
-  def count_down(number):
-    if(number > 0):
-      result = number + count_down(number - 1)
-      print(result)
-    else:
-      result = 0
-    return result
+  def factorial(n):
+    if n == 0:  # Base case: factorial of 0 is 1
+        return 1
+    return n * factorial(n - 1)  # Recursive case
 
-  print("Recursion Results:")
-  count_down(4)
+  print(factorial(5))  # Output: 120
   ```
 
 ## **13.8 Built-In Functions**
@@ -411,11 +400,26 @@ But with the *, you will get an error if you try to send a positional argument:
 - **Examples**:
   - `map()`: Applies a function to all items in an iterable.
     ```python
+    map(callback, iterator)
+    ```
+    Where:
+    - **`callback`**: A function (or lambda) that takes an element from the `iterator` and processes it.
+    - **`iterator`**: An iterable (like a list, tuple, or string) whose elements are passed to the `callback`.
+
+    ```python
     numbers = [1, 2, 3]
     squared = list(map(lambda x: x**2, numbers))
     print(squared)  # Output: [1, 4, 9]
     ```
+
   - `zip()`: Combines multiple iterables element-wise into tuples.
+    
+    ```python
+    zip(iterable1, iterable2, ...)
+    ```
+    Where:
+    - iterable1, iterable2, ...: Multiple iterables (like lists, tuples, etc.) to be combined element-wise.
+
     ```python
     names = ["Alice", "Bob"]
     ages = [25, 30]
@@ -424,12 +428,37 @@ But with the *, you will get an error if you try to send a positional argument:
     ```
   - `reduce()`(from `functools`): Applies a function of two arguments cumulatively to the items of an iterable.
     ```python
+    reduce(function, iterable, [initial])
+    ```
+    - Applies a binary function cumulatively to the items of an iterable, from left to right, reducing it to a single value. The optional `initial` argument can be provided to start the accumulation.
+    
+    ```python
     from functools import reduce
     numbers = [1, 2, 3, 4]
     total = reduce(lambda x, y: x + y, numbers)
     print(total)  # Output: 10
     ```
+
+    ```python
+    from functools import reduce
+
+    numbers = [1, 2, 3, 4]
+    result = reduce(lambda x, y: x + y, numbers, 10)
+    print(result)  # Output: 20
+    ```
+
+    ### Explanation:
+    - The `initial` value is set to `10`. 
+    - The `reduce()` function starts by using `10` as the initial value and then adds each number in the list to it.
+    - First, it calculates `10 + 1 = 11`, then `11 + 2 = 13`, then `13 + 3 = 16`, and finally `16 + 4 = 20`.
+    - The result is `20`. The `initial` value (`10`) is included in the accumulation.
+
   - `filter()`: Filters elements based on a condition.
+    ```python
+    filter(function, iterable)
+    ```
+    - Filters elements from the iterable by applying the `function`. Only elements for which the `function` returns `True` are included in the result.
+    
     ```python
     numbers = [1, 2, 3, 4]
     even = list(filter(lambda x: x % 2 == 0, numbers))
@@ -455,20 +484,20 @@ But with the *, you will get an error if you try to send a positional argument:
     ```
 
   - `chr()` and `ord()`: Converts between character and ASCII value.
-  ```python
-  print(chr(65))  # Output: 'A'
-  print(ord('A'))  # Output: 65
-  ```
+    ```python
+    print(chr(65))  # Output: 'A'
+    print(ord('A'))  # Output: 65
+    ```
 
 - **`globals()` and `locals()`**: Return dictionaries representing the current global and local symbol tables.
-  ```python
-  a = 10
-  def test():
-      b = 20
-      print(globals())  # Contains global variables, e.g., 'a'
-      print(locals())   # Contains local variables, e.g., 'b'
-  test()
-  ```
+    ```python
+    a = 10
+    def test():
+        b = 20
+        print(globals())  # Contains global variables, e.g., 'a'
+        print(locals())   # Contains local variables, e.g., 'b'
+    test()
+    ```
 
 ---
 

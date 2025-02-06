@@ -60,6 +60,10 @@
   dict_example = {"a": 1, "b": 2}
   set_from_dict = set(dict_example)  # {'a', 'b'}
   ```
+- **Set can't have mutable items**
+  ```PYTHON
+  s = {1,2,[3,4]}  
+  ```
 
 ### **Creating Frozensets**
 - **Using `frozenset()` Constructor**: Frozensets are created using the `frozenset()` constructor, and like sets, they can be made from iterables.
