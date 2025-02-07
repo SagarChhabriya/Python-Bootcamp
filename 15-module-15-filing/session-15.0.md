@@ -81,37 +81,42 @@ Instead of manually managing the file handle, it’s better to use the **`with`*
 ---
 
 ## **15.4 Reading Files**
+
 - **Reading Entire File Content**:
-  ```python
-  with open("example.txt", "r") as file:
-      content = file.read()
-      print(content)
-  ```
+    ```python
+    with open("example.txt", "r") as file:
+        content = file.read()
+        print(content)
+    ```
 - **Reading Line by Line**:
   - `readline()`: Reads one line at a time.
+   
     ```python
     with open("example.txt", "r") as file:
         line = file.readline()
         print(line)
     ```
+
   - `readlines()`: Reads all lines into a list.
+   
     ```python
     with open("example.txt", "r") as file:
         lines = file.readlines()
         print(lines)
     ```
 - **Iterating Over File Content**:
-  ```python
-  with open("example.txt", "r") as file:
-      for line in file:
-          print(line.strip())  # Remove newline character
-  ```
+
+    ```python
+    with open("example.txt", "r") as file:
+        for line in file:
+            print(line.strip())  # Remove newline character
+    ```
   
-  ```python
-  with open('example.txt', 'r') as file:
-      for line in file:
-          print(line, end='')
-  ```
+    ```python
+    with open('example.txt', 'r') as file:
+        for line in file:
+            print(line, end='')
+    ```
 ---
 
 ## **15.5 Writing Files**
@@ -164,6 +169,28 @@ Python provides several useful methods to interact with files:
         file.read(5)
         print(file.tell())  # Output: 5
     ```
+
+- **Combining tell() and seek()**:
+    ```python
+    data = "All students are STUPIDS"
+    f = open("abc.txt","w")
+    f.write(data)
+    with open("abc.txt","r+") as f:
+      text = f.read()
+      print(text)
+      print("The current cursor position: ", f.tell()) # 24
+
+      f.seek(17)
+      print("The current cursor position: ", f.tell())
+
+      f.write("GEMS!")
+      f.seek(0)
+      text = f.read()
+      
+      print("Data after modification:",text)
+      
+    ```
+
   - `flush()`: Flushes the internal buffer.
     
     ```python
@@ -182,7 +209,7 @@ Python provides several useful methods to interact with files:
 ---
 
 ## **15.7 Using the `with` Keyword**
-The `with` statement is a context manager that ensures files are automatically closed when you're done working with them.
+The `with` statement is a context manager that ensures files are automatically closed when you're done working with them. Even in case of exceptions also.
 
 - **Context Manager**:
   - Automatically handles file closing, even if an exception occurs.
