@@ -316,18 +316,11 @@ If the number of arguments is unknown, add a * before the parameter name:
     print(value)
 
   show_value(42)  # Correct usage
+  show_value(value = 42)  # Error
   ```
 
 - Without the `/`, you can use keyword arguments even if the function expects positional arguments.
 
-**Example:**
-
-  ```python
-  def show_value(value):
-    print(value)
-
-  show_value(value = 42)  # Error
-  ```
 
 But when adding the , / you will get an error if you try to send a keyword argument:
 
@@ -350,18 +343,10 @@ But when adding the , / you will get an error if you try to send a keyword argum
     print(value)
 
   show_value(value = 42)  # Correct usage
+  show_value(42)  # Error
   ```
 
 - Without the `*`, you can use positional arguments even if the function expects keyword arguments.
-
-**Example:**
-
-  ```python
-  def show_value(value):
-    print(value)
-
-  show_value(42)  # Error
-  ```
 
 - But with the *, you will get an error if you try to send a positional argument:
 
