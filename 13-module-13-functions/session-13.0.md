@@ -380,6 +380,28 @@ But when adding the , / you will get an error if you try to send a keyword argum
   print(factorial(5))  # Output: 120
   ```
 
+## Function Aliasing
+For the existing functions we can give another name, which is nothing but function aliasing. 
+
+  ```python
+  def wish(name):
+      print("RADHE RADHE ", name, "!")
+
+  greeting = wish
+  print(id(wish))      
+  print(id(greeting))
+
+  greeting("Sagar")
+  wish("Qadeer")
+  
+  # If we delete either wish or greet still we can access the other function.
+
+  del wish
+  # wish("Sagar") # Error
+  greeting("Sagar")
+  ```
+
+
 ## **13.8 Built-In Functions**
 - Python provides many built-in functions that are always available for use.
 - **Examples**:
@@ -397,6 +419,7 @@ But when adding the , / you will get an error if you try to send a keyword argum
     print(squared)  # Output: [1, 4, 9]
     ```
 
+
   - `zip()`: Combines multiple iterables element-wise into tuples.
     
     ```python
@@ -411,7 +434,10 @@ But when adding the , / you will get an error if you try to send a keyword argum
     combined = list(zip(names, ages))
     print(combined)  # Output: [('Alice', 25), ('Bob', 30)]
     ```
-  - `reduce()`(from `functools`): Applies a function of two arguments cumulatively to the items of an iterable.
+  - `reduce()`(from `functools`): 
+    - reduce() function reduces sequences of elments into a single element by applying the specified function.
+    - Applies a function of two arguments cumulatively to the items of an iterable.
+    - 
     ```python
     reduce(function, iterable, [initial])
     ```
@@ -449,6 +475,24 @@ But when adding the , / you will get an error if you try to send a keyword argum
     even = list(filter(lambda x: x % 2 == 0, numbers))
     print(even)  # Output: [2, 4]
     ```
+    ```python
+    def isEven(x):
+        if x % 2 == 0:
+            return True
+        else:
+            return False
+    
+    l = [0,5,10,15,20,25,30]
+    
+    l1 = list(filter(isEven,l))
+    print(l1) # [0,10,20,30]
+
+    l2 = list(filter(lambda x: x % 2 == 0, l))
+    print(l1) # [0,10,20,30]
+
+    ```
+
+
   - `any()`: Returns `True` if any element in an iterable is `True`.
     ```python
     values = [False, True, False]
