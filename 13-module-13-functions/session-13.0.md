@@ -607,6 +607,52 @@ print(mytripler(11))  # Output: 33
 
 
 
+## first-class citizens 
+In many programming languages, functions are considered **first-class citizens**. This means that functions can be:
+
+1. **Assigned to variables**: You can store a function in a variable.
+2. **Passed as arguments to other functions**: You can send a function as a parameter to another function.
+3. **Returned from other functions**: You can return a function from another function.
+4. **Stored in data structures**: Functions can be stored in arrays, objects, or other data structures.
+
+When we say **functions are first-class citizens**, we're emphasizing that functions can be treated like any other data type (such as integers or strings), giving a lot of flexibility in how you design and implement your code.
+
+### Higher-Order Functions:
+A **higher-order function** is a function that either:
+
+1. **Takes one or more functions as arguments**, or
+2. **Returns a function as its result**.
+
+In simple terms, higher-order functions can operate on or return other functions. Here are a couple of examples:
+
+#### Example 1: Function as an argument
+```python
+def apply_function(f, x):
+    return f(x)
+
+def square(n):
+    return n * n
+
+result = apply_function(square, 5)  # Pass function `square` as an argument
+print(result)  # Output: 25
+```
+
+#### Example 2: Function returning another function
+```python
+def multiply_by(n):
+    def multiply(x):
+        return x * n
+    return multiply
+
+multiply_by_2 = multiply_by(2)
+print(multiply_by_2(5))  # Output: 10
+```
+
+In these examples, `apply_function` is a higher-order function because it takes a function `f` as an argument. Similarly, `multiply_by` is a higher-order function because it returns a function (`multiply`) that can then be used.
+
+Many functional programming languages (like Haskell or Lisp) leverage higher-order functions extensively, but even in languages like Python, JavaScript, and others, higher-order functions are common and quite useful for creating flexible and reusable code.
+
+
 <!-- ## **13.10 Advanced Function Concepts**
 
 ### **13.10.1 Python Closures**
